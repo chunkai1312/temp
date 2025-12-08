@@ -1,0 +1,104 @@
+# https://bank.sinopac.com llms.txt
+
+- [Sinopac Bank Services](https://bank.sinopac.com): Explore banking services, promotions, and financial tools online.
+- [Sinopac Bank Services](https://bank.sinopac.com/sinopacBT/index.html): Explore banking services, promotions, and personalized notifications.
+- [Letter of Credit Application](https://bank.sinopac.com/MMA8/DocDownload/2.BANK%20SINOPAC%20HCMC_LETTER%20OF%20CREDIT%20APPLICATION.pdf): Application form for irrevocable letter of credit issuance.
+- [About Bank SinoPac](https://bank.sinopac.com/sinopacBT/en/about/tagList20180102210052310000000000000533.html): Explore corporate profile, governance, leadership, and sustainability.
+- [About Bank SinoPac](https://bank.sinopac.com/sinopacBT/en/about/tagList20180112145607380000000000000836.html): Explore corporate profile, governance, sustainability, and financial information.
+- [Bank SinoPac Overview](https://bank.sinopac.com/sinopacBT/en/index.html): Explore Bank SinoPac's services, governance, and sustainability efforts.
+- [Starting Your Own E-Commerce](https://bank.sinopac.com/sinopacBT/personal/article/intelligence/how-to-start-own-ec.html): Learn essential steps to launch your own e-commerce business.
+- [About Bank SinoPac](https://bank.sinopac.com/sinopacBT/en/about/20180102153120459000000000000958.html): Explore Bank SinoPac's corporate profile, governance, and services.
+- [Investment Portfolio Insights](https://bank.sinopac.com/sinopacBT/webevents/RetireChannel/article/investment-portfolio.html): Explore benefits, types, and strategies for investment portfolios.
+- [DACARD Payment Solutions](https://bank.sinopac.com/sinopacBT/webevents/dacard): Convenient card management and payment solutions with biometrics.
+- [SME Financial Services](https://bank.sinopac.com/sinopacBT/sme.html): Comprehensive banking solutions for small and medium enterprises.
+- [DAWHO Digital Account](https://bank.sinopac.com/sinopacBT/webevents/dawho): Explore DAWHO's digital banking and investment services today.
+- [Personal Banking Services](https://bank.sinopac.com/sinopacBT/personal.html): Explore credit cards, loans, deposits, and wealth management.
+- [Corporate Banking Services](https://bank.sinopac.com/sinopacBT/coroperate.html): Explore comprehensive financial services for corporate clients.
+- [DAWHO Event Promotions](https://bank.sinopac.com/sinopacBT/webevents/dawhotouevent): Participate in DAWHO event for exclusive gifts and rewards.
+- [Portable Funds Account](https://bank.sinopac.com/sinopacBT/webevents/portablefundsaccount): Easily manage and transfer retirement trust funds online.
+- [Unlimited Wealth Card](https://bank.sinopac.com/sinopacbt/webevents/2106_unlimited): Explore exclusive benefits and experiences with Sinopac card.
+- [豐城購物回饋](https://bank.sinopac.com/SinoCardWeb/funstore): 登入享受購物回饋金與優惠服務
+- [Frequently Asked Questions](https://bank.sinopac.com/sinopacBT/webevents/qa.html): Answers to common questions about Sinopac's loyalty program.
+- [MMA金融交易網](https://bank.sinopac.com/MMA8/bank/togointro): Explore MMA financial services and customer support options.
+- [Corporate Financial Services](https://bank.sinopac.com/sinopacBT/coroperate/service.html): Comprehensive investment banking and trust services for businesses.
+- [公平待客政策](https://bank.sinopac.com/sinopacBT/webevents/fairly.html): 永豐銀行致力於公平待客和消費者保護
+- [DA BOSS Event](https://bank.sinopac.com/sinopacBT/webevents/daboss/202411event): Participate to win iPhone 16 Pro with bank offers.
+- [大咖攻略 Blog](https://bank.sinopac.com/sinopacBT/webevents/dacard/blog): Explore tips and guides for managing payments and credit cards.
+- [Customer Service Initiatives](https://bank.sinopac.com/sinopacBT/webevents/case.html): Explore Sinopac's commitment to customer service excellence.
+- [DACARD Payment Solutions](https://bank.sinopac.com/sinopacBT/webevents/dacard/about): Simplify bill payments and manage finances effortlessly online.
+- [大咖活動與優惠](https://bank.sinopac.com/sinopacBT/webevents/dacard/hot): Explore exclusive rewards and events for cardholders.
+- [Anti-Fraud Resources](https://bank.sinopac.com/sinopacBT/webevents/anti-fraudbee): Learn to identify and report fraud effectively.
+- [小額投資美股指南](https://bank.sinopac.com/sinopacBT/webevents/ibrain/blogs_detail_028.html): 學習如何用小額資金投資美股
+- [DA BOSS創業金融服務](https://bank.sinopac.com/sinopacBT/webevents/daboss/article13.html): 提供創業者全面金融資源與服務支持
+- [Strategic Talent Program](https://bank.sinopac.com/sinopacBT/webevents/ma/index.html): Explore Sinopac Bank's management and professional associate opportunities.
+- [Dual Currency Card Benefits](https://bank.sinopac.com/sinopacBT/webevents/2003_dualcc/content_more.html): Explore rewards and travel insurance for Dual Currency Card.
+- [Mobile Payment Services Overview](https://bank.sinopac.com/upload/sinopac/spbtBookMark/1650ddc69040000089ee.pdf): Explore mobile payment options and services offered here.
+- [印鑑授權及彌償條款](https://bank.sinopac.com/upload/sinopac/spbtBookMark/17196515a0300000ac4c.pdf): 授權使用印鑑的風險及責任條款說明
+- [ibrAin Investment Insights](https://bank.sinopac.com/sinopacBT/webevents/ibrain/blogs_detail_023.html): Explore smart investment strategies using NBA game logic.
+- [DAWHO優惠公告](https://bank.sinopac.com/sinopacBT/webevents/dawho/hot/2025h2offer): 2025年下半年大戶優惠及回饋活動詳情
+- [南山人壽保險產品](https://bank.sinopac.com/upload/sinopac/spbtBookMark/17e0927f8e3000002a5e.pdf): 終身保險，生存還本，增值回饋分享金
+- [永豐SPORT卡活動](https://bank.sinopac.com/sinopacBT/webevents/2008_SportCard2/index.html): 運動賺回饋最高享26%新戶優惠活動
+- [勞保與退休計畫](https://bank.sinopac.com/sinopacBT/webevents/ibrain/blogs_detail_011.html): 了解勞保、勞退及退休金計算方式
+- [複利投資與優惠](https://bank.sinopac.com/sinopacBT/webevents/ibrain/blogs_detail_017.html): 了解複利投資及ibrAin帳戶優惠活動
+- [DAWHO Account Upgrade](https://bank.sinopac.com/sinopacBT/webevents/dawho/about/upgrade): Enhance DAWHO account for easier transfers and withdrawals.
+- [退休金試算與規劃](https://bank.sinopac.com/sinopacBT/webevents/ibrain/blogs_detail_008.html): 了解退休金準備與試算方法的重要性
+- [Employee Stock Trust](https://bank.sinopac.com/sinopacBT/webevents/truststockrsu/index.html): Incentivize employees with effective stock trust programs.
+- [房屋融資優惠活動](https://bank.sinopac.com/sinopacBT/webevents/allnon72/index_b.html): 參加房屋融資活動獲得Bee600點獎勵
+- [Dream Card Promotions](https://bank.sinopac.com/sinopacBT/webevents/1906_dream/index.html): Exclusive offers for new SinoPac credit card applicants.
+- [DAWHO Member Loyalty Program](https://bank.sinopac.com/sinopacBT/webevents/dawho/about/memberloyalty): Join DAWHO for exclusive member benefits and upgrades.
+- [DA BOSS Startup Support](https://bank.sinopac.com/sinopacBT/webevents/daboss/index.html): Subscribe for startup grants and exclusive business resources.
+- [MMA Account Details](https://bank.sinopac.com/sinopacBT/webevents/1907_mmanewwebsite/details.html): Important information regarding MMA children's account services.
+- [Foreign Currency Deposit](https://bank.sinopac.com/sinopacBT/webevents/dawho/about/foreigncurrencydeposit): Enjoy discounts and services for foreign currency exchange.
+- [投資理財常犯錯誤](https://bank.sinopac.com/sinopacBT/webevents/ibrain/blogs_detail_012.html): 了解新手投資理財的常見錯誤與建議
+- [Financial Overview](https://bank.sinopac.com/sinopacBT/about/investor/finance.html): Detailed financial information and performance metrics for investors.
+- [Investor Disclaimers](https://bank.sinopac.com/sinopacBT/about/investor/disclaimers.html): Important disclaimers and financial information for investors.
+- [債券投資指南](https://bank.sinopac.com/sinopacBT/webevents/ibrain/blogs_detail_021.html): 了解債券種類、風險及投資費用詳情
+- [Preventing Scams Guide](https://bank.sinopac.com/sinopacBT/webevents/dacard/blog/preventscam): Learn effective strategies to avoid common scams.
+- [退休金規劃與優惠](https://bank.sinopac.com/sinopacBT/webevents/ibrain/blogs_detail_009.html): 了解退休金風險及ibrAin優惠活動詳情
+- [碳足跡查詢與綠色消費](https://bank.sinopac.com/sinopacBT/webevents/2208_green/open_carbon_footprint.html): 了解消費對碳排放的影響及查詢方法
+- [信貸常見問題](https://bank.sinopac.com/sinopacBT/webevents/dawho/faq/credit): 了解DAWHO信貸申請流程和相關問題解答
+- [小蜜豐點數計畫條款](https://bank.sinopac.com/sinopacBT/webevents/beetogether/rules.html): 了解永豐小蜜豐點數計畫的使用條款
+- [Open Business Account](https://bank.sinopac.com/sinopacBT/webevents/daboss/openaccount.html): Step-by-step guide to opening a business account.
+- [長期投資與優惠](https://bank.sinopac.com/sinopacBT/webevents/ibrain/blogs_detail_016.html): 探索長期投資策略及ibrAin優惠活動
+- [MyData Personalization Platform](https://bank.sinopac.com/sinopacBT/webevents/myData/index.html): Easily upload financial proof for online banking services.
+- [房貸優惠活動](https://bank.sinopac.com/sinopacBT/webevents/womanmay/index.html): 申辦房貸享洗沐禮盒及獨家折扣碼
+- [Online Insurance with DAWHO](https://bank.sinopac.com/sinopacBT/webevents/dawho/about/insurance): Efficient online insurance for travel and life protection.
+- [Employee Stock Trust](https://bank.sinopac.com/sinopacBT/webevents/truststockesop/index.html): Build retirement security through employee stock trust programs.
+- [DAWHO Savings Information](https://bank.sinopac.com/sinopacBT/webevents/dawho/faq/saving): Explore DAWHO savings options and account benefits here.
+- [Financial Advisory Services](https://bank.sinopac.com/sinopacBT/coroperate/service/adviser.html): Expert financial advisory services for corporate clients.
+- [Company Account Opening Guide](https://bank.sinopac.com/sinopacBT/webevents/daboss/article2.html): Step-by-step process for opening a company account.
+- [AML Internal Control Statement](https://bank.sinopac.com/sinopacBT/about/operation/rule2.html): Access the AML internal control statements for various years.
+- [DACARD Payment Rewards](https://bank.sinopac.com/sinopacBT/webevents/dacard/hot/event8): Join DACARD for rewards and cashback on payments.
+- [高利率活儲方案](https://bank.sinopac.com/sinopacBT/webevents/dawho/about/saving): 享受最高1.5%年利率，輕鬆存款賺利息
+- [Digital Banking Promotions](https://bank.sinopac.com/sinopacBT/webevents/beetogether/news.html): Participate in tasks to earn rewards and points.
+- [ibrAin優惠與ETF介紹](https://bank.sinopac.com/sinopacBT/webevents/ibrain/blogs_detail_002.html): 探索ibrAin優惠及各類ETF投資策略
+- [MMA Children's Account Promotion](https://bank.sinopac.com/sinopacBT/webevents/2401mma/index.html): Exclusive 1.2% interest for new MMA children's accounts.
+- [High-Interest Foreign Currency Deposits](https://bank.sinopac.com/sinopacBT/webevents/2025q4fxfd/index.html): Earn up to 8.8% interest on foreign currency deposits.
+- [Trust Services Overview](https://bank.sinopac.com/sinopacBT/webevents/2308_trust/index.html): Explore trust services and benefits offered by Sinopac.
+- [Understanding S&P 500 Index](https://bank.sinopac.com/sinopacBT/webevents/shareshares/article_5.html): Learn about S&P 500 index and its representative ETFs.
+- [Foreign Currency Deposit FAQ](https://bank.sinopac.com/sinopacBT/webevents/dawho/faq/foreigncurrencydeposit): Find answers about foreign currency deposit services here.
+- [無碼轉帳常見問題](https://bank.sinopac.com/sinopacBT/webevents/dawho/faq/transfer): 了解無碼轉帳的流程和限制信息
+- [Mobile Transfer Event](https://bank.sinopac.com/sinopacBT/webevents/ec/phonetransfer/event): Earn cash rewards by completing mobile transfer tasks.
+- [Deposit and Forex Services](https://bank.sinopac.com/sinopacBT/personal/desposit-forex.html): Explore deposit options, foreign exchange rates, and services.
+- [Online Banking Services](https://bank.sinopac.com/sinopacBT/digital/online-banking.html): Access 24/7 banking, transfers, and financial management online.
+- [Corporate Governance Rules](https://bank.sinopac.com/sinopacBT/about/operation/rule.html): Overview of important corporate governance regulations and procedures.
+- [美股投資懶人包](https://bank.sinopac.com/sinopacBT/webevents/shareshares/article_2.html): 了解美股投資的優勢與存股方法
+- [Personal Loan Application](https://bank.sinopac.com/sinopacBT/webevents/psn_loan/index.html): Apply online for quick and easy personal loans.
+- [智能撲滿服務](https://bank.sinopac.com/sinopacBT/webevents/ipiggybank/index.html): 輕鬆存錢，實現夢想的智能撲滿解決方案
+- [Invest Smart with ibrAin](https://bank.sinopac.com/sinopacBT/webevents/ibrain/blogs_detail_013.html): Explore investment strategies to combat rising living costs.
+- [Automatic Payment Authorization](https://bank.sinopac.com/sinopacBT/webevents/dawho/about/automatic): Easily set up automatic credit card payments online.
+- [Healthcare Loan Options](https://bank.sinopac.com/sinopacBT/webevents/2203healthcarepl/index.html): Explore low-interest loans for healthcare professionals and employees.
+- [Virtual Account Services](https://bank.sinopac.com/sinopacBT/coroperate/cash/VA.html): Convenient payment collection and reconciliation services offered.
+- [Dual Currency Credit Card](https://bank.sinopac.com/sinopacBT/webevents/2003_dualcc/index.html): Enjoy high cashback rewards with SinoPac's new card.
+- [Dual Currency Deposit Offers](https://bank.sinopac.com/sinopacBT/webevents/2024foreigndeposit/index.html): Discover attractive rates for USD and RMB deposits.
+- [存款自動轉入常見問題](https://bank.sinopac.com/sinopacBT/webevents/dawho/faq/achin): 解答存款自動轉入申請過程中的常見問題
+- [ibrAin Investment Experience](https://bank.sinopac.com/sinopacBT/webevents/ibrain/index.html): Explore zero account management fees and automated investment options.
+- [Personal Loan Promotions](https://bank.sinopac.com/sinopacBT/webevents/1910_PLdigital/index.html): Explore low-interest personal loan options and apply online.
+- [Employee Trust Investment](https://bank.sinopac.com/sinopacBT/webevents/trustinvestment/index.html): Enhance employee retirement benefits through trust investment plans.
+- [DAWAY Red Envelope Event](https://bank.sinopac.com/sinopacBT/webevents/2404_DAWAYCP/day.html): Participate in DAWAY's red envelope rewards with LINE Pay.
+- [DACARD App FAQ](https://bank.sinopac.com/sinopacBT/webevents/dacard/faq): Find answers to common DACARD App questions here.
+- [Mobile Banking Setup](https://bank.sinopac.com/sinopacBT/webevents/sinopacmidfido/index.html): Guide for binding devices and verifying mobile banking.
+- [多幣Debit卡常見問題](https://bank.sinopac.com/sinopacBT/webevents/dawho/faq/duodebit): 了解多幣Debit卡的功能與使用方式
+- [Mitsui Outlet Park Card](https://bank.sinopac.com/sinopacBT/webevents/2201_moptncard/index.html): Apply for Mitsui Outlet Park credit card benefits today.
+- [推薦好友辦卡](https://bank.sinopac.com/sinopacBT/webevents/1809_mgm): 推薦好友申辦永豐卡享300元刷卡金回饋
+- [Corporate Financing Solutions](https://bank.sinopac.com/sinopacBT/coroperate/finance.html): Comprehensive financing services for corporate operational needs.
