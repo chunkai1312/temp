@@ -1,106 +1,207 @@
-# https://www.sinopac.com llms.txt
+# sinopac.com 品牌簡介
+永豐金控致力於提供全面的金融解決方案，秉持「翻轉金融，共創美好生活」的願景，專注於可持續發展及社會責任，推動環境、社會和公司治理（ESG）整合，為客戶、員工及社會創造價值。
 
-- [Sinopac Financial Services](https://www.sinopac.com): Explore Sinopac's financial services, governance, and sustainability initiatives.
-- [About SinoPac Financial](https://www.sinopac.com/about.html): Learn about SinoPac's corporate identity, governance, and subsidiaries.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20231130145741467581.html): Explore Sinopac's corporate governance and management structure.
-- [SinoPac Green Initiative](https://www.sinopac.com/upload/event/2403_life/about.html): Promoting sustainable living through daily green actions.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20230728181431844710.html): Explore Sinopac's corporate governance and sustainability initiatives.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20250529191106000394.html): Explore Sinopac's corporate governance and sustainability practices.
-- [Corporate Governance Overview](https://www.sinopac.com/governance/20211210153437929523/20211210153439241519.html): Explore SinoPac's governance structure and board member details.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20241112152229249524.html): Explore Sinopac's corporate governance and management structure.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480.html): Explore SinoPac's corporate governance and management structure.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20191211164331540000000000000105.html): Explore SinoPac's corporate governance structure and policies.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20250207103416527952.html): Explore Sinopac's corporate governance and management structure.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20241029155220950691.html): Explore Sinopac's corporate governance and subsidiary information.
-- [Responsible Lending Practices](https://www.sinopac.com/esg/en/responsible-lending): SinoPac's commitment to sustainable and responsible lending practices.
-- [SinoPac Holdings Q2 2025 Results](https://www.sinopac.com/upload/sinopac/spfcMenu/198dedc57f500000c061.pdf): Record high revenues and income reported for first half 2025.
-- [SinoPac Awards Overview](https://www.sinopac.com/esg/tw/awards): Explore SinoPac's achievements and sustainability awards history.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20220802142137722854.html): Explore Sinopac's corporate governance and sustainability practices.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20200421170446898000000000000312.html): Explore Sinopac's corporate governance structure and policies.
-- [Company Overview and Governance](https://www.sinopac.com/about/20211210153412288343.html): Explore SinoPac's corporate structure, governance, and subsidiaries.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20240325174036300915.html): Explore Sinopac's corporate governance structure and policies.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20240523152104340035.html): Explore Sinopac's corporate governance and sustainability practices.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20230817144142290484.html): Explore SinoPac's corporate governance and management structure.
-- [Corporate Governance Overview](https://www.sinopac.com/investors/20211210153454773946/20211210153455304077.html): Explore Sinopac's corporate governance structure and policies.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20240607170131358591.html): Explore Sinopac's corporate governance and sustainability practices.
-- [SinoPac Holdings Q3 2025 Results](https://www.sinopac.com/upload/sinopac/spfcMenu/19a5285682c000006c36.pdf): Record net income and revenues for SinoPac Holdings in 2025.
-- [Corporate Governance Overview](https://www.sinopac.com/investors/20211210153457585149/20211210153458742624/20250825092806126850.html): Explore SinoPac's corporate governance structure and policies.
-- [Company Governance Overview](https://www.sinopac.com/about/20211210153412366384.html): Explore SinoPac's governance structure and management teams.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20220914155641630870.html): Explore SinoPac's corporate governance and sustainability practices.
-- [Sustainability Initiatives Overview](https://www.sinopac.com/Sustainability/20211210153422444074/20211210153422523300/20211210153422554871.html): Explore Sinopac's commitment to sustainable development practices.
-- [2024 CSR Impact Analysis](https://www.sinopac.com/esg/files/tw/2024/2024CSR-5-10.pdf): Analysis of Sinopac's sustainability impacts and stakeholder engagement.
-- [Privacy Statement Overview](https://www.sinopac.com/esg/en/privacy-statement): Learn about SinoPac's customer data protection policies.
-- [Employee Communication at SinoPac](https://www.sinopac.com/esg/en/employee-communication): Explore SinoPac's commitment to effective employee communication strategies.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20241120162842760606.html): Explore Sinopac's corporate governance structure and policies.
-- [SinoPac Financial Services](https://www.sinopac.com/en): Explore SinoPac's banking, governance, and sustainability initiatives.
-- [Investor Relations Overview](https://www.sinopac.com/investors.html): Explore SinoPac's corporate governance and investor information.
-- [Sustainability Commitments Overview](https://www.sinopac.com/esg/tw): Explore SinoPac's dedication to sustainable development goals.
-- [Corporate Governance Overview](https://www.sinopac.com/governance.html): Explore SinoPac's governance structure, policies, and committees.
-- [2025 AI GO Competition](https://www.sinopac.com/upload/event/2025aigo/index.html): Join the AI competition to predict stock market trends.
-- [Protect Ocean Ecosystems](https://www.sinopac.com/upload/event/2403_life/topic40.html): Join efforts to restore clownfish habitats and marine life.
-- [減塑隨行活動](https://www.sinopac.com/upload/event/2403_life/topic38.html): 響應減塑行動，保護地球與生物健康
-- [Natural Cleaning Solutions](https://www.sinopac.com/upload/event/2403_life/topic49.html): Choose eco-friendly cleaners for a safe, clean home.
-- [Earth Hour Participation](https://www.sinopac.com/upload/event/2403_life/topic37.html): Join Earth Hour to reduce carbon emissions and promote sustainability.
-- [Protect Our Oceans](https://www.sinopac.com/upload/event/2403_life/topic50.html): Learn to enjoy summer while preserving marine ecosystems.
-- [Green Consumption Guide](https://www.sinopac.com/upload/event/2403_life/topic45.html): Promote sustainable living through mindful consumer choices.
-- [Sustainable Living Practices](https://www.sinopac.com/upload/event/2403_life/topic43.html): Learn to reduce plastic waste and promote sustainability.
-- [Protecting Ocean Life](https://www.sinopac.com/upload/event/2403_life/topic41.html): Learn how whales help maintain ocean ecosystem health.
-- [Sustainable Seafood Choices](https://www.sinopac.com/upload/event/2403_life/topic47.html): Choose sustainable seafood to protect our oceans this year.
-- [Clownfish Conservation Awareness](https://www.sinopac.com/upload/event/2403_life/clownfish.html): Learn about clownfish habitats and conservation challenges.
-- [無塑海洋行動](https://www.sinopac.com/upload/event/2403_life/topic42.html): 減少塑膠使用，保護海洋生態健康
-- [珍惜食材與環保](https://www.sinopac.com/upload/event/2403_life/topic44.html): 倡導減少食物浪費，保護地球環境
-- [守護生物多樣性](https://www.sinopac.com/upload/event/2403_life/topic39.html): 保護台灣特有種，維護地球生態平衡
-- [Sustainable Fashion Initiative](https://www.sinopac.com/upload/event/2403_life/topic48.html): Transform old clothes creatively to support environmental sustainability.
-- [Sustainable Seafood Initiative](https://www.sinopac.com/upload/event/2005_life/topic33.html): Promoting eco-friendly seafood choices for marine sustainability.
-- [SinoPac Sustainability Roadmap](https://www.sinopac.com/esg/en/roadmap): Explore SinoPac's commitments to sustainable development and governance.
-- [Sustainability at Sinopac](https://www.sinopac.com/Sustainability/20211210153422663477.html): Explore Sinopac's commitment to sustainable development practices.
-- [Corporate Governance Overview](https://www.sinopac.com/footer/2018122510273284900000000000071.html): Explore Sinopac's corporate governance and management structure.
-- [Stakeholder Feedback Form](https://www.sinopac.com/esg/en/feedback): Provide anonymous feedback for SinoPac's sustainability efforts.
-- [Corporate Governance Overview](https://www.sinopac.com/about/20211210153412366326.html): Explore Sinopac's corporate governance and management structure.
-- [About SinoPac Group](https://www.sinopac.com/en/about.html): Discover SinoPac's corporate identity, management, and subsidiaries.
-- [Sustainability Overview](https://www.sinopac.com/Sustainability/20211210153422851509.html): Explore SinoPac's commitment to sustainable development practices.
-- [Corporate Governance Overview](https://www.sinopac.com/footer/20220615114235810000000000000909.html): Explore Sinopac's corporate governance and management structure.
-- [永豐金控子公司成員](https://www.sinopac.com/footer/2021041410314350900000000000001.html): Explore SinoPac's subsidiaries and corporate governance details.
-- [Company Governance Overview](https://www.sinopac.com/footer/20240117091436915000000000000317.html): Explore SinoPac's corporate governance and management structure.
-- [Corporate Governance Overview](https://www.sinopac.com/about/20211210153412382063.html): Explore SinoPac's corporate governance and management team details.
-- [SinoPac Awards Overview](https://www.sinopac.com/esg/en/awards): Explore SinoPac's achievements in sustainability and recognition.
-- [SinoPac ESG Videos](https://www.sinopac.com/esg/en/video): Explore videos promoting sustainability and cultural equality initiatives.
-- [Sinopac Corporate Governance](https://www.sinopac.com/footer/20220607170846759000000000000718.html): Explore Sinopac's corporate governance and management structure.
-- [Brand Story Overview](https://www.sinopac.com/about/20211210153412351412.html): Explore the brand story and corporate identity of Sinopac.
-- [Corporate Governance Overview](https://www.sinopac.com/footer/2018110216150226800000000000011.html): Explore SinoPac's corporate governance and subsidiary information.
-- [SinoPac ESG Video Hub](https://www.sinopac.com/esg/tw/video): Explore videos promoting sustainable development and community engagement.
-- [Sustainability Sitemap Overview](https://www.sinopac.com/esg/en/sitemap): Explore Sinopac's sustainability governance and initiatives.
-- [Sinopac Company Information](https://www.sinopac.com/footer/list15bf71e999300000c3d784846533951.html): Explore Sinopac's corporate structure, governance, and subsidiaries.
-- [Sustainable Development Roadmap](https://www.sinopac.com/esg/tw/roadmap): Explore Sinopac's commitment to sustainable development initiatives.
-- [Feedback for Sustainable Development](https://www.sinopac.com/esg/tw/feedback): Share your feedback to enhance sustainable development efforts.
-- [Company Governance Overview](https://www.sinopac.com/footer/list167e32fabb300000cfa6dab91c882d1.html): Explore Sinopac's governance structure and subsidiary information.
-- [Sitemap for Sustainable Development](https://www.sinopac.com/esg/tw/sitemap): Explore Sinopac's sustainability governance and initiatives.
-- [SinoPac Sitemap Overview](https://www.sinopac.com/en/sitemap.html): Explore SinoPac's corporate structure, governance, and subsidiaries.
-- [SinoPac ESG News](https://www.sinopac.com/esg/tw/news): Latest updates on SinoPac's sustainability initiatives and awards.
-- [About SinoPac Financial Holdings](https://www.sinopac.com/footer/2017051211102612600000000000081.html): Explore SinoPac's corporate identity, governance, and sustainability efforts.
-- [SinoPac ESG News](https://www.sinopac.com/esg/en/news): Latest updates on SinoPac's sustainability and corporate responsibility efforts.
-- [Sustainability Initiatives Overview](https://www.sinopac.com/en/Sustainability.html): Explore SinoPac's commitment to sustainable business practices.
-- [Investor Information Overview](https://www.sinopac.com/investors/20211210153501700321.html): Comprehensive details on corporate governance and subsidiaries.
-- [SinoPac Turing Plan](https://www.sinopac.com/upload/event/turingplan/index.html): Explore SinoPac's Turing Plan event details and resources.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20230107103529876355.html): Explore Sinopac's corporate governance and management structure.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20221117142510836766.html): Explore Sinopac's governance structure and corporate sustainability initiatives.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20230307141440214908.html): Explore Sinopac's corporate governance structure and policies.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20220729100223340805.html): Explore Sinopac's governance structure and corporate sustainability practices.
-- [Corporate Governance Overview](https://www.sinopac.com/en/footer/20240117091436915000000000000317.html): Explore SinoPac's corporate governance policies and board structure.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20220503184034760442.html): Explore Sinopac's corporate governance and sustainability practices.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20240718144924475960.html): Explore Sinopac's corporate governance and management structure.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20220503195153768975.html): Explore SinoPac's corporate governance and management structure.
-- [Corporate Governance Overview](https://www.sinopac.com/governance/20211210153437929523/20211210153439226064.html): Explore SinoPac's governance structure and board member details.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20240408093411110251.html): Explore Sinopac's corporate governance and subsidiary information.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20220624191257558054.html): Explore SinoPac's corporate governance structure and policies.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20241217143956635280.html): Explore Sinopac's governance structure and corporate sustainability efforts.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20240116150834318491.html): Explore Sinopac's corporate governance and management structure.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20220503183507290949.html): Explore Sinopac's corporate governance and sustainability practices.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20240628145329879836.html): Explore Sinopac's corporate governance and management structure.
-- [Corporate Governance Overview](https://www.sinopac.com/News/20220503183151553480/20221214145611730328.html): Explore Sinopac's corporate governance and management structure.
-- [Sinopac Company Overview](https://www.sinopac.com/News/20220503183151553480/20250120143732624514.html): Explore Sinopac's governance, subsidiaries, and sustainability efforts.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20240807144042573409.html): Overview of Sinopac's corporate governance and management structure.
-- [SinoPac Sustainability Initiatives](https://www.sinopac.com/esg/en): Explore SinoPac's commitment to sustainable development goals.
-- [Join Green Actions](https://www.sinopac.com/upload/event/2403_life/join.html): Participate in daily eco-friendly activities and track progress.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20220503184413124818.html): Explore Sinopac's corporate governance and sustainability initiatives.
-- [Sinopac Company Governance](https://www.sinopac.com/News/20220503183151553480/20250307110610654086.html): Overview of Sinopac's corporate governance and management structure.
+## 核心價值
+- 誠信：堅持誠實守信，建立長期信賴關係。
+- 專業：提供專業的金融服務，滿足客戶需求。
+- 創新：持續推動數位轉型，提升服務效率與品質。
+- 責任：承擔社會責任，促進可持續發展。
+- 團隊：重視團隊合作，培養優秀人才。
+
+## 主要服務
+
+| 服務名稱         | 服務簡介                                                         |
+| ---------------- | ---------------------------------------------------------------- |
+| 財富管理         | 提供個人及企業客戶的資產配置、投資建議與專業理財服務。         |
+| 數位金融服務     | 包括「大戶豐」APP與「智慧收支帳本」，整合客戶資產及提供智能財務管理。|
+| 企業銀行         | 提供企業客戶的信貸、融資及財務顧問服務，支持企業成長與發展。     |
+| 投資銀行         | 提供資本市場的融資、併購與重組顧問服務，協助企業實現戰略目標。   |
+| 資產管理         | 提供專業的資產管理服務，協助客戶實現資本增值。                 |
+
+## 產品特色
+- 數位創新：提供先進的數位金融平台，提升客戶使用體驗。
+- 環保金融：推動綠色金融產品，支持可持續發展項目。
+- 客製化服務：根據客戶需求提供量身定制的金融解決方案。
+- 整合式資產管理：多元化的資產配置選擇，滿足不同客戶的需求。
+
+## 常見問答（FAQ）
+
+**Q：如何開戶？**  
+A：可透過官方網站或行動APP進行線上開戶，並依指示提交所需文件。
+
+**Q：永豐金控有哪些數位金融服務？**  
+A：提供「大戶豐」APP及「智慧收支帳本」，整合多項金融服務，方便客戶管理資產。
+
+**Q：永豐金控的社會責任有哪些具體做法？**  
+A：積極推動ESG政策，包含負責任貸款、環保金融及員工溝通機制等。
+
+**Q：如何查詢投資績效？**  
+A：可在「大戶豐」APP中查看各項投資產品的績效報告。
+
+**Q：永豐金控的ESG承諾是什麼？**  
+A：致力於環境保護、社會責任及企業治理，並設有專門的永續發展委員會。
+
+## 品牌關鍵字
+永豐金控、SinoPac Holdings、財富管理、數位金融、ESG、可持續發展、社會責任
+
+## 頁面索引
+- [企業永續發展策略與實踐](https://www.sinopac.com/en/Sustainability.html): 探索企業在永續發展方面的策略、政策及實踐案例，促進社會責任與環境保護。
+- [永豐金控企業介紹與發展歷程](https://www.sinopac.com/about.html): 了解永豐金控的企業背景、發展歷程及核心價值觀。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20230817144142290484.html): 詳細介紹永豐金控旗下各子公司的組成與功能，幫助了解其業務架構。
+- [負責任貸款管理指導方針與ESG風險評估](https://www.sinopac.com/esg/en/responsible-lending): 介紹如何在貸款過程中融入ESG考量，確保負責任的信貸決策與風險管理。
+- [員工溝通與意見反饋機制介紹](https://www.sinopac.com/esg/en/employee-communication): 了解SinoPac如何透過員工調查與溝通渠道提升工作環境與員工滿意度。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/governance/20211210153437929523/20211210153439226064.html): 詳細介紹永豐金控旗下各子公司的組織架構與功能。
+- [夏日海洋保護行動與責任消費](https://www.sinopac.com/upload/event/2403_life/topic50.html): 探索如何在夏季活動中保護海洋生態，並了解責任消費的重要性。
+- [永豐金控企業永續發展概述](https://www.sinopac.com/Sustainability/20211210153422663477.html): 介紹永豐金控在企業永續發展方面的願景與承諾，強調其對社會與環境的責任。
+- [永豐金控投資者關係與公司治理概覽](https://www.sinopac.com/investors.html): 提供永豐金控的投資者關係資訊及公司治理架構的詳細介紹。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20220729100223340805.html): 了解永豐金控旗下各子公司的組成與功能，助您掌握企業全貌。
+- [永豐金控企業永續發展與治理架構](https://www.sinopac.com/Sustainability.html): 探索永豐金控在企業永續發展及公司治理方面的政策與實踐。
+- [永豐金控子公司成員介紹與概述](https://www.sinopac.com/News/20220503183151553480.html): 了解永豐金控旗下各子公司的組織架構及其業務範疇。
+- [年節圍爐選擇永續海鮮保護海洋](https://www.sinopac.com/upload/event/2403_life/topic47.html): 探討如何透過選擇永續海鮮來減少對海洋生態的影響，讓年年有魚。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/footer/2018122510273284900000000000071.html): 了解永豐金控旗下各子公司的組成與功能，掌握企業架構與運作模式。
+- [國際生物多樣性日活動與綠色行動倡議](https://www.sinopac.com/upload/event/2005_life/topic22.html): 探索國際生物多樣性日的意義及參與永豐生活的綠色行動計劃。
+- [守護台灣特有種生物與生態平衡](https://www.sinopac.com/upload/event/2403_life/topic39.html): 探索如何保護台灣特有種，維護生物多樣性及生態系統的穩定性。
+- [永豐金控子公司成員介紹與治理架構](https://www.sinopac.com/governance/20211210153439585298/20211210153439601400.html): 了解永豐金控旗下各子公司的成員及其治理架構，掌握企業運作情形。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20220503184034760442.html): 了解永豐金控旗下各子公司的組成與業務範疇，掌握企業整體架構。
+- [永豐金控企業概況與子公司介紹](https://www.sinopac.com/footer/2017051211102612600000000000081.html): 了解永豐金控的企業背景及旗下各子公司的運作與服務。
+- [SinoPac 隱私政策與客戶資料保護措施](https://www.sinopac.com/esg/en/privacy-statement): 詳細說明 SinoPac 集團如何收集、處理及保護客戶個人資料的政策與措施。
+- [無塑海洋行動：從生活習慣開始減塑](https://www.sinopac.com/upload/event/2403_life/topic42.html): 探索如何透過日常行動減少塑膠使用，保護海洋生態。
+- [永豐金控企業概況與發展歷程](https://www.sinopac.com): 了解永豐金控的企業背景、發展歷程及核心價值觀，探索其在金融業的定位。
+- [國際無消費日：重新思考購物需求與慾望](https://www.sinopac.com/upload/event/2403_life/index.html): 探討國際無消費日的意義，鼓勵減少不必要的消費，保護海洋環境。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20220503195153768975.html): 詳細介紹永豐金控旗下各子公司的組織架構與業務範疇。
+- [永豐金控三大永續承諾與目標](https://www.sinopac.com/esg/tw): 介紹永豐金控在消弭不平等、氣候變遷與共榮成長的永續發展承諾及相關目標。
+- [永豐生活 百萬綠行動推廣綠色生活](https://www.sinopac.com/upload/event/2403_life/about.html): 探索永豐生活的綠色行動計畫，鼓勵日常生活中的環保實踐與資源珍惜。
+- [可持續發展治理架構與承諾概覽](https://www.sinopac.com/esg/en/sitemap): 探索企業在可持續發展方面的治理架構、承諾與未來路線圖。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20240807144042573409.html): 提供永豐金控旗下各子公司的詳細介紹與組織架構資訊。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20230728181431844710.html): 提供永豐金控旗下各子公司的詳細介紹與組織結構概覽。
+- [SinoPac Holdings 推動淨零轉型的企業合作](https://www.sinopac.com/esg/en/news): 報導SinoPac Holdings如何與企業合作推動可持續發展與淨零轉型。
+- [改變生活習慣以減少塑膠垃圾](https://www.sinopac.com/upload/event/2403_life/topic43.html): 探討如何透過改變日常習慣來減少塑膠垃圾，保護海洋環境。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20240116150834318491.html): 了解永豐金控旗下各子公司的組織架構與業務範疇，提供全面的企業資訊。
+- [小丑魚生存危機與保育行動介紹](https://www.sinopac.com/upload/event/2403_life/clownfish.html): 探索小丑魚面臨的生存挑戰及保育措施，提升對海洋生態的認識。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20240628145329879836.html): 詳細介紹永豐金控旗下各子公司的組成與業務範疇。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20250529191106000394.html): 提供永豐金控旗下各子公司的詳細資訊與組織架構概覽。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/investors/20211210153457585149/20211210153458742624/20250825092806126850.html): 詳細介紹永豐金控旗下各子公司的組織架構與業務範疇，助您了解集團運作。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20240523152104340035.html): 探索永豐金控旗下各子公司的組成與業務範疇，了解其在金融市場的角色。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20191211164331540000000000000105.html): 詳細介紹永豐金控旗下各子公司的組織架構與功能。
+- [SinoPac 可持續發展承諾與行動計劃](https://www.sinopac.com/esg/en): 探索 SinoPac 在減少不平等、氣候變遷應對及促進包容性增長的可持續發展策略與目標。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/footer/2018110216150226800000000000011.html): 了解永豐金控旗下各子公司的成員及其業務範疇。
+- [可持續發展視頻集錦與活動回顧](https://www.sinopac.com/esg/en/video): 探索關於可持續發展的各類視頻，包括年度回顧與社會公益活動。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/governance/20211210153437929523/20211210153439241519.html): 提供永豐金控旗下各子公司的詳細資訊與組織架構介紹。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20241029155220950691.html): 提供永豐金控旗下各子公司的詳細資訊與組織架構概覽。
+- [永續海鮮選擇指南與生態保護](https://www.sinopac.com/upload/event/2005_life/topic33.html): 探索如何選擇對海洋生態友善的海鮮，支持永續利用與生物多樣性保護。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20241120162842760606.html): 了解永豐金控旗下各子公司的組成與功能，深入掌握企業架構。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20230307141440214908.html): 詳細介紹永豐金控旗下各子公司的基本資訊與功能。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20251110102337794127.html): 提供永豐金控旗下各子公司的詳細資訊與組織架構概覽。
+- [珍惜食材與零浪費生活實踐指南](https://www.sinopac.com/upload/event/2403_life/topic44.html): 探索如何從日常餐飲中減少食物浪費，實踐環保生活方式。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/footer/2021041410314350900000000000001.html): 了解永豐金控旗下各子公司的組成與功能，增進對企業架構的認識。
+- [永豐金控企業介紹與發展歷程](https://www.sinopac.com/about/20211210153412288343.html): 了解永豐金控的企業背景、發展歷程及核心價值，探索其在金融業的定位與貢獻。
+- [SinoPac 投資者關係概覽與子公司介紹](https://www.sinopac.com/en/investors.html): 提供關於SinoPac集團的投資者資訊及各子公司的詳細介紹。
+- [永豐銀行影音專區：共創美好生活](https://www.sinopac.com/esg/tw/video): 探索永豐銀行的影音內容，了解如何翻轉金融與推動永續發展。
+- [舊衣物再利用與環保創意實踐](https://www.sinopac.com/upload/event/2403_life/topic48.html): 探索舊衣物的創新再利用方法，減少環境負擔並實踐永續時尚。
+- [北臺風光圖介紹與應用](https://www.sinopac.com/about/20211210153412366384.html): 探索北臺風光圖的特點及其在永豐金控中的應用情境。
+- [關於我們 - 企業介紹與願景](https://www.sinopac.com/en/about.html): 了解公司的背景、使命及未來發展方向，探索企業文化與價值觀。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20220503183507290949.html): 了解永豐金控旗下各子公司的組成與業務範疇，掌握企業整體架構。
+- [企業識別與品牌形象介紹](https://www.sinopac.com/about/20211210153412366326.html): 了解永豐金控的企業識別系統及品牌形象的核心要素。
+- [永豐金控企業介紹與發展歷程](https://www.sinopac.com/sitemap.html): 了解永豐金控的企業背景、發展歷程及核心價值觀，深入探索公司的成長故事。
+- [2025 永豐 AI GO 股神對決競賽報名與規則](https://www.sinopac.com/upload/event/2025aigo/index.html): 了解2025永豐AI GO競賽的報名規範、參賽辦法及獎項詳情，挑戰AI技術預測股市！
+- [永豐金控子公司成員介紹](https://www.sinopac.com/footer/20220615114235810000000000000909.html): 詳細介紹永豐金控旗下各子公司的成員與業務範疇。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20221117142510836766.html): 詳細介紹永豐金控旗下各子公司的組成與功能，提供全面的企業架構了解。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20250307110610654086.html): 了解永豐金控旗下各子公司的組成與功能，助您全面掌握集團架構。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20230306094506582920.html): 了解永豐金控旗下各子公司的組織架構及其主要業務範疇。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/footer/20220607170846759000000000000718.html): 了解永豐金控旗下各子公司的組成與業務範疇。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20241217143956635280.html): 了解永豐金控旗下各子公司的組成與業務範疇。
+- [永豐金控經營團隊介紹與成員背景](https://www.sinopac.com/about/20211210153412382063.html): 深入了解永豐金控的經營團隊及其成員的專業背景與經驗。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20240718144924475960.html): 了解永豐金控旗下各子公司的組成與運作情況。
+- [SinoPac 企業子公司介紹與業務範圍](https://www.sinopac.com/en/footer/20240117091436915000000000000317.html): 詳細介紹SinoPac集團旗下各子公司的業務及功能，幫助了解其整體運作。
+- [永豐金控利害關係人意見回饋問卷](https://www.sinopac.com/esg/tw/feedback): 填寫問卷以提供對永豐金控永續發展的意見與建議，無須具名。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/investors/20211210153501700321.html): 了解永豐金控旗下各子公司的組成與功能，增進對集團的認識。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/honor/20210729122354352000000000000054.html): 詳細介紹永豐金控旗下各子公司的組成與功能，幫助了解其業務架構。
+- [Earth Hour 地球關燈一小時活動介紹](https://www.sinopac.com/upload/event/2005_life/topic20.html): 了解如何參與地球關燈一小時，並共同響應節能減碳的行動。
+- [2025 SinoPac 獲獎紀錄與可持續發展成就](https://www.sinopac.com/esg/en/awards): 展示SinoPac在2025年獲得的各項獎項與可持續發展的努力與成就。
+- [永豐金控2025年度獲獎紀錄與榮耀](https://www.sinopac.com/esg/tw/awards): 展示永豐金控在2025年度獲得的各項榮譽與獎項，強調其在永續發展方面的成就。
+- [永豐金控企業永續發展概述](https://www.sinopac.com/Sustainability/20211210153422444074/20211210153422523300/20211210153422554871.html): 了解永豐金控在企業永續發展方面的努力與成就，及其未來願景。
+- [選擇天然清潔劑守護海洋與健康](https://www.sinopac.com/upload/event/2403_life/topic49.html): 介紹天然清潔劑的優勢，幫助家庭清潔同時保護海洋環境。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/investors/20220914111403899612.html): 詳細介紹永豐金控旗下各子公司的組成與功能，便於了解集團架構。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20220503183507290949.html): 了解永豐金控旗下各子公司的組成與業務範疇，掌握企業整體架構。
+- [永豐金控企業永續發展概述](https://www.sinopac.com/Sustainability/20211210153422851509.html): 介紹永豐金控在企業永續發展方面的願景與承諾，強調其對社會責任的重視。
+- [日常綠行動參與清單與建議](https://www.sinopac.com/upload/event/2403_life/join.html): 提供日常生活中可實踐的綠色行動建議，鼓勵環保行為。
+- [永豐金控永續發展藍圖與承諾](https://www.sinopac.com/esg/tw/roadmap): 介紹永豐金控的永續發展藍圖及其三大永續承諾，強調企業社會責任與環境治理。
+- [小丑魚保育行動與海洋生態復育](https://www.sinopac.com/upload/event/2403_life/topic40.html): 探索小丑魚的生存挑戰及如何參與海洋保護行動，守護美麗海洋生態。
+- [永豐金控公司治理架構與運作概述](https://www.sinopac.com/governance.html): 介紹永豐金控的公司治理政策、架構及運作情形，確保透明與負責任的管理。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/footer/list15bf71e999300000c3d784846533951.html): 了解永豐金控旗下各子公司的組成與業務範疇。
+- [永豐金控最新永續發展新聞與獲獎資訊](https://www.sinopac.com/esg/tw/news): 提供永豐金控在永續發展領域的最新消息及獲獎成就，展示其對社會責任的承諾。
+- [鯨魚保育與海洋生態健康的重要性](https://www.sinopac.com/upload/event/2403_life/topic41.html): 探討鯨魚在海洋生態系統中的角色及保育行動對環境的影響。
+- [SinoPac 可持續發展路線圖與承諾](https://www.sinopac.com/esg/en/roadmap): 介紹SinoPac Holdings在可持續發展方面的願景、行動計劃及承諾，促進社會責任與環境保護。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/footer/20240117091436915000000000000317.html): 詳細介紹永豐金控旗下各子公司的組成與功能，助您了解企業架構。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/stakeholders/20170210145654630000000000000426.html): 了解永豐金控旗下各子公司的組成與功能，助您全面掌握企業架構。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20220914155641630870.html): 詳細介紹永豐金控旗下各子公司的組成與功能，幫助了解集團架構。
+- [SinoPac 持股企業可持續發展意見回饋問卷](https://www.sinopac.com/esg/en/feedback): 填寫問卷以幫助 SinoPac 改進其可持續發展策略，並表達您的意見與關注。
+- [關於我們 - SinoPac 金融集團介紹](https://www.sinopac.com/en): 了解 SinoPac 金融集團的歷史、願景及核心價值，探索我們的企業文化與使命。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20221214145611730328.html): 了解永豐金控旗下各子公司的組成與功能，掌握企業架構與運作情況。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20230726171635380873.html): 詳細介紹永豐金控旗下各子公司的基本資訊與功能。
+- [永豐金控品牌故事與發展歷程](https://www.sinopac.com/about/20211210153412351412.html): 探索永豐金控的品牌故事及其在金融業的成長與發展背景。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20200421170446898000000000000312.html): 提供永豐金控旗下各子公司的詳細介紹與組織結構概覽。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20220802142137722854.html): 提供永豐金控旗下各子公司的詳細介紹與成員資訊，便於了解其業務架構。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20250327162422925870.html): 提供永豐金控旗下各子公司的詳細介紹與組織架構概覽。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/footer/20220607170846759000000000000718.html): 了解永豐金控旗下各子公司的組成與業務範疇。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20241217143956635280.html): 了解永豐金控旗下各子公司的組成與業務範疇。
+- [永豐金控經營團隊介紹與成員背景](https://www.sinopac.com/about/20211210153412382063.html): 深入了解永豐金控的經營團隊及其成員的專業背景與經驗。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20240718144924475960.html): 了解永豐金控旗下各子公司的組成與運作情況。
+- [SinoPac 企業子公司介紹與業務範圍](https://www.sinopac.com/en/footer/20240117091436915000000000000317.html): 詳細介紹SinoPac集團旗下各子公司的業務及功能，幫助了解其整體運作。
+- [永豐金控利害關係人意見回饋問卷](https://www.sinopac.com/esg/tw/feedback): 填寫問卷以提供對永豐金控永續發展的意見與建議，無須具名。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/investors/20211210153501700321.html): 了解永豐金控旗下各子公司的組成與功能，增進對集團的認識。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/honor/20210729122354352000000000000054.html): 詳細介紹永豐金控旗下各子公司的組成與功能，幫助了解其業務架構。
+- [Earth Hour 地球關燈一小時活動介紹](https://www.sinopac.com/upload/event/2005_life/topic20.html): 了解如何參與地球關燈一小時，並共同響應節能減碳的行動。
+- [2025 SinoPac 獲獎紀錄與可持續發展成就](https://www.sinopac.com/esg/en/awards): 展示SinoPac在2025年獲得的各項獎項與可持續發展的努力與成就。
+- [永豐金控2025年度獲獎紀錄與榮耀](https://www.sinopac.com/esg/tw/awards): 展示永豐金控在2025年度獲得的各項榮譽與獎項，強調其在永續發展方面的成就。
+- [永豐金控企業永續發展概述](https://www.sinopac.com/Sustainability/20211210153422444074/20211210153422523300/20211210153422554871.html): 了解永豐金控在企業永續發展方面的努力與成就，及其未來願景。
+- [選擇天然清潔劑守護海洋與健康](https://www.sinopac.com/upload/event/2403_life/topic49.html): 介紹天然清潔劑的優勢，幫助家庭清潔同時保護海洋環境。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/investors/20220914111403899612.html): 詳細介紹永豐金控旗下各子公司的組成與功能，便於了解集團架構。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20220503183507290949.html): 了解永豐金控旗下各子公司的組成與業務範疇，掌握企業整體架構。
+- [永豐金控企業永續發展概述](https://www.sinopac.com/Sustainability/20211210153422851509.html): 介紹永豐金控在企業永續發展方面的願景與承諾，強調其對社會責任的重視。
+- [日常綠行動參與清單與建議](https://www.sinopac.com/upload/event/2403_life/join.html): 提供日常生活中可實踐的綠色行動建議，鼓勵環保行為。
+- [永豐金控永續發展藍圖與承諾](https://www.sinopac.com/esg/tw/roadmap): 介紹永豐金控的永續發展藍圖及其三大永續承諾，強調企業社會責任與環境治理。
+- [小丑魚保育行動與海洋生態復育](https://www.sinopac.com/upload/event/2403_life/topic40.html): 探索小丑魚的生存挑戰及如何參與海洋保護行動，守護美麗海洋生態。
+- [永豐金控公司治理架構與運作概述](https://www.sinopac.com/governance.html): 介紹永豐金控的公司治理政策、架構及運作情形，確保透明與負責任的管理。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/footer/list15bf71e999300000c3d784846533951.html): 了解永豐金控旗下各子公司的組成與業務範疇。
+- [永豐金控最新永續發展新聞與獲獎資訊](https://www.sinopac.com/esg/tw/news): 提供永豐金控在永續發展領域的最新消息及獲獎成就，展示其對社會責任的承諾。
+- [鯨魚保育與海洋生態健康的重要性](https://www.sinopac.com/upload/event/2403_life/topic41.html): 探討鯨魚在海洋生態系統中的角色及保育行動對環境的影響。
+- [SinoPac 可持續發展路線圖與承諾](https://www.sinopac.com/esg/en/roadmap): 介紹SinoPac Holdings在可持續發展方面的願景、行動計劃及承諾，促進社會責任與環境保護。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/footer/20240117091436915000000000000317.html): 詳細介紹永豐金控旗下各子公司的組成與功能，助您了解企業架構。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/stakeholders/20170210145654630000000000000426.html): 了解永豐金控旗下各子公司的組成與功能，助您全面掌握企業架構。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20220914155641630870.html): 詳細介紹永豐金控旗下各子公司的組成與功能，幫助了解集團架構。
+- [SinoPac 持股企業可持續發展意見回饋問卷](https://www.sinopac.com/esg/en/feedback): 填寫問卷以幫助 SinoPac 改進其可持續發展策略，並表達您的意見與關注。
+- [關於我們 - SinoPac 金融集團介紹](https://www.sinopac.com/en): 了解 SinoPac 金融集團的歷史、願景及核心價值，探索我們的企業文化與使命。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20221214145611730328.html): 了解永豐金控旗下各子公司的組成與功能，掌握企業架構與運作情況。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20230726171635380873.html): 詳細介紹永豐金控旗下各子公司的基本資訊與功能。
+- [永豐金控品牌故事與發展歷程](https://www.sinopac.com/about/20211210153412351412.html): 探索永豐金控的品牌故事及其在金融業的成長與發展背景。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20200421170446898000000000000312.html): 提供永豐金控旗下各子公司的詳細介紹與組織結構概覽。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20220802142137722854.html): 提供永豐金控旗下各子公司的詳細介紹與成員資訊，便於了解其業務架構。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20250327162422925870.html): 提供永豐金控旗下各子公司的詳細介紹與組織架構概覽。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/footer/20220607170846759000000000000718.html): 了解永豐金控旗下各子公司的組成與業務範疇。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20241217143956635280.html): 了解永豐金控旗下各子公司的組成與業務範疇。
+- [永豐金控經營團隊介紹與成員背景](https://www.sinopac.com/about/20211210153412382063.html): 深入了解永豐金控的經營團隊及其成員的專業背景與經驗。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20240718144924475960.html): 了解永豐金控旗下各子公司的組成與運作情況。
+- [SinoPac 企業子公司介紹與業務範圍](https://www.sinopac.com/en/footer/20240117091436915000000000000317.html): 詳細介紹SinoPac集團旗下各子公司的業務及功能，幫助了解其整體運作。
+- [永豐金控利害關係人意見回饋問卷](https://www.sinopac.com/esg/tw/feedback): 填寫問卷以提供對永豐金控永續發展的意見與建議，無須具名。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/investors/20211210153501700321.html): 了解永豐金控旗下各子公司的組成與功能，增進對集團的認識。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/honor/20210729122354352000000000000054.html): 詳細介紹永豐金控旗下各子公司的組成與功能，幫助了解其業務架構。
+- [Earth Hour 地球關燈一小時活動介紹](https://www.sinopac.com/upload/event/2005_life/topic20.html): 了解如何參與地球關燈一小時，並共同響應節能減碳的行動。
+- [2025 SinoPac 獲獎紀錄與可持續發展成就](https://www.sinopac.com/esg/en/awards): 展示SinoPac在2025年獲得的各項獎項與可持續發展的努力與成就。
+- [永豐金控2025年度獲獎紀錄與榮耀](https://www.sinopac.com/esg/tw/awards): 展示永豐金控在2025年度獲得的各項榮譽與獎項，強調其在永續發展方面的成就。
+- [永豐金控企業永續發展概述](https://www.sinopac.com/Sustainability/20211210153422444074/20211210153422523300/20211210153422554871.html): 了解永豐金控在企業永續發展方面的努力與成就，及其未來願景。
+- [選擇天然清潔劑守護海洋與健康](https://www.sinopac.com/upload/event/2403_life/topic49.html): 介紹天然清潔劑的優勢，幫助家庭清潔同時保護海洋環境。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/investors/20220914111403899612.html): 詳細介紹永豐金控旗下各子公司的組成與功能，便於了解集團架構。
+- [永豐金控子公司成員介紹與概覽](https://www.sinopac.com/News/20220503183151553480/20220503183507290949.html): 了解永豐金控旗下各子公司的組成與業務範疇，掌握企業整體架構。
+- [永豐金控企業永續發展概述](https://www.sinopac.com/Sustainability/20211210153422851509.html): 介紹永豐金控在企業永續發展方面的願景與承諾，強調其對社會責任的重視。
+- [日常綠行動參與清單與建議](https://www.sinopac.com/upload/event/2403_life/join.html): 提供日常生活中可實踐的綠色行動建議，鼓勵環保行為。
+- [永豐金控永續發展藍圖與承諾](https://www.sinopac.com/esg/tw/roadmap): 介紹永豐金控的永續發展藍圖及其三大永續承諾，強調企業社會責任與環境治理。
+- [小丑魚保育行動與海洋生態復育](https://www.sinopac.com/upload/event/2403_life/topic40.html): 探索小丑魚的生存挑戰及如何參與海洋保護行動，守護美麗海洋生態。
+- [永豐金控公司治理架構與運作概述](https://www.sinopac.com/governance.html): 介紹永豐金控的公司治理政策、架構及運作情形，確保透明與負責任的管理。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/footer/list15bf71e999300000c3d784846533951.html): 了解永豐金控旗下各子公司的組成與業務範疇。
+- [永豐金控最新永續發展新聞與獲獎資訊](https://www.sinopac.com/esg/tw/news): 提供永豐金控在永續發展領域的最新消息及獲獎成就，展示其對社會責任的承諾。
+- [鯨魚保育與海洋生態健康的重要性](https://www.sinopac.com/upload/event/2403_life/topic41.html): 探討鯨魚在海洋生態系統中的角色及保育行動對環境的影響。
+- [SinoPac 可持續發展路線圖與承諾](https://www.sinopac.com/esg/en/roadmap): 介紹SinoPac Holdings在可持續發展方面的願景、行動計劃及承諾，促進社會責任與環境保護。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/footer/20240117091436915000000000000317.html): 詳細介紹永豐金控旗下各子公司的組成與功能，助您了解企業架構。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/stakeholders/20170210145654630000000000000426.html): 了解永豐金控旗下各子公司的組成與功能，助您全面掌握企業架構。
+- [永豐金控子公司成員介紹](https://www.sinopac.com/News/20220503183151553480/20220914155641630870.html): 詳細介紹永豐金控旗下各子公司的組成與功能，幫助了解集團架構。
