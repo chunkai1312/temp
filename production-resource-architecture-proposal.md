@@ -1,64 +1,29 @@
 # InfoGather 正式環境資源與系統架構提案
 
 日期：2026-06-02  
-版本：v1.9  
+版本：v1.13  
 目的：依據目前資料量、Docker worker 併發、Copilot CLI server 依賴與實機資源觀測，提出正式環境的地端與雲端系統架構、硬體規格、擴充策略與導入路線。
 
 ## 簡報大綱
 
-1. 執行摘要與正式環境建置目標
-2. 專案技術堆疊與系統邊界概覽
-3. 現行環境盤點與容量基準
-4. 平台資料規模現況
-5. 資料成長趨勢與負載來源分析
-6. 背景處理流程與 Worker 併發模型
-7. Copilot CLI Server 與 LLM Runtime 架構依賴
-8. 正式環境資源估算原則
-9. 地端正式環境目標架構
-10. 地端硬體資源配置建議
-11. 地端部署級距與高可用策略
-12. 雲端正式環境目標架構
-13. 雲端服務選型與資源配置建議
-14. 安全控管、備份與災難復原策略
-15. 可觀測性、告警與擴充機制
-16. 成本最佳化與工程治理項目
-17. 導入時程與決策建議
+1. 專案技術堆疊與系統邊界概覽
+2. 現行環境盤點與容量基準
+3. 平台資料規模現況
+4. 資料成長趨勢與負載來源分析
+5. 背景處理流程與 Worker 併發模型
+6. Copilot CLI Server 與 LLM Runtime 架構依賴
+7. 正式環境資源估算原則
+8. 地端正式環境目標架構
+9. 地端硬體資源配置建議
+10. 雲端正式環境目標架構
+11. 雲端服務選型與資源配置建議
+12. 安全控管、備份與災難復原策略
+13. 可觀測性、告警與擴充機制
+14. 正式環境建置結論與導入建議
 
 ---
 
-## 1. 執行摘要與正式環境建置目標
-
-### 投影片重點
-
-- InfoGather 目前已具備正式化條件，但資源提案必須以 10 個 worker container 為基準，而不是單一 worker。
-- 現有資料量不大：MongoDB data + index 約 1.36 GiB；Redis/BullMQ used memory 約 34.35 MiB，retention 已納入容量控管。
-- 目前主機為 8 vCPU / 15 GiB RAM，可支撐開發或低流量環境；正式環境建議至少提高到 16 vCPU / 64 GiB，若 Copilot CLI、MongoDB、Redis 與 10 workers 全部同機，保守規格建議 24 vCPU / 64 GiB。
-- Copilot CLI server 是 API 與 worker 共用的外部 LLM runtime endpoint，目前閒置約 294 MiB RAM；正式環境需納入獨立服務與 HA 規劃。
-- BullMQ completed/failed job retention 已納入容量控管，正式環境需持續監控 Redis memory、queue depth 與 failed rate。
-
-```mermaid
-flowchart LR
-  A["目前狀態"] --> B["10 worker container"]
-  A --> C["MongoDB 1.36 GiB"]
-  A --> D["Redis/BullMQ 容量基準\n34.35 MiB used memory"]
-  A --> J["Copilot CLI server\n約 294 MiB idle"]
-  B --> E["正式 sizing 以背景併發為核心"]
-  C --> F["資料庫可先中小型部署"]
-  D --> G["Redis 容量納入持續監控"]
-  J --> K["納入 LLM orchestration 容量與 HA"]
-  E --> H["地端 16 vCPU / 64 GiB 起步\n同機保守 24 vCPU / 64 GiB"]
-  E --> I["雲端 10 worker replicas + managed DB/Redis + CLI endpoint"]
-```
-
-### 講稿內容
-
-本頁先說明本次評估的核心結論。InfoGather 目前已具備進入正式環境規劃的基礎，但資源估算不能只用目前主機規格線性放大，而必須把實際執行模式納入考量。現在系統已經以 10 個 worker container 處理背景工作，同時依賴 MongoDB、Redis/BullMQ 與 Copilot CLI server，因此正式環境容量應以背景併發、LLM runtime、Redis 記憶體與 MongoDB 索引共同評估。
-
-目前 MongoDB 資料量仍屬中小型；Redis/BullMQ 目前 used memory 約 34.35 MiB，正式環境 sizing 重點是持續監控 Redis memory、queue depth、failed rate 與 retention 設定。結論上，地端正式環境至少建議 16 vCPU / 64 GiB；若 Copilot CLI、MongoDB、Redis 與 10 個 workers 全部同機，保守規格應抓到 24 vCPU / 64 GiB。若採雲端方案，則建議使用 managed MongoDB、managed Redis、containerized workers，以及獨立的 Copilot CLI private endpoint。
-
----
-
-## 2. 專案技術堆疊與系統邊界概覽
+## 1. 專案技術堆疊與系統邊界概覽
 
 ### 投影片重點
 
@@ -118,7 +83,7 @@ LLM 相關流程不是直接嵌在單一 API process 裡，而是透過 Copilot 
 
 ---
 
-## 3. 現行環境盤點與容量基準
+## 2. 現行環境盤點與容量基準
 
 ### 投影片重點
 
@@ -162,7 +127,7 @@ flowchart TB
 
 ---
 
-## 4. 平台資料規模現況
+## 3. 平台資料規模現況
 
 ### 投影片重點
 
@@ -198,7 +163,7 @@ pie showData
 
 ---
 
-## 5. 資料成長趨勢與負載來源分析
+## 4. 資料成長趨勢與負載來源分析
 
 ### 投影片重點
 
@@ -235,7 +200,7 @@ flowchart LR
 
 ---
 
-## 6. 背景處理流程與 Worker 併發模型
+## 5. 背景處理流程與 Worker 併發模型
 
 ### 投影片重點
 
@@ -281,7 +246,7 @@ sequenceDiagram
 
 ---
 
-## 7. Copilot CLI Server 與 LLM Runtime 架構依賴
+## 6. Copilot CLI Server 與 LLM Runtime 架構依賴
 
 ### 投影片重點
 
@@ -310,7 +275,7 @@ flowchart LR
 
 ---
 
-## 8. 正式環境資源估算原則
+## 7. 正式環境資源估算原則
 
 ### 投影片重點
 
@@ -352,7 +317,7 @@ flowchart LR
 
 ---
 
-## 9. 地端正式環境目標架構
+## 8. 地端正式環境目標架構
 
 ### 投影片重點
 
@@ -414,7 +379,7 @@ flowchart TB
 
 ---
 
-## 10. 地端硬體資源配置建議
+## 9. 地端硬體資源配置建議
 
 ### 投影片重點
 
@@ -468,37 +433,7 @@ flowchart LR
 
 ---
 
-## 11. 地端部署級距與高可用策略
-
-### 投影片重點
-
-| 級距 | 適用情境 | 優點 | 風險 |
-|---|---|---|---|
-| 單機增強版 | 內部正式、低成本 | 建置快、成本低 | 主機故障即中斷 |
-| 雙層拆分版 | API/worker/Copilot CLI 與 DB/Redis 分離 | 降低資源互搶 | DB/Redis 與 CLI endpoint 仍需備援 |
-| HA 版 | 對外正式營運 | 可維護、可擴充 | 成本與維運複雜度較高 |
-
-```mermaid
-flowchart TB
-  T1["Level 1\n單機增強版\n16 vCPU / 64 GiB"] --> T2["Level 2\n應用層與資料層拆分"]
-  T2 --> T3["Level 3\nHA 正式版"]
-
-  T1 --> L1A["RPO 24h\nRTO 數小時"]
-  T2 --> L2A["資料層與 CLI runtime 可獨立擴充"]
-  T3 --> L3A["Mongo RS + Redis HA + App replicas"]
-
-  L3A --> OPS["可滾動部署\n可節點維護\n可承受單節點故障"]
-```
-
-### 講稿內容
-
-這一頁將地端部署分成三個級距。Level 1 是單機增強版，適合內部正式或成本優先情境，優點是建置快、成本低，但缺點是主機故障就會造成服務中斷。Level 2 將 API、worker、Copilot CLI 與資料層拆分，可以降低資源互搶，也讓資料層與 LLM runtime endpoint 可以獨立擴充。
-
-若系統已經承載對外服務、跨部門關鍵流程，或需要明確 SLA，建議目標應放在 Level 3。Level 3 包含 MongoDB replica set、Redis HA、App/Worker replicas、Copilot CLI endpoint 備援與 Load Balancer。這個級距成本較高，但能支援滾動部署、節點維護與單節點故障承受能力，是較完整的正式營運架構。
-
----
-
-## 12. 雲端正式環境目標架構
+## 10. 雲端正式環境目標架構
 
 ### 投影片重點
 
@@ -552,7 +487,7 @@ flowchart TB
 
 ---
 
-## 13. 雲端服務選型與資源配置建議
+## 11. 雲端服務選型與資源配置建議
 
 ### 投影片重點
 
@@ -601,7 +536,7 @@ flowchart LR
 
 ---
 
-## 14. 安全控管、備份與災難復原策略
+## 12. 安全控管、備份與災難復原策略
 
 ### 投影片重點
 
@@ -641,7 +576,7 @@ flowchart TB
 
 ---
 
-## 15. 可觀測性、告警與擴充機制
+## 13. 可觀測性、告警與擴充機制
 
 ### 投影片重點
 
@@ -678,63 +613,35 @@ flowchart LR
 
 ---
 
-## 16. 成本最佳化與工程治理項目
+## 14. 正式環境建置結論與導入建議
 
 ### 投影片重點
 
-優先改善項目：
+本頁收斂前述評估，提出正式環境建置結論、建議方案與分階段導入路線。
 
-| 優先順序 | 項目 | 預期效果 |
-|---:|---|---|
-| P0 | 維持 feed/article/assistant jobs 的 `removeOnComplete` / `removeOnFail` | 控制 Redis RAM 與雲端 Redis 成本 |
-| P0 | 定期檢查 BullMQ retention 與 queue backlog | 維持 Redis used memory 在可控範圍，避免歷史 job 再次累積 |
-| P1 | worker job payload 改存 ID，處理時再查 DB | 降低 Redis payload size |
-| P1 | 設定 worker concurrency 與 LLM/API rate limit | 避免尖峰時外部 API 429 |
-| P1 | 為 Copilot CLI 加健康檢查、私有 LB 與 session latency dashboard | 降低 LLM runtime 單點故障與瓶頸風險 |
-| P1 | 加上 queue depth dashboard | 讓擴充決策可量化 |
-| P2 | 檢視 articles / assistantarticles indexes | 控制 MongoDB index 成長 |
-| P2 | 設定資料保留策略或冷儲存 | 控制長期 storage 成本 |
+**建置結論**
 
-```mermaid
-flowchart TB
-  NOW["Redis/BullMQ 容量基準\n34.35 MiB used memory"] --> P0A["P0 maintain retention limits"]
-  NOW --> P0B["P0 retention / backlog check"]
-  P0A --> LOWER["Redis 8 GiB 可穩定起步"]
-  P0B --> LOWER
-  LOWER --> P1A["P1 payload slimming"]
-  P1A --> COST["雲端 Redis 成本下降"]
-  P1A --> STABILITY["Queue latency 更穩"]
-  P1B["P1 LLM throttle"] --> STABILITY
-  P1C["P1 Copilot CLI HA / dashboard"] --> STABILITY
-  P2["P2 index and retention review"] --> LONGTERM["長期資料成本可控"]
-```
+- InfoGather 已具備正式環境規劃基礎，但不可用現行 8 vCPU / 15 GiB 單機直接視為正式規格。
+- 正式 sizing 應以 10 個 worker container、MongoDB working set、Redis/BullMQ queue 與 Copilot CLI runtime 共同估算。
+- Redis/BullMQ retention 已納入容量控管，後續重點是監控、告警與容量警戒。
 
-### 講稿內容
+**建議方案**
 
-這一頁列出正式環境前最值得優先處理的工程治理項目。P0 的重點是維持 BullMQ retention 設定、定期檢查 queue backlog 與 failed jobs，並避免部署或環境變數變更讓 completed / failed jobs 再次無限制累積。在目前容量基準下，8 GiB managed Redis 通常可支撐目前資料量與 10 worker 起步。
-
-P1 則包含 worker job payload 瘦身、worker concurrency 與 LLM/API rate limit、Copilot CLI healthcheck / private LB / session latency dashboard，以及 queue depth dashboard。這些項目可以降低尖峰時的 API 429、Redis payload size 與 LLM runtime 單點故障風險。P2 則是中長期治理，包括 articles / assistantarticles index review，以及資料保留或冷儲存策略，確保資料成長後仍能控制 storage 與 index 成本。
-
----
-
-## 17. 導入時程與決策建議
-
-### 投影片重點
-
-建議採取分階段導入，先降風險，再搬正式環境。
+- 地端最低起步：16 vCPU / 64 GiB RAM / 1 TB NVMe。
+- 地端全同機保守：24 vCPU / 64 GiB RAM，適用 app、workers、MongoDB、Redis 與 Copilot CLI 全部同機。
+- 雲端建議：containerized app/worker/scheduler + managed MongoDB + managed Redis + Copilot CLI private endpoint。
 
 ```mermaid
 flowchart LR
-  P0["第 0 階段\n確認 SLA 與部署目標"] --> P1["第 1 階段\n容量基準與 retention 確認"]
-  P1 --> P2["第 2 階段\n建置 staging-like production\n含 Copilot CLI endpoint"]
-  P2 --> P3["第 3 階段\n壓測 ingestion + assistant evaluation"]
-  P3 --> P4["第 4 階段\n正式切換"]
-  P4 --> P5["第 5 階段\n監控調校與擴充"]
-
-  P1 --> D1["Redis 以 8 GiB 起步\n依 backlog 擴至 16 GiB"]
-  P2 --> D0["驗證 Copilot CLI HA / affinity"]
-  P3 --> D2["決定 worker 10 是否需要 max 20"]
-  P5 --> D3["依資料成長升 Atlas M30 或地端 DB RAM"]
+  DECIDE["確認 SLA / 成本\n維運能力"] --> PATH["選擇部署路徑"]
+  PATH --> ONPREM["地端\n16 vCPU / 64 GiB 起步\nHA 為正式目標"]
+  PATH --> CLOUD["雲端\nmanaged DB/Redis\ncontainer workers\nCLI private endpoint"]
+  ONPREM --> P1["容量基準與\nretention 確認"]
+  CLOUD --> P1
+  P1 --> P2["建置 staging-like production\n含 Copilot CLI endpoint"]
+  P2 --> P3["壓測 ingestion\n+ assistant evaluation"]
+  P3 --> P4["正式切換"]
+  P4 --> P5["監控調校\n與容量擴充"]
 ```
 
 ### 建議決策
@@ -749,9 +656,11 @@ flowchart LR
 
 ### 講稿內容
 
-最後這一頁是建議的導入路線。第 0 階段先確認正式環境的 SLA、RPO/RTO、地端或雲端偏好，以及是否接受單點故障。第 1 階段確認容量基準、BullMQ retention、Redis queue depth 與 failed rate，確保正式環境起始規格建立在目前實測狀態上。
+最後這一頁收斂前面所有評估。InfoGather 已具備正式環境規劃基礎，但正式規格不能直接沿用現行 8 vCPU / 15 GiB 單機環境，因為目前已經有 10 個 worker container 同時處理背景工作，並且共同依賴 MongoDB、Redis/BullMQ 與 Copilot CLI server。
 
-第 2 階段建立 staging-like production，這個環境必須包含 Copilot CLI endpoint，而不是只測 app 與 worker。第 3 階段進行 ingestion 與 assistant evaluation 壓測，確認 10 worker 是否足夠、是否需要 max 20，以及 Copilot CLI HA / affinity 是否穩定。第 4 階段再進行正式切換，第 5 階段依監控資料調整 worker、Redis、MongoDB 與 Copilot CLI 規格。整體建議是：雲端優先採 managed MongoDB、managed Redis、container app/worker/scheduler 與 Copilot CLI private endpoint；地端若要正式 SLA，則以 App/Worker 節點、Copilot CLI、MongoDB replica set 與 Redis HA 的拆分架構為目標。
+建議規格分成三個方向來看。若採地端成本優先方案，最低起步建議為 16 vCPU / 64 GiB RAM / 1 TB NVMe；若 app、workers、MongoDB、Redis 與 Copilot CLI 全部同機，則保守規格建議提高到 24 vCPU / 64 GiB。若採雲端方案，建議以 containerized app、worker、scheduler 搭配 managed MongoDB、managed Redis，以及獨立的 Copilot CLI private endpoint。若要求正式 SLA，則建議優先採雲端 managed services 或地端 HA 架構。
+
+導入順序上，第一步先確認 SLA、RPO/RTO、成本上限、地端或雲端偏好，以及是否接受單點故障。接著確認容量基準、BullMQ retention、Redis queue depth 與 failed rate，再建立 staging-like production，且這個環境必須包含 Copilot CLI endpoint。壓測階段要驗證 ingestion、assistant evaluation、10 worker 是否足夠、是否需要 max 20，以及 Copilot CLI HA / affinity 是否穩定。正式切換後，再依監控資料調整 worker、Redis、MongoDB 與 Copilot CLI 規格。
 
 ---
 
