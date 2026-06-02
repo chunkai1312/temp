@@ -1,7 +1,7 @@
 # InfoGather 正式環境資源與系統架構提案
 
 日期：2026-06-02  
-版本：v1.6  
+版本：v1.9  
 目的：依據目前資料量、Docker worker 併發、Copilot CLI server 依賴與實機資源觀測，提出正式環境的地端與雲端系統架構、硬體規格、擴充策略與導入路線。
 
 ## 簡報大綱
@@ -66,8 +66,8 @@ flowchart LR
 
 | 層級 | 技術 / 元件 | 正式環境定位 |
 |---|---|---|
-| Frontend | Angular 21 SPA | 使用者介面與前端路由，靜態資產可由 Nginx、CDN 或 static hosting 提供 |
-| Backend | NestJS 11 API | REST API、SSE、工作區權限、feeds、articles、assistants、briefs 與 agent runtime |
+| Frontend | Angular SPA | 使用者介面與前端路由，靜態資產可由 Nginx、CDN 或 static hosting 提供 |
+| Backend | Node.js / NestJS API | REST API、SSE、工作區權限、feeds、articles、assistants、briefs 與 agent runtime |
 | Monorepo | Nx + TypeScript | 前後端一致建置、測試與部署管理 |
 | Database | MongoDB + Mongoose | 儲存文章、助手評估、工作區、通知、briefs 與使用者狀態 |
 | Queue | Redis + BullMQ | 承載 feed、article、assistant、brief、announcement 等背景工作 |
@@ -77,8 +77,8 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-  USERS["使用者 / 管理者"] --> WEB["Angular 21 SPA\nWeb frontend"]
-  WEB --> API["NestJS 11 API\nREST / SSE / workspace auth"]
+  USERS["Users / Admins"] --> WEB["Angular SPA\nWeb frontend"]
+  WEB --> API["Node.js / NestJS API\nREST / SSE / workspace auth"]
 
   subgraph APP["Application Runtime"]
     API
@@ -110,7 +110,7 @@ flowchart TB
 
 ### 講稿內容
 
-這一頁先建立整份提案的共同技術語境。InfoGather 是 Nx monorepo，前端是 Angular 21 SPA，後端是 NestJS 11 API；資料層以 MongoDB 與 Mongoose 儲存文章、助手評估、briefs、通知與使用者狀態；背景工作則由 Redis 與 BullMQ 承載，透過 scheduler 與 worker pool 處理 feed 抓取、文章處理、助手評估與 brief 產生。
+這一頁先建立整份提案的共同技術語境。InfoGather 是 Nx monorepo，前端是 Angular SPA，後端是 Node.js runtime 上的 NestJS API；資料層以 MongoDB 與 Mongoose 儲存文章、助手評估、briefs、通知與使用者狀態；背景工作則由 Redis 與 BullMQ 承載，透過 scheduler 與 worker pool 處理 feed 抓取、文章處理、助手評估與 brief 產生。
 
 LLM 相關流程不是直接嵌在單一 API process 裡，而是透過 Copilot CLI server 作為外部 runtime endpoint，負責 Agent chat、文章萃取、摘要與助手評估所需的 LLM session orchestration，並轉接 OpenAI-compatible BYOK provider。這也是為什麼後續 sizing 不只看 Web/API 和 MongoDB，而要一起評估 worker pool、Redis queue、Copilot CLI server、MongoDB index working set，以及外部 LLM/API rate limit。
 
@@ -360,10 +360,10 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-  USERS["使用者 / 管理者"] --> FW["Firewall / WAF"]
+  USERS["Users / Admins"] --> FW["Firewall / WAF"]
   FW --> LB["Load Balancer / Nginx HA"]
   LB --> WEB["Angular static assets\nNginx or CDN-like cache"]
-  LB --> API["API app x2\nNestJS REST + SSE"]
+  LB --> API["API app x2\nNode.js / NestJS REST + SSE"]
 
   subgraph APP["Application Tier"]
     API
@@ -509,7 +509,7 @@ flowchart TB
   USERS["Users"] --> DNS["DNS"]
   DNS --> CDN["CDN / Static Web Hosting\nAngular SPA"]
   DNS --> WAF["WAF / HTTPS Load Balancer"]
-  WAF --> API["API app replicas x2\nNestJS REST + SSE"]
+  WAF --> API["API app replicas x2\nNode.js / NestJS REST + SSE"]
 
   subgraph COMPUTE["Container Compute"]
     API
