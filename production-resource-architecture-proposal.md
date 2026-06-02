@@ -1,27 +1,28 @@
 # InfoGather 正式環境資源與系統架構提案
 
 日期：2026-06-02  
-版本：v1.5  
+版本：v1.6  
 目的：依據目前資料量、Docker worker 併發、Copilot CLI server 依賴與實機資源觀測，提出正式環境的地端與雲端系統架構、硬體規格、擴充策略與導入路線。
 
 ## 簡報大綱
 
 1. 執行摘要與正式環境建置目標
-2. 現行環境盤點與容量基準
-3. 平台資料規模現況
-4. 資料成長趨勢與負載來源分析
-5. 背景處理流程與 Worker 併發模型
-6. Copilot CLI Server 與 LLM Runtime 架構依賴
-7. 正式環境資源估算原則
-8. 地端正式環境目標架構
-9. 地端硬體資源配置建議
-10. 地端部署級距與高可用策略
-11. 雲端正式環境目標架構
-12. 雲端服務選型與資源配置建議
-13. 安全控管、備份與災難復原策略
-14. 可觀測性、告警與擴充機制
-15. 成本最佳化與工程治理項目
-16. 導入時程與決策建議
+2. 專案技術堆疊與系統邊界概覽
+3. 現行環境盤點與容量基準
+4. 平台資料規模現況
+5. 資料成長趨勢與負載來源分析
+6. 背景處理流程與 Worker 併發模型
+7. Copilot CLI Server 與 LLM Runtime 架構依賴
+8. 正式環境資源估算原則
+9. 地端正式環境目標架構
+10. 地端硬體資源配置建議
+11. 地端部署級距與高可用策略
+12. 雲端正式環境目標架構
+13. 雲端服務選型與資源配置建議
+14. 安全控管、備份與災難復原策略
+15. 可觀測性、告警與擴充機制
+16. 成本最佳化與工程治理項目
+17. 導入時程與決策建議
 
 ---
 
@@ -57,7 +58,67 @@ flowchart LR
 
 ---
 
-## 2. 現行環境盤點與容量基準
+## 2. 專案技術堆疊與系統邊界概覽
+
+### 投影片重點
+
+本頁建立後續容量估算與架構提案的共同技術脈絡。
+
+| 層級 | 技術 / 元件 | 正式環境定位 |
+|---|---|---|
+| Frontend | Angular 21 SPA | 使用者介面與前端路由，靜態資產可由 Nginx、CDN 或 static hosting 提供 |
+| Backend | NestJS 11 API | REST API、SSE、工作區權限、feeds、articles、assistants、briefs 與 agent runtime |
+| Monorepo | Nx + TypeScript | 前後端一致建置、測試與部署管理 |
+| Database | MongoDB + Mongoose | 儲存文章、助手評估、工作區、通知、briefs 與使用者狀態 |
+| Queue | Redis + BullMQ | 承載 feed、article、assistant、brief、announcement 等背景工作 |
+| Background runtime | Scheduler + worker pool | 排程與背景處理；正式 sizing 以 10 個 worker container 為基準 |
+| LLM runtime | Copilot CLI server + OpenAI-compatible BYOK provider | Agent chat、文章萃取、摘要與助手評估的 LLM control plane |
+| Deployment | Docker containers | 可落地於地端 VM/HA 架構或雲端 container platform |
+
+```mermaid
+flowchart TB
+  USERS["使用者 / 管理者"] --> WEB["Angular 21 SPA\nWeb frontend"]
+  WEB --> API["NestJS 11 API\nREST / SSE / workspace auth"]
+
+  subgraph APP["Application Runtime"]
+    API
+    SCHED["Scheduler\nfeed / brief cron"]
+    WORKERS["Worker pool x10\nfeed / article / assistant / brief"]
+    CLI["Copilot CLI server\nLLM control plane"]
+  end
+
+  subgraph DATA["Data and Queue"]
+    MONGO["MongoDB + Mongoose\narticles / assistants / briefs"]
+    REDIS["Redis + BullMQ\njob queues / retention"]
+  end
+
+  SOURCES["RSS / Search / Infominer / Direct URL"] --> SCHED
+  API --> MONGO
+  API --> REDIS
+  API --> CLI
+  SCHED --> REDIS
+  WORKERS --> REDIS
+  WORKERS --> MONGO
+  WORKERS --> CLI
+  CLI --> LLM["OpenAI-compatible\nBYOK provider"]
+  OPS["Observability / secrets / backup"] --> API
+  OPS --> WORKERS
+  OPS --> CLI
+  OPS --> MONGO
+  OPS --> REDIS
+```
+
+### 講稿內容
+
+這一頁先建立整份提案的共同技術語境。InfoGather 是 Nx monorepo，前端是 Angular 21 SPA，後端是 NestJS 11 API；資料層以 MongoDB 與 Mongoose 儲存文章、助手評估、briefs、通知與使用者狀態；背景工作則由 Redis 與 BullMQ 承載，透過 scheduler 與 worker pool 處理 feed 抓取、文章處理、助手評估與 brief 產生。
+
+LLM 相關流程不是直接嵌在單一 API process 裡，而是透過 Copilot CLI server 作為外部 runtime endpoint，負責 Agent chat、文章萃取、摘要與助手評估所需的 LLM session orchestration，並轉接 OpenAI-compatible BYOK provider。這也是為什麼後續 sizing 不只看 Web/API 和 MongoDB，而要一起評估 worker pool、Redis queue、Copilot CLI server、MongoDB index working set，以及外部 LLM/API rate limit。
+
+部署上，這套系統已經天然容器化，因此可以落地在地端 VM、地端 HA 架構，或雲端 container platform。地端與雲端的差異主要在網路隔離、資料服務、備份、高可用與監控工具的實作方式；核心應用邊界與容量瓶頸是一致的。
+
+---
+
+## 3. 現行環境盤點與容量基準
 
 ### 投影片重點
 
@@ -101,7 +162,7 @@ flowchart TB
 
 ---
 
-## 3. 平台資料規模現況
+## 4. 平台資料規模現況
 
 ### 投影片重點
 
@@ -137,7 +198,7 @@ pie showData
 
 ---
 
-## 4. 資料成長趨勢與負載來源分析
+## 5. 資料成長趨勢與負載來源分析
 
 ### 投影片重點
 
@@ -174,7 +235,7 @@ flowchart LR
 
 ---
 
-## 5. 背景處理流程與 Worker 併發模型
+## 6. 背景處理流程與 Worker 併發模型
 
 ### 投影片重點
 
@@ -220,7 +281,7 @@ sequenceDiagram
 
 ---
 
-## 6. Copilot CLI Server 與 LLM Runtime 架構依賴
+## 7. Copilot CLI Server 與 LLM Runtime 架構依賴
 
 ### 投影片重點
 
@@ -249,7 +310,7 @@ flowchart LR
 
 ---
 
-## 7. 正式環境資源估算原則
+## 8. 正式環境資源估算原則
 
 ### 投影片重點
 
@@ -291,7 +352,7 @@ flowchart LR
 
 ---
 
-## 8. 地端正式環境目標架構
+## 9. 地端正式環境目標架構
 
 ### 投影片重點
 
@@ -353,7 +414,7 @@ flowchart TB
 
 ---
 
-## 9. 地端硬體資源配置建議
+## 10. 地端硬體資源配置建議
 
 ### 投影片重點
 
@@ -403,11 +464,11 @@ flowchart LR
 
 這一頁給出地端硬體資源建議。若採成本優先的單機正式起步方案，最低建議為 16 vCPU / 64 GiB RAM / 1 TB NVMe SSD。這個規格可承載目前資料量與 10 worker 的初始運行，但仍需接受單點故障風險。
 
-如果 Copilot CLI server、MongoDB、Redis 與 10 個 workers 全部同機，保守建議提高到 24 vCPU / 64 GiB。這是因為 Copilot CLI 雖然目前閒置約 294 MiB，但尖峰時會承擔 session orchestration；Redis 已經接近 3.56 GiB；MongoDB 也需要保留索引 working set。若採高可用正式版，建議使用 3 台 App/Worker 節點、2 個 Copilot CLI instances、3 台 MongoDB replica set，以及 2 到 3 台 Redis HA 節點，讓服務可以維護、替換與水平擴充。
+如果 Copilot CLI server、MongoDB、Redis 與 10 個 workers 全部同機，保守建議提高到 24 vCPU / 64 GiB。這是因為 Copilot CLI 雖然目前閒置約 294 MiB，但尖峰時會承擔 session orchestration；Redis 需要預留 queue backlog、failed jobs 與 retention 安全餘裕；MongoDB 也需要保留索引 working set。若採高可用正式版，建議使用 3 台 App/Worker 節點、2 個 Copilot CLI instances、3 台 MongoDB replica set，以及 2 到 3 台 Redis HA 節點，讓服務可以維護、替換與水平擴充。
 
 ---
 
-## 10. 地端部署級距與高可用策略
+## 11. 地端部署級距與高可用策略
 
 ### 投影片重點
 
@@ -437,7 +498,7 @@ flowchart TB
 
 ---
 
-## 11. 雲端正式環境目標架構
+## 12. 雲端正式環境目標架構
 
 ### 投影片重點
 
@@ -459,7 +520,7 @@ flowchart TB
 
   subgraph MANAGED["Managed Data Services"]
     ATLAS["MongoDB Atlas M20/M30\nstorage autoscale"]
-    REDIS["Managed Redis\n8 GiB cleaned / 16 GiB uncleaned"]
+    REDIS["Managed Redis\n8-16 GiB"]
   end
 
   subgraph PLATFORM["Cloud Platform Services"]
@@ -491,7 +552,7 @@ flowchart TB
 
 ---
 
-## 12. 雲端服務選型與資源配置建議
+## 13. 雲端服務選型與資源配置建議
 
 ### 投影片重點
 
@@ -540,7 +601,7 @@ flowchart LR
 
 ---
 
-## 13. 安全控管、備份與災難復原策略
+## 14. 安全控管、備份與災難復原策略
 
 ### 投影片重點
 
@@ -580,7 +641,7 @@ flowchart TB
 
 ---
 
-## 14. 可觀測性、告警與擴充機制
+## 15. 可觀測性、告警與擴充機制
 
 ### 投影片重點
 
@@ -617,7 +678,7 @@ flowchart LR
 
 ---
 
-## 15. 成本最佳化與工程治理項目
+## 16. 成本最佳化與工程治理項目
 
 ### 投影片重點
 
@@ -656,7 +717,7 @@ P1 則包含 worker job payload 瘦身、worker concurrency 與 LLM/API rate lim
 
 ---
 
-## 16. 導入時程與決策建議
+## 17. 導入時程與決策建議
 
 ### 投影片重點
 
