@@ -100,6 +100,133 @@ flowchart TB
 | Backup / Restore | 獨立 NAS、備份主機或物件儲存 | MongoDB snapshot/dump、設定備份、還原演練 | MongoDB、Redis 視策略、Secrets 設定 |
 | Secrets Manager / Vault | 獨立或既有企業平台 | Mongo URI、Redis URL、JWT secrets、OAuth credentials、LLM API keys | API、Worker、Scheduler、Copilot CLI |
 
+### VM 級部署拓樸，建議正式配置
+
+以下拓樸以「地端 HA 正式版」為基準，將服務落到具體 VM。此配置假設維運單位可提供 private network / VLAN、內部 DNS、VIP 或硬體/虛擬 Load Balancer，並可將 MongoDB、Redis、Copilot CLI 與 App/Worker 分散到不同 failure domain。
+
+```mermaid
+flowchart TB
+  USERS["Users / Admins"] --> FW["Firewall / WAF"]
+  FW --> PUBLICVIP["Public VIP\nhttps://infogather.example.com"]
+
+  subgraph EDGE["Edge / DMZ"]
+    LB1["vm-lb-01\n2-4 vCPU / 4-8 GiB RAM\nNginx or HAProxy\nKeepalived / VRRP\nPublic API VIP + Private CLI VIP"]
+    LB2["vm-lb-02\n2-4 vCPU / 4-8 GiB RAM\nNginx or HAProxy\nKeepalived / VRRP\nPublic API VIP + Private CLI VIP"]
+  end
+
+  subgraph APP["Application VLAN"]
+    APP1["vm-app-01\n8-12 vCPU / 32-64 GiB RAM\nAPI replica 1\nWorker x3\nBull Board optional"]
+    APP2["vm-app-02\n8-12 vCPU / 32-64 GiB RAM\nAPI replica 2\nWorker x3\nScheduler standby disabled"]
+    APP3["vm-app-03\n8-12 vCPU / 32-64 GiB RAM\nWorker x4\nScheduler active x1"]
+  end
+
+  subgraph CLITIER["LLM Runtime VLAN"]
+    CLIVIP["Private CLI VIP\nCOPILOT_CLI_URL"]
+    CLI1["vm-cli-01\n2 vCPU / 4 GiB RAM\nCopilot CLI server 1\nsession state volume"]
+    CLI2["vm-cli-02\n2 vCPU / 4 GiB RAM\nCopilot CLI server 2\nsession state volume"]
+  end
+
+  subgraph REDISTIER["Redis HA VLAN"]
+    REDIS1["vm-redis-01\n2-4 vCPU / 8-16 GiB RAM\nRedis primary candidate\nSentinel vote"]
+    REDIS2["vm-redis-02\n2-4 vCPU / 8-16 GiB RAM\nRedis replica candidate\nSentinel vote"]
+    REDIS3["vm-redis-03\n2 vCPU / 8 GiB RAM\nSentinel quorum vote\noptional replica / witness"]
+  end
+
+  subgraph MONGOTIER["MongoDB Replica Set VLAN"]
+    MONGO1["vm-mongo-01\n4-8 vCPU / 16-32 GiB RAM\n1 TB NVMe\nMongoDB primary candidate"]
+    MONGO2["vm-mongo-02\n4-8 vCPU / 16-32 GiB RAM\n1 TB NVMe\nMongoDB secondary"]
+    MONGO3["vm-mongo-03\n4-8 vCPU / 16-32 GiB RAM\n1 TB NVMe\nMongoDB secondary"]
+  end
+
+  subgraph OPS["Operations VLAN"]
+    OPS1["vm-ops-01\n4 vCPU / 16 GiB RAM\nPrometheus / Grafana\nAlertmanager / log collector"]
+    BACKUP1["vm-backup-01\n4 vCPU / 8-16 GiB RAM\n2 TB+ storage\nMongo backup jobs\nrestore drill workspace"]
+    VAULT["Existing Vault / Secrets Manager\nor vm-vault-01~03"]
+  end
+
+  LLM["OpenAI-compatible\nBYOK provider"]
+
+  PUBLICVIP --> LB1
+  PUBLICVIP --> LB2
+  LB1 -->|HTTPS / API / SSE| APP1
+  LB1 -->|HTTPS / API / SSE| APP2
+  LB2 -->|HTTPS / API / SSE| APP1
+  LB2 -->|HTTPS / API / SSE| APP2
+
+  APP1 -->|COPILOT_CLI_URL| CLIVIP
+  APP2 -->|COPILOT_CLI_URL| CLIVIP
+  APP3 -->|COPILOT_CLI_URL| CLIVIP
+  CLIVIP --> CLI1
+  CLIVIP --> CLI2
+  CLI1 --> LLM
+  CLI2 --> LLM
+
+  APP1 -->|Redis URL / Sentinel list| REDIS1
+  APP2 -->|Redis URL / Sentinel list| REDIS1
+  APP3 -->|Redis URL / Sentinel list| REDIS1
+  REDIS1 --> REDIS2
+  REDIS1 -. Sentinel quorum .- REDIS3
+  REDIS2 -. Sentinel quorum .- REDIS3
+
+  APP1 -->|MongoDB replica set URI| MONGO1
+  APP1 -->|MongoDB replica set URI| MONGO2
+  APP1 -->|MongoDB replica set URI| MONGO3
+  APP2 -->|MongoDB replica set URI| MONGO1
+  APP2 -->|MongoDB replica set URI| MONGO2
+  APP2 -->|MongoDB replica set URI| MONGO3
+  APP3 -->|MongoDB replica set URI| MONGO1
+  APP3 -->|MongoDB replica set URI| MONGO2
+  APP3 -->|MongoDB replica set URI| MONGO3
+  MONGO1 --> MONGO2
+  MONGO1 --> MONGO3
+
+  OPS1 -. scrape / logs .-> LB1
+  OPS1 -. scrape / logs .-> APP1
+  OPS1 -. scrape / logs .-> APP2
+  OPS1 -. scrape / logs .-> APP3
+  OPS1 -. scrape / logs .-> CLI1
+  OPS1 -. scrape / logs .-> REDIS1
+  OPS1 -. scrape / logs .-> MONGO1
+  BACKUP1 -->|backup / restore drill| MONGO1
+  BACKUP1 -->|backup / restore drill| MONGO2
+  BACKUP1 -->|backup / restore drill| MONGO3
+  VAULT -. secrets .-> APP1
+  VAULT -. secrets .-> APP2
+  VAULT -. secrets .-> APP3
+  VAULT -. secrets .-> CLI1
+  VAULT -. secrets .-> CLI2
+```
+
+### VM 配置與服務部署矩陣
+
+| VM | 建議規格 | 部署服務 | 持久化儲存 | 對外 / 對內連線 | 容錯角色 |
+|---|---:|---|---|---|---|
+| `vm-lb-01` | 2 到 4 vCPU / 4 到 8 GiB RAM / 40 到 80 GB system disk | Nginx 或 HAProxy、Keepalived/VRRP、TLS 憑證、public API VIP、private CLI VIP | 只需設定檔與憑證備份 | 對外 HTTPS；對內連 API app 與 Copilot CLI | 入口層 active 或 active/passive 節點 |
+| `vm-lb-02` | 2 到 4 vCPU / 4 到 8 GiB RAM / 40 到 80 GB system disk | Nginx 或 HAProxy、Keepalived/VRRP、TLS 憑證、public API VIP、private CLI VIP | 只需設定檔與憑證備份 | 對外 HTTPS；對內連 API app 與 Copilot CLI | 入口層 standby 或 active/active 節點 |
+| `vm-app-01` | 8 到 12 vCPU / 32 到 64 GiB RAM / 100 GB system disk | API app replica 1、Worker x3、Bull Board optional、metrics/log agent | 不需業務資料持久化 | 連 MongoDB replica set、Redis/Sentinel、Copilot CLI VIP、Secrets | API 主要副本之一；worker 分散節點 |
+| `vm-app-02` | 8 到 12 vCPU / 32 到 64 GiB RAM / 100 GB system disk | API app replica 2、Worker x3、Scheduler standby disabled、metrics/log agent | 不需業務資料持久化 | 連 MongoDB replica set、Redis/Sentinel、Copilot CLI VIP、Secrets | API 主要副本之一；scheduler 故障時可人工切換 |
+| `vm-app-03` | 8 到 12 vCPU / 32 到 64 GiB RAM / 100 GB system disk | Worker x4、Scheduler active x1、metrics/log agent | 不需業務資料持久化 | 連 MongoDB replica set、Redis/Sentinel、Copilot CLI VIP、Secrets | 背景處理主承載節點；scheduler active 節點 |
+| `vm-cli-01` | 2 vCPU / 4 GiB RAM / 50 GB system disk / 20 GB session volume | Copilot CLI server replica 1、healthcheck、metrics/log agent | 建議保留 session state volume | 僅接受 API/Worker 經 private CLI VIP 連線；對外連 BYOK LLM provider | CLI active 節點之一，需驗證 affinity |
+| `vm-cli-02` | 2 vCPU / 4 GiB RAM / 50 GB system disk / 20 GB session volume | Copilot CLI server replica 2、healthcheck、metrics/log agent | 建議保留 session state volume | 僅接受 API/Worker 經 private CLI VIP 連線；對外連 BYOK LLM provider | CLI HA 節點；可 active/active 或 active/standby |
+| `vm-mongo-01` | 4 到 8 vCPU / 16 到 32 GiB RAM / 1 TB NVMe | MongoDB replica set member、primary candidate、backup agent | 必要，NVMe；納入 snapshot/dump | 僅允許 API/Worker/Scheduler、DB 管理與備份節點連線 | MongoDB primary candidate |
+| `vm-mongo-02` | 4 到 8 vCPU / 16 到 32 GiB RAM / 1 TB NVMe | MongoDB replica set member、secondary、backup agent | 必要，NVMe；可作為備份來源 | 僅允許 API/Worker/Scheduler、DB 管理與備份節點連線 | MongoDB secondary；primary 故障時可選舉 |
+| `vm-mongo-03` | 4 到 8 vCPU / 16 到 32 GiB RAM / 1 TB NVMe | MongoDB replica set member、secondary、backup agent | 必要，NVMe；可作為備份來源 | 僅允許 API/Worker/Scheduler、DB 管理與備份節點連線 | MongoDB secondary；維持 majority quorum |
+| `vm-redis-01` | 2 到 4 vCPU / 8 到 16 GiB RAM / 100 到 200 GB SSD | Redis primary candidate、Redis Sentinel vote、metrics/log agent | 視 AOF/RDB 策略；保留 Redis config 與必要持久化 | 允許 API/Worker/Scheduler 連線；與 redis 節點 replication | Redis primary candidate |
+| `vm-redis-02` | 2 到 4 vCPU / 8 到 16 GiB RAM / 100 到 200 GB SSD | Redis replica candidate、Redis Sentinel vote、metrics/log agent | 視 AOF/RDB 策略；保留 Redis config 與必要持久化 | 允許 API/Worker/Scheduler 連線；與 redis 節點 replication | Redis replica；primary 故障時可升級 |
+| `vm-redis-03` | 2 vCPU / 8 GiB RAM / 80 到 100 GB SSD | Redis Sentinel quorum vote、optional Redis replica 或 witness、metrics/log agent | Sentinel config；若部署 replica 則依 Redis 持久化策略 | 連 redis-01/02；提供 Sentinel quorum | 第三個 Sentinel vote，避免 2 節點腦裂 |
+| `vm-ops-01` | 4 vCPU / 16 GiB RAM / 500 GB 到 1 TB storage | Prometheus、Grafana、Alertmanager、log collector 或 forwarder、dashboard | 必要，依 metrics/log retention 調整 | scrape / collect 所有 VM 指標與 logs；發送告警 | 維運觀測節點；可接既有監控平台替代 |
+| `vm-backup-01` | 4 vCPU / 8 到 16 GiB RAM / 2 TB 以上 storage | MongoDB backup job、restore drill workspace、備份校驗、異地同步 client | 必要，建議獨立磁碟、NAS 或物件儲存 | 連 MongoDB secondary 優先；可讀取必要設定與 secrets metadata | 備份與還原演練節點，不應與 primary DB 共用唯一 storage |
+| `vm-vault-01~03`，若無既有平台 | 每台 2 到 4 vCPU / 8 GiB RAM / 100 GB storage | Vault / Secrets Manager HA、secret rotation、audit log | 必要，依 Vault HA 後端設計 | 僅允許 runtime 與維運節點依權限存取 | 若已有企業 Vault、Key Vault 或密碼管理平台，可不另建 |
+
+### 服務分散原則
+
+- API 與 Worker 可以共用 `vm-app-01~03`，但需設定 CPU/RAM resource limit，避免 worker 尖峰拖慢 API。
+- Scheduler 只能有一個 active instance；standby 可預先部署但保持 disabled，故障時再切換。
+- Copilot CLI 不建議與 MongoDB 或 Redis 共用 VM；它雖不跑模型推論，但會承擔 session orchestration 與 streaming 穩定性。
+- MongoDB 三台 VM 應分散於不同實體主機或虛擬化 failure domain，避免同一宿主故障造成 replica set 失去 majority。
+- Redis 至少需要 primary、replica 與第三個 Sentinel vote；若只有兩台 Redis VM，第三個 Sentinel vote 可放在 `vm-app-03` 或 `vm-ops-01`，但仍建議獨立 `vm-redis-03`。
+- Monitoring、Backup、Secrets 可接既有企業平台；若自建，應避免與 production runtime 或 primary DB 共用唯一主機與磁碟。
+
 ## 2. 硬體資源配置
 
 以下規格以目前觀測到的 10 個 worker container、MongoDB 約 1.36 GiB physical size、MongoDB indexes 約 824.84 MiB、Redis current used memory 約 34.35 MiB、Redis peak 約 3.71 GiB，以及 Copilot CLI idle 約 294 MiB 作為基準。正式環境不應直接用 idle memory 推估，必須保留尖峰流量、queue backlog、LLM session concurrency、備份與 HA 容錯空間。
