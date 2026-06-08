@@ -140,34 +140,34 @@ flowchart TB
 | 資料類型 | 數量 / 用量 |
 |---|---:|
 | MongoDB collections | 29 |
-| MongoDB documents | 1,113,082 |
-| MongoDB logical data | 約 934.84 MiB |
+| MongoDB documents | 1,265,635 |
+| MongoDB logical data | 約 1,066.18 MiB |
 | MongoDB storage + indexes | 約 1.36 GiB |
-| 使用者 | 172 |
+| 使用者 | 181 |
 | 工作區 | 29 |
 | 資料來源 feeds | 176，其中 159 active |
-| 資訊助手 assistants | 41，其中 38 active |
-| articles | 246,876 |
-| assistantarticles | 859,775 |
-| notifications | 2,662 |
+| 資訊助手 assistants | 41，其中 37 active |
+| articles | 280,221 |
+| assistantarticles | 976,905 |
+| notifications | 4,629 |
 
 ```mermaid
 pie showData
   title MongoDB 文件數分布
-  "assistantarticles" : 859775
-  "articles" : 246876
-  "notifications" : 2662
-  "adminaudits" : 983
-  "其他集合" : 8786
+  "assistantarticles" : 976905
+  "articles" : 280221
+  "notifications" : 4629
+  "adminaudits" : 1002
+  "其他集合" : 2878
 ```
 
 ### 講稿內容
 
-這一頁我們來看資料量。現在 MongoDB 裡面共有 29 個 collections，總文件數大約 111 萬筆。資料本體加上索引，實體大小大約是 1.36 GiB。以正式環境資料庫來說，這個大小其實還不算大，所以短期內不需要一開始就上非常大的資料庫叢集。
+這一頁我們來看資料量。現在 MongoDB 裡面共有 29 個 collections，總文件數大約 126.6 萬筆。資料本體加上索引，實體大小大約是 1.36 GiB。以正式環境資料庫來說，這個大小其實還不算大，所以短期內不需要一開始就上非常大的資料庫叢集。
 
-不過，資料量小不代表可以忽略資料庫規格。真正要看的，是資料集中在哪裡。目前最大宗是 `articles` 和 `assistantarticles`。`articles` 大約 24.7 萬筆，是平台實際收進來的文章；`assistantarticles` 大約 86 萬筆，代表助手對文章做過的評估結果。
+不過，資料量小不代表可以忽略資料庫規格。真正要看的，是資料集中在哪裡。目前最大宗是 `articles` 和 `assistantarticles`。`articles` 大約 28 萬筆，是平台實際收進來的文章；`assistantarticles` 大約 97.7 萬筆，代表助手對文章做過的評估結果。
 
-這裡有一個重要觀察：MongoDB 的 index 大約 825 MiB，其中 articles 的 index 就大約 741 MiB。換句話說，未來查詢效能不只看資料本體大小，也要看索引能不能穩定留在記憶體裡。如果索引常常被擠出 memory，查詢延遲就會上升。因此後面規劃 MongoDB RAM 時，會以 working set 和 index growth 作為主要依據。
+這裡有一個重要觀察：MongoDB 的 index 大約 827 MiB，其中 articles 的 index 就大約 741 MiB。換句話說，未來查詢效能不只看資料本體大小，也要看索引能不能穩定留在記憶體裡。如果索引常常被擠出 memory，查詢延遲就會上升。因此後面規劃 MongoDB RAM 時，會以 working set 和 index growth 作為主要依據。
 
 ---
 
@@ -177,36 +177,36 @@ pie showData
 
 | 指標 | 近 1 天 | 近 7 天 | 近 30 天 |
 |---|---:|---:|---:|
-| 新增 articles | 3,163 | 37,432 | 103,698 |
-| 新增 assistantarticles | 8,490 | 132,961 | 418,290 |
-| 新增 users | - | 11 | 40 |
+| 新增 articles | 2,307 | 34,921 | 125,947 |
+| 新增 assistantarticles | 12,059 | 124,527 | 506,701 |
+| 新增 users | 0 | 9 | 49 |
 
 近 7 天文章來源分布：
 
 | 來源 | 新增文章數 |
 |---|---:|
-| RSS | 31,035 |
-| Infominer | 5,803 |
-| Search | 594 |
+| RSS | 29,285 |
+| Infominer | 5,127 |
+| Search | 509 |
 
 ```mermaid
 flowchart LR
-  RSS["RSS\n31,035 / 7d"] --> ARTICLES["Articles\n37,432 / 7d"]
-  INFOMINER["Infominer\n5,803 / 7d"] --> ARTICLES
-  SEARCH["Search\n594 / 7d"] --> ARTICLES
-  ARTICLES --> EVAL["Assistant evaluations\n132,961 / 7d"]
-  EVAL --> COLLECTED["Collected\n3,789 / 7d"]
-  EVAL --> STORAGE["MongoDB growth\n約 0.6 到 0.9 GiB / month"]
+  RSS["RSS\n29,285 / 7d"] --> ARTICLES["Articles\n34,921 / 7d"]
+  INFOMINER["Infominer\n5,127 / 7d"] --> ARTICLES
+  SEARCH["Search\n509 / 7d"] --> ARTICLES
+  ARTICLES --> EVAL["Assistant evaluations\n124,527 / 7d"]
+  EVAL --> COLLECTED["Collected\n3,424 / 7d"]
+  EVAL --> STORAGE["MongoDB growth\n約 0.63 GiB / month"]
   EVAL --> LLM["LLM/API 成本與延遲"]
 ```
 
 ### 講稿內容
 
-這一頁我們把時間拉長一點，看資料成長速度。過去 30 天新增了大約 10.4 萬篇文章，也新增了大約 41.8 萬筆助手評估。過去 7 天則新增大約 3.7 萬篇文章，以及 13.3 萬筆助手評估。
+這一頁我們把時間拉長一點，看資料成長速度。過去 30 天新增了大約 12.6 萬篇文章，也新增了大約 50.7 萬筆助手評估。過去 7 天則新增大約 3.49 萬篇文章，以及 12.45 萬筆助手評估。
 
 這代表一件事：InfoGather 的主要負載不是只有把文章存進資料庫。每一篇文章進來之後，還會再觸發多個助手規則評估，所以真正成長比較快的是 assistant evaluation 這一段。
 
-從來源來看，近 7 天文章主要來自 RSS，其次是 Infominer，Search 目前比例比較低。用目前資料估算，每篇文章平均會產生大約 3.55 筆助手評估。因此，正式環境在規劃時，不能只問「每天新增幾篇文章」，還要問「這些文章會觸發多少次助手評估」。
+從來源來看，近 7 天文章主要來自 RSS，其次是 Infominer，Search 目前比例比較低。用目前資料估算，每篇文章平均會產生大約 3.57 筆助手評估。如果用目前 `articles` 與 `assistantarticles` 的平均 storage + index 大小來估算，30 天大約會再增加 0.63 GiB 的資料庫 footprint。因此，正式環境在規劃時，不能只問「每天新增幾篇文章」，還要問「這些文章會觸發多少次助手評估」。
 
 這也解釋了為什麼 worker 併發、Copilot CLI session、LLM provider rate limit 和 LLM 成本會變得很重要。文章數增加時，後面的評估工作會被放大，所以正式環境應該把 assistant evaluation 視為主要負載來源。
 
@@ -305,7 +305,7 @@ flowchart LR
 |---|---|---|---|
 | 主機基準 | 8 vCPU / 約 15 GiB RAM | 現況只作參考，不直接作為正式規格 | 正式環境需預留尖峰、備援與維運空間 |
 | 背景併發 | 10 個 worker container | 以 desired 10 為常態吞吐量，保留擴到 20 的空間 | 影響 CPU、Redis queue、MongoDB connections、LLM request rate |
-| 資料庫 | MongoDB physical size 約 1.36 GiB，indexes 約 824.84 MiB | 以 working set、index growth、備份與查詢延遲估算 | 影響 MongoDB RAM、IOPS、storage 與備份容量 |
+| 資料庫 | MongoDB physical size 約 1.36 GiB，indexes 約 827.31 MiB | 以 working set、index growth、備份與查詢延遲估算 | 影響 MongoDB RAM、IOPS、storage 與備份容量 |
 | Queue | Redis current 約 34.35 MiB，peak 約 3.71 GiB | 以 retention、backlog、failed jobs 與 queue depth 設計容量 | 影響 Redis RAM、持久化與告警門檻 |
 | LLM runtime | Copilot CLI idle 約 294 MiB | 不用 idle 值估算，改以 session 尖峰與 HA 規劃 | 影響 Copilot CLI CPU/RAM、replicas 與 private endpoint 設計 |
 | 可用性 | 單機開發 / 準正式基準 | 依 SLA、RPO/RTO 與是否接受單點故障決定 | 影響節點數、MongoDB replica set、Redis HA 與備份策略 |
@@ -315,7 +315,7 @@ flowchart LR
   subgraph BASE["現況觀測基準"]
     HOST["8 vCPU / 15 GiB\n不可直接作正式規格"]
     WORKER["Worker x10\n目前吞吐量基準"]
-    DB["MongoDB 1.36 GiB physical\nindexes 824.84 MiB"]
+    DB["MongoDB 1.36 GiB physical\nindexes 827.31 MiB"]
     REDIS["Redis current 34 MiB\npeak 3.71 GiB"]
     CLI["Copilot CLI idle 294 MiB"]
     SLA["正式 SLA / RPO / RTO\n部署前決策"]
@@ -742,20 +742,20 @@ flowchart LR
 |---|---:|
 | database | infogather |
 | collection count | 29 |
-| total documents | 1,113,082 |
-| data size | 約 934.84 MiB |
-| storage size | 約 540.86 MiB |
-| index size | 約 824.84 MiB |
+| total documents | 1,265,635 |
+| data size | 約 1,066.18 MiB |
+| storage size | 約 570.29 MiB |
+| index size | 約 827.31 MiB |
 | total physical size | 約 1.36 GiB |
 
 ### Top collections
 
 | Collection | Count | Logical data | Index |
 |---|---:|---:|---:|
-| assistantarticles | 859,775 | 約 416.40 MiB | 約 80.18 MiB |
-| articles | 246,876 | 約 512.89 MiB | 約 740.98 MiB |
-| notifications | 2,662 | 約 1.66 MiB | 約 0.25 MiB |
-| adminaudits | 983 | 約 0.30 MiB | 約 0.06 MiB |
+| assistantarticles | 976,905 | 約 490.05 MiB | 約 82.72 MiB |
+| articles | 280,221 | 約 569.03 MiB | 約 740.71 MiB |
+| notifications | 4,629 | 約 2.89 MiB | 約 0.35 MiB |
+| adminaudits | 1,002 | 約 0.30 MiB | 約 0.06 MiB |
 
 ### Redis / BullMQ
 
