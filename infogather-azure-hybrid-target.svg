@@ -1,0 +1,267 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1045" viewBox="0 55 1800 1045">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#2563eb"/></marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#15803d"/></marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#ea580c"/></marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#7e22ce"/></marker>
+    <marker id="arrow-gray" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#64748b"/></marker>
+    <style>
+      text { font-family: Inter, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; fill: #0f172a; }
+      .title { font-size: 30px; font-weight: 700; }
+      .section-title { font-size: 20px; font-weight: 700; }
+      .zone-title { font-size: 16px; font-weight: 700; }
+      .node-title { font-size: 14px; font-weight: 700; }
+      .node-sub { font-size: 11px; fill: #475569; }
+      .edge-label { font-size: 11px; font-weight: 600; paint-order: stroke; stroke: #fff; stroke-width: 5px; stroke-linejoin: round; }
+      .outer { fill: #fff; stroke: #334155; stroke-width: 2; rx: 14; }
+      .azure-outer { fill: #f8fbff; stroke: #0078d4; stroke-width: 2.5; rx: 14; }
+      .internal-zone { fill: #faf5ff; stroke: #7c3aed; stroke-width: 1.7; rx: 10; }
+      .dmz-zone { fill: #fff7ed; stroke: #ea580c; stroke-width: 1.7; rx: 10; }
+      .hub-zone { fill: #f1f5f9; stroke: #2563eb; stroke-width: 1.6; rx: 10; }
+      .app-zone { fill: #eff6ff; stroke: #2563eb; stroke-width: 1.6; rx: 10; }
+      .data-zone { fill: #f0fdf4; stroke: #16a34a; stroke-width: 1.6; rx: 10; }
+      .platform-zone { fill: #f8fafc; stroke: #64748b; stroke-width: 1.5; rx: 10; }
+      .external-zone { fill: #f8fafc; stroke: #64748b; stroke-width: 1.7; rx: 10; }
+      .node { fill: #fff; stroke: #64748b; stroke-width: 1.3; rx: 8; filter: url(#shadow); }
+      .node-blue { fill: #fff; stroke: #2563eb; stroke-width: 1.5; rx: 8; filter: url(#shadow); }
+      .node-green { fill: #fff; stroke: #16a34a; stroke-width: 1.5; rx: 8; filter: url(#shadow); }
+      .node-orange { fill: #fff; stroke: #ea580c; stroke-width: 1.5; rx: 8; filter: url(#shadow); }
+      .node-purple { fill: #fff; stroke: #7e22ce; stroke-width: 1.5; rx: 8; filter: url(#shadow); }
+      .blue { fill: none; stroke: #2563eb; stroke-width: 2.6; marker-end: url(#arrow-blue); }
+      .green { fill: none; stroke: #15803d; stroke-width: 2.4; marker-end: url(#arrow-green); }
+      .orange { fill: none; stroke: #ea580c; stroke-width: 2.6; marker-end: url(#arrow-orange); }
+      .purple { fill: none; stroke: #7e22ce; stroke-width: 2.8; marker-end: url(#arrow-purple); }
+      .gray { fill: none; stroke: #64748b; stroke-width: 1.8; stroke-dasharray: 7 6; marker-end: url(#arrow-gray); }
+      .green-dash { fill: none; stroke: #15803d; stroke-width: 2; stroke-dasharray: 6 5; marker-end: url(#arrow-green); }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1100" fill="#ffffff"/>
+
+  <!-- Top: deployment and security boundaries -->
+  <rect x="20" y="82" width="330" height="555" class="outer"/>
+  <text x="185" y="108" text-anchor="middle" class="section-title">On-premises Environment</text>
+
+  <rect x="35" y="120" width="300" height="112" class="internal-zone"/>
+  <text x="185" y="143" text-anchor="middle" class="zone-title" fill="#6d28d9">內部使用者網段</text>
+  <rect x="50" y="158" width="130" height="52" class="node-purple"/>
+  <text x="115" y="181" text-anchor="middle" class="node-title">內部使用者</text>
+  <text x="115" y="198" text-anchor="middle" class="node-sub">Browser</text>
+  <rect x="200" y="158" width="120" height="52" class="node-purple"/>
+  <text x="260" y="181" text-anchor="middle" class="node-title">內部 DNS</text>
+  <text x="260" y="198" text-anchor="middle" class="node-sub">Internal DNS</text>
+
+  <rect x="35" y="246" width="300" height="245" class="dmz-zone"/>
+  <text x="185" y="270" text-anchor="middle" class="zone-title" fill="#c2410c">DMZ 區域</text>
+  <text x="50" y="293" class="node-sub" fill="#c2410c">Ingress</text>
+  <rect x="50" y="305" width="125" height="54" class="node-orange"/>
+  <text x="112" y="328" text-anchor="middle" class="node-title">Reverse Proxy</text>
+  <text x="112" y="346" text-anchor="middle" class="node-sub">/ WAF</text>
+  <rect x="200" y="305" width="120" height="54" class="node-orange"/>
+  <text x="260" y="328" text-anchor="middle" class="node-title">Firewall</text>
+  <text x="260" y="346" text-anchor="middle" class="node-sub">/ WAN Edge</text>
+  <text x="50" y="413" class="node-sub" fill="#c2410c">Egress</text>
+  <rect x="50" y="425" width="125" height="54" class="node-orange"/>
+  <text x="112" y="448" text-anchor="middle" class="node-title">Firewall</text>
+  <text x="112" y="466" text-anchor="middle" class="node-sub">/ WAN Edge</text>
+  <rect x="200" y="425" width="120" height="54" class="node-orange"/>
+  <text x="260" y="448" text-anchor="middle" class="node-title">Forward Proxy</text>
+  <text x="260" y="466" text-anchor="middle" class="node-sub">唯一 Internet 出口</text>
+
+  <rect x="35" y="505" width="300" height="112" class="internal-zone"/>
+  <text x="185" y="529" text-anchor="middle" class="zone-title" fill="#6d28d9">內部服務網段</text>
+  <rect x="70" y="545" width="230" height="50" class="node-purple"/>
+  <text x="185" y="567" text-anchor="middle" class="node-title">LiteLLM</text>
+  <text x="185" y="584" text-anchor="middle" class="node-sub">Backend: Azure OpenAI</text>
+
+  <rect x="370" y="82" width="1090" height="555" class="azure-outer"/>
+  <text x="915" y="108" text-anchor="middle" class="section-title" fill="#005a9e">Microsoft Azure</text>
+
+  <rect x="390" y="120" width="230" height="485" class="hub-zone"/>
+  <text x="505" y="140" text-anchor="middle" class="zone-title">Connectivity Hub</text>
+  <text x="505" y="156" text-anchor="middle" class="node-sub" font-weight="700">Shared Network Services</text>
+  <rect x="410" y="170" width="190" height="58" class="node-blue"/>
+  <text x="505" y="193" text-anchor="middle" class="node-title">Hybrid Connectivity</text>
+  <text x="505" y="211" text-anchor="middle" class="node-sub">ER Primary / S2S VPN Backup</text>
+  <rect x="410" y="250" width="190" height="60" class="node-blue"/>
+  <text x="505" y="274" text-anchor="middle" class="node-title">Application Gateway WAF v2</text>
+  <text x="505" y="293" text-anchor="middle" class="node-sub">Private Frontend</text>
+  <rect x="410" y="350" width="190" height="58" class="node-orange"/>
+  <text x="505" y="374" text-anchor="middle" class="node-title">Azure Firewall</text>
+  <text x="505" y="392" text-anchor="middle" class="node-sub">Deny direct Internet</text>
+  <rect x="410" y="535" width="190" height="50" class="node-blue"/>
+  <text x="505" y="557" text-anchor="middle" class="node-title">Azure DNS Private Resolver</text>
+  <text x="505" y="575" text-anchor="middle" class="node-sub">Private DNS forwarding</text>
+  <rect x="640" y="120" width="200" height="180" class="app-zone"/>
+  <text x="740" y="143" text-anchor="middle" class="zone-title">Web PaaS</text>
+  <rect x="660" y="160" width="160" height="64" class="node-blue"/>
+  <text x="740" y="184" text-anchor="middle" class="node-title">InfoGather Web</text>
+  <text x="740" y="203" text-anchor="middle" class="node-sub">Azure App Service</text>
+
+  <rect x="860" y="120" width="415" height="335" class="app-zone"/>
+  <text x="1067" y="140" text-anchor="middle" class="zone-title">Application Spoke</text>
+  <text x="1067" y="159" text-anchor="middle" class="node-title">Azure Container Apps</text>
+  <rect x="887" y="192" width="101" height="60" class="node-blue"/>
+  <text x="937" y="216" text-anchor="middle" class="node-title">InfoGather API</text>
+  <text x="937" y="235" text-anchor="middle" class="node-sub">Internal Ingress</text>
+  <rect x="887" y="276" width="101" height="60" class="node-blue"/>
+  <text x="937" y="300" text-anchor="middle" class="node-title">Scheduler</text>
+  <text x="937" y="319" text-anchor="middle" class="node-sub">No Ingress</text>
+
+  <rect x="1022" y="192" width="96" height="60" class="node-blue"/>
+  <text x="1070" y="216" text-anchor="middle" class="node-title">Worker</text>
+  <text x="1070" y="235" text-anchor="middle" class="node-sub">No Ingress</text>
+  <rect x="1152" y="192" width="96" height="60" class="node-purple"/>
+  <text x="1200" y="214" text-anchor="middle" class="node-title">Copilot CLI</text>
+  <text x="1200" y="235" text-anchor="middle" class="node-sub">TCP Server</text>
+
+  <rect x="640" y="480" width="410" height="125" class="data-zone"/>
+  <text x="845" y="503" text-anchor="middle" class="zone-title" fill="#15803d">Azure Data PaaS</text>
+  <rect x="660" y="520" width="175" height="64" class="node-green"/>
+  <text x="747" y="544" text-anchor="middle" class="node-title">Azure DocumentDB</text>
+  <text x="747" y="564" text-anchor="middle" class="node-sub">Private Endpoint</text>
+  <rect x="855" y="520" width="175" height="64" class="node-green"/>
+  <text x="942" y="544" text-anchor="middle" class="node-title">Azure Managed Redis</text>
+  <text x="942" y="564" text-anchor="middle" class="node-sub">Private Endpoint</text>
+
+  <rect x="1070" y="480" width="200" height="125" class="platform-zone"/>
+  <text x="1170" y="503" text-anchor="middle" class="zone-title">Platform Services</text>
+  <text x="1170" y="529" text-anchor="middle" class="node-title">Azure Key Vault</text>
+  <text x="1170" y="550" text-anchor="middle" class="node-title">Azure Container Registry (ACR)</text>
+  <text x="1170" y="571" text-anchor="middle" class="node-title">Azure Monitor + AMPLS</text>
+
+  <rect x="1480" y="82" width="290" height="555" class="external-zone"/>
+  <text x="1625" y="108" text-anchor="middle" class="section-title">Internet</text>
+  <rect x="1510" y="190" width="230" height="62" class="node"/>
+  <text x="1625" y="218" text-anchor="middle" class="node-title">Microsoft Entra ID</text>
+  <text x="1625" y="238" text-anchor="middle" class="node-sub">Identity Provider</text>
+  <rect x="1510" y="460" width="230" height="62" class="node"/>
+  <text x="1625" y="488" text-anchor="middle" class="node-title">外部資料來源</text>
+  <text x="1625" y="508" text-anchor="middle" class="node-sub">Domain allowlist</text>
+
+  <!-- Top view paths -->
+  <path d="M115 210 V305" class="blue"/>
+  <path d="M175 332 H200" class="blue"/>
+  <path d="M320 332 H365 V185 H410" class="blue"/>
+  <path d="M505 228 V250" class="blue"/>
+  <path d="M600 280 H625 V212 H660" class="blue"/>
+  <text x="628" y="202" class="edge-label" fill="#2563eb">/</text>
+  <path d="M600 280 H630 V320 H850 V222 H887" class="blue"/>
+  <text x="708" y="313" class="edge-label" fill="#2563eb">/api/* · /health</text>
+  <text x="325" y="300" class="edge-label" fill="#2563eb">HTTPS</text>
+
+  <path d="M320 184 H345 V560 H410" class="gray"/>
+  <text x="405" y="515" class="edge-label" fill="#64748b">Conditional Forwarding</text>
+
+  <path d="M1070 252 V440 H625 V379 H600" class="orange"/>
+  <text x="850" y="434" class="edge-label" fill="#ea580c">Controlled Egress · Azure Firewall</text>
+  <path d="M410 379 H400 V395 H112 V425" class="orange"/>
+  <path d="M175 452 H200" class="orange"/>
+  <path d="M320 452 H350 V622 H1470 V491 H1510" class="orange"/>
+  <text x="690" y="618" class="edge-label" fill="#ea580c">External data fetch · Proxy allowlist</text>
+
+  <path d="M988 205 C1040 170 1100 170 1152 205" class="purple"/>
+  <path d="M1118 222 H1152" class="purple"/>
+  <path d="M1200 252 V458 H620 V189 H600" class="purple"/>
+  <path d="M410 200 H385 V332 H320" class="purple"/>
+  <path d="M260 359 H185 V495 H325 V570 H300" class="purple"/>
+  <text x="650" y="452" class="edge-label" fill="#7e22ce">LLM Request · HTTPS</text>
+
+  <path d="M1067 455 V468 H1170 V480" class="gray"/>
+  <text x="1093" y="463" class="edge-label" fill="#64748b">Managed Identity · Image Pull · Telemetry</text>
+  <path d="M988 242 H1000 V420 H625 V390 H600" class="orange"/>
+  <text x="730" y="414" class="edge-label" fill="#ea580c">Server-side OAuth · Controlled Egress</text>
+  <path d="M320 452 H345 V610 H1490 V221 H1510" class="orange"/>
+  <text x="1295" y="604" class="edge-label" fill="#ea580c">Server-side OAuth · Proxy allowlist</text>
+
+  <!-- Bottom: logical application flow -->
+  <rect x="20" y="675" width="1750" height="395" fill="#fbfdff" stroke="#94a3b8" stroke-width="1.7" rx="14"/>
+  <text x="45" y="706" class="section-title">應用資料流</text>
+
+  <rect x="60" y="755" width="150" height="64" class="node-blue"/>
+  <text x="135" y="783" text-anchor="middle" class="node-title">InfoGather Web</text>
+  <text x="135" y="803" text-anchor="middle" class="node-sub">Azure App Service</text>
+  <rect x="260" y="755" width="160" height="64" class="node-blue"/>
+  <text x="340" y="783" text-anchor="middle" class="node-title">InfoGather API</text>
+  <text x="340" y="803" text-anchor="middle" class="node-sub">REST / SSE</text>
+  <rect x="480" y="755" width="170" height="64" class="node-green"/>
+  <text x="565" y="783" text-anchor="middle" class="node-title">Azure Managed Redis</text>
+  <text x="565" y="803" text-anchor="middle" class="node-sub">Queue / Session / Cache</text>
+  <rect x="710" y="755" width="150" height="64" class="node-blue"/>
+  <text x="785" y="783" text-anchor="middle" class="node-title">Worker</text>
+  <text x="785" y="803" text-anchor="middle" class="node-sub">Queue Consumer</text>
+  <rect x="920" y="755" width="170" height="64" class="node-purple"/>
+  <text x="1005" y="783" text-anchor="middle" class="node-title">Copilot CLI</text>
+  <text x="1005" y="803" text-anchor="middle" class="node-sub">TCP Server</text>
+  <rect x="1150" y="755" width="160" height="64" class="node-purple"/>
+  <text x="1230" y="783" text-anchor="middle" class="node-title">LiteLLM</text>
+  <text x="1230" y="803" text-anchor="middle" class="node-sub">Backend: Azure OpenAI</text>
+
+  <rect x="260" y="910" width="160" height="64" class="node-blue"/>
+  <text x="340" y="938" text-anchor="middle" class="node-title">Scheduler</text>
+  <text x="340" y="958" text-anchor="middle" class="node-sub">Cron Producer</text>
+  <rect x="500" y="910" width="180" height="64" class="node-green"/>
+  <text x="590" y="938" text-anchor="middle" class="node-title">Azure DocumentDB</text>
+  <text x="590" y="958" text-anchor="middle" class="node-sub">Persistent Data</text>
+  <rect x="720" y="910" width="170" height="64" class="node-orange"/>
+  <text x="805" y="938" text-anchor="middle" class="node-title">Forward Proxy</text>
+  <text x="805" y="958" text-anchor="middle" class="node-sub">唯一 Internet 出口</text>
+  <rect x="960" y="910" width="170" height="64" class="node"/>
+  <text x="1045" y="938" text-anchor="middle" class="node-title">外部資料來源</text>
+  <text x="1045" y="958" text-anchor="middle" class="node-sub">Domain allowlist</text>
+  <rect x="1210" y="910" width="180" height="64" class="node"/>
+  <text x="1300" y="938" text-anchor="middle" class="node-title">Microsoft Entra ID</text>
+  <text x="1300" y="958" text-anchor="middle" class="node-sub">Identity Provider</text>
+
+  <!-- Bottom flow paths -->
+  <path d="M210 787 H260" class="blue"/>
+  <text x="220" y="777" class="edge-label" fill="#2563eb">REST / SSE</text>
+  <path d="M420 787 H480" class="green"/>
+  <text x="430" y="777" class="edge-label" fill="#15803d">Enqueue</text>
+  <path d="M650 787 H710" class="green"/>
+  <text x="657" y="777" class="edge-label" fill="#15803d">Consume</text>
+  <path d="M710 811 H675 V845 H565 V819" class="green-dash"/>
+  <text x="603" y="841" class="edge-label" fill="#15803d">Job status</text>
+
+  <path d="M340 819 V885 H590 V910" class="green"/>
+  <text x="438" y="879" class="edge-label" fill="#15803d">CRUD</text>
+  <path d="M340 910 V850 H565 V819" class="green"/>
+  <text x="375" y="865" class="edge-label" fill="#15803d">Enqueue</text>
+  <path d="M420 942 H500" class="green"/>
+  <text x="430" y="932" class="edge-label" fill="#15803d">Query due jobs</text>
+  <path d="M785 819 V875 H650 V910" class="green"/>
+  <text x="678" y="867" class="edge-label" fill="#15803d">Persist results</text>
+
+  <path d="M420 767 V730 H1005 V755" class="purple"/>
+  <text x="635" y="724" class="edge-label" fill="#7e22ce">TCP</text>
+  <path d="M860 787 H920" class="purple"/>
+  <text x="865" y="777" class="edge-label" fill="#7e22ce">TCP</text>
+  <path d="M1090 787 H1150" class="purple"/>
+  <text x="1097" y="777" class="edge-label" fill="#7e22ce">LLM Request</text>
+
+  <path d="M785 819 V910" class="orange"/>
+  <text x="793" y="866" class="edge-label" fill="#ea580c">External fetch</text>
+  <path d="M890 942 H960" class="orange"/>
+  <path d="M260 807 H230 V1020 H805 V974" class="orange"/>
+  <text x="505" y="1013" class="edge-label" fill="#ea580c">Server-side OAuth</text>
+  <path d="M890 958 H930 V1020 H1300 V974" class="orange"/>
+
+  <!-- Legend -->
+  <rect x="1450" y="742" width="285" height="300" fill="#fff" stroke="#cbd5e1" stroke-width="1.2" rx="10"/>
+  <text x="1470" y="770" class="zone-title">圖例</text>
+  <line x1="1470" y1="800" x2="1530" y2="800" stroke="#2563eb" stroke-width="3"/>
+  <text x="1545" y="805" class="node-sub">使用者入口</text>
+  <line x1="1470" y1="838" x2="1530" y2="838" stroke="#15803d" stroke-width="3"/>
+  <text x="1545" y="843" class="node-sub">Queue / Database</text>
+  <line x1="1470" y1="876" x2="1530" y2="876" stroke="#ea580c" stroke-width="3"/>
+  <text x="1545" y="881" class="node-sub">External egress</text>
+  <line x1="1470" y1="914" x2="1530" y2="914" stroke="#7e22ce" stroke-width="3"/>
+  <text x="1545" y="919" class="node-sub">LLM path</text>
+  <line x1="1470" y1="952" x2="1530" y2="952" stroke="#64748b" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="1545" y="957" class="node-sub">DNS / Management</text>
+  <text x="1470" y="982" class="node-sub">Azure PaaS · Private access only</text>
+  <text x="1470" y="1009" class="node-sub">Target Architecture</text>
+</svg>
