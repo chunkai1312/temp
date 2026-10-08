@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sinopac-large-exposure",
   "version": "0.1.0",
-  "description": "永豐金控大額暴險申報、A07／表七、F19／表十九、歸戶與系統操作的靜態知識 Plugin。",
+  "description": "永豐金控大額暴險申報與系統操作的靜態知識 Plugin。",
   "author": {
     "name": "永豐金控風險管理處"
   },
@@ -10,7 +10,6 @@
   "keywords": [
     "large-exposure",
     "risk-management",
-    "financial-holding-company",
     "a07",
     "f19"
   ]
