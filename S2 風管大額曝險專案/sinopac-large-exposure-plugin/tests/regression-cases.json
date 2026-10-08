@@ -1,143 +1,144 @@
 {
   "schema_version": 1,
-  "description": "Q1 至 Q4 的標準問法與同義問法。expected_facts 用於知識完整性與人工 Agent 驗收。",
+  "source_scope": "知識庫文件/",
+  "description": "常見申報情境的標準問法與同義問法。expected_facts 用於知識完整性與人工 Agent 驗收。",
   "cases": [
     {
-      "id": "Q1-01",
-      "group": "Q1",
+      "id": "scope-01",
+      "group": "scope-and-threshold",
       "question": "子公司需要申報哪些大額暴險交易？有最低金額限制嗎？",
       "expected_reference_ids": ["KB-SCOPE-001", "KB-THRESHOLD-001"],
       "expected_facts": ["六類交易", "內部上傳無金額門檻", "有曝險或交易餘額即應上傳"]
     },
     {
-      "id": "Q1-02",
-      "group": "Q1",
+      "id": "scope-02",
+      "group": "scope-and-threshold",
       "question": "小額授信也要放進大額暴險系統嗎？",
       "expected_reference_ids": ["KB-SCOPE-001", "KB-THRESHOLD-001"],
       "expected_facts": ["授信屬交易範圍", "內部上傳無金額門檻"]
     },
     {
-      "id": "Q1-03",
-      "group": "Q1",
+      "id": "scope-03",
+      "group": "scope-and-threshold",
       "question": "哪些商品屬於子公司要上傳的暴險範圍？",
       "expected_reference_ids": ["KB-SCOPE-001"],
       "expected_facts": ["授信", "短期票券保證或背書", "附賣回交易", "有價證券", "衍生性金融商品", "其他主管機關規定交易"]
     },
     {
-      "id": "Q1-04",
-      "group": "Q1",
+      "id": "scope-04",
+      "group": "scope-and-threshold",
       "question": "內部大額暴險資料是不是只報超過門檻的部位？",
       "expected_reference_ids": ["KB-THRESHOLD-001"],
       "expected_facts": ["不是", "內部上傳無金額門檻", "對外門檻另行判斷"]
     },
     {
-      "id": "Q1-05",
-      "group": "Q1",
+      "id": "scope-05",
+      "group": "scope-and-threshold",
       "question": "請說明大額暴險申報範圍及門檻。",
       "expected_reference_ids": ["KB-SCOPE-001", "KB-THRESHOLD-001"],
       "expected_facts": ["區分內部上傳與對外申報", "六類交易", "金控淨值 5% 或新臺幣 30 億元"]
     },
     {
-      "id": "Q2-01",
-      "group": "Q2",
+      "id": "f19-balance-01",
+      "group": "f19-highest-balance",
       "question": "表十九哪些項目要報最高餘額？最高餘額是什麼？",
       "expected_reference_ids": ["KB-F19-001", "KB-CONFLICT-001"],
-      "expected_facts": ["代碼 02、04、06、09、11、12", "當月申報期間內曾出現的最高餘額", "不是月底餘額", "正式定義待確認"]
+      "expected_facts": ["代碼 02、04、06、09、11、12", "來源只列當月最高餘額欄位名稱", "沒有完整計算定義", "請風險管理處確認"]
     },
     {
-      "id": "Q2-02",
-      "group": "Q2",
+      "id": "f19-balance-02",
+      "group": "f19-highest-balance",
       "question": "F19 要抓月底數還是當月峰值？",
       "expected_reference_ids": ["KB-F19-001", "KB-CONFLICT-001"],
-      "expected_facts": ["當月峰值", "不是月底數", "正式定義待確認"]
+      "expected_facts": ["現有知識無法判定", "不得自行推論", "請風險管理處確認"]
     },
     {
-      "id": "Q2-03",
-      "group": "Q2",
+      "id": "f19-balance-03",
+      "group": "f19-highest-balance",
       "question": "當月最高餘額等於最大一筆交易金額嗎？",
       "expected_reference_ids": ["KB-F19-001", "KB-CONFLICT-001"],
-      "expected_facts": ["不等於單筆交易金額", "申報期間內的最高餘額"]
+      "expected_facts": ["現有知識未定義與單筆交易金額的關係", "不得自行推論", "請風險管理處確認"]
     },
     {
-      "id": "Q2-04",
-      "group": "Q2",
+      "id": "f19-balance-04",
+      "group": "f19-highest-balance",
       "question": "如果月中餘額最高、月底下降，F19 應填哪個數？",
       "expected_reference_ids": ["KB-F19-001", "KB-CONFLICT-001"],
-      "expected_facts": ["依測試預期填月中最高餘額", "正式計算定義待確認"]
+      "expected_facts": ["現有知識無法判定", "不得自行推論月中或月底數", "請風險管理處確認"]
     },
     {
-      "id": "Q2-05",
-      "group": "Q2",
+      "id": "f19-balance-05",
+      "group": "f19-highest-balance",
       "question": "請定義表十九的最高餘額並說明依據。",
       "expected_reference_ids": ["KB-F19-001", "KB-CONFLICT-001"],
-      "expected_facts": ["當月申報期間內最高餘額", "作業說明第 27 頁", "測試簡報第 5 張投影片", "待權責單位確認"]
+      "expected_facts": ["作業說明第 27 頁只列欄位名稱", "無正式計算定義", "待風險管理處確認"]
     },
     {
-      "id": "Q3-01",
-      "group": "Q3",
+      "id": "f19-fields-01",
+      "group": "f19-fields",
       "question": "表十九有哪些交易項目？金額欄位怎麼填？",
       "expected_reference_ids": ["KB-F19-001"],
       "expected_facts": ["代碼 02 至 12 的十類項目", "最高餘額與累積交易總額需依代碼區分", "新臺幣千元"]
     },
     {
-      "id": "Q3-02",
-      "group": "Q3",
+      "id": "f19-fields-02",
+      "group": "f19-fields",
       "question": "F19 的買賣不動產要填月底餘額嗎？",
       "expected_reference_ids": ["KB-F19-001"],
       "expected_facts": ["不是", "代碼 05", "本年累積交易總額"]
     },
     {
-      "id": "Q3-03",
-      "group": "Q3",
+      "id": "f19-fields-03",
+      "group": "f19-fields",
       "question": "表十九的放款、捐贈和保證背書各填什麼金額？",
       "expected_reference_ids": ["KB-F19-001"],
       "expected_facts": ["放款填當月最高餘額", "捐贈填本年累積交易總額", "保證及背書填當月最高餘額"]
     },
     {
-      "id": "Q3-04",
-      "group": "Q3",
+      "id": "f19-fields-04",
+      "group": "f19-fields",
       "question": "Top30 上傳檔的金額單位是元還是千元？",
       "expected_reference_ids": ["KB-F19-001"],
       "expected_facts": ["新臺幣千元", "F19 前 30 大"]
     },
     {
-      "id": "Q3-05",
-      "group": "Q3",
+      "id": "f19-fields-05",
+      "group": "f19-fields",
       "question": "F19 代碼 07 和 09 都是填最高餘額嗎？",
       "expected_reference_ids": ["KB-F19-001"],
       "expected_facts": ["不是", "07 填本年累積交易總額", "09 填當月最高餘額"]
     },
     {
-      "id": "Q4-01",
-      "group": "Q4",
+      "id": "threshold-01",
+      "group": "internal-external-threshold",
       "question": "子公司一定要曝險達新臺幣 30 億元才需申報嗎？",
       "expected_reference_ids": ["KB-THRESHOLD-001"],
       "expected_facts": ["不是", "內部上傳無金額門檻", "30 億元是對外門檻之一"]
     },
     {
-      "id": "Q4-02",
-      "group": "Q4",
+      "id": "threshold-02",
+      "group": "internal-external-threshold",
       "question": "未滿 30 億元的交易可以不用上傳表七嗎？",
       "expected_reference_ids": ["KB-THRESHOLD-001", "KB-F07-001"],
       "expected_facts": ["不可以因未滿 30 億元而省略", "範圍內有餘額即上傳"]
     },
     {
-      "id": "Q4-03",
-      "group": "Q4",
+      "id": "threshold-03",
+      "group": "internal-external-threshold",
       "question": "5% 和 30 億元是子公司的篩選條件嗎？",
       "expected_reference_ids": ["KB-THRESHOLD-001"],
       "expected_facts": ["不是子公司內部上傳篩選條件", "是金控對外申報條件", "符合任一條件"]
     },
     {
-      "id": "Q4-04",
-      "group": "Q4",
+      "id": "threshold-04",
+      "group": "internal-external-threshold",
       "question": "暴險只有一萬元，還要進系統嗎？",
       "expected_reference_ids": ["KB-SCOPE-001", "KB-THRESHOLD-001"],
       "expected_facts": ["若屬交易範圍且有餘額就要上傳", "內部無最低金額"]
     },
     {
-      "id": "Q4-05",
-      "group": "Q4",
+      "id": "threshold-05",
+      "group": "internal-external-threshold",
       "question": "請比較內部上傳門檻與主管機關申報門檻。",
       "expected_reference_ids": ["KB-THRESHOLD-001"],
       "expected_facts": ["內部無金額門檻", "對外為金控淨值 5% 或新臺幣 30 億元", "季末後 30 日內"]

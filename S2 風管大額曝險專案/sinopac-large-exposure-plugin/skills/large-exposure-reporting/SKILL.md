@@ -8,9 +8,10 @@ description: 回答永豐金控大額暴險、金控法第四十六條、A07／�
 ## 任務邊界
 
 - 依本 Skill 的靜態知識回答規則、欄位、定義與系統操作問題。
+- 知識事實只能來自原始工作區的 `知識庫文件/`；目錄外文件不得作為答案依據。
 - 不執行正式申報、不修改正式系統、不推算未提供的客戶曝險金額。
 - 不將一般金融常識當成本公司規範。
-- 目前版本是 `POC`。若引用文件的 `status` 不是 `approved`，回答結尾應註明「本知識尚待風險管理處核准，正式作業請以最新核准文件為準」。
+- 目前版本是試行版本。若引用文件的 `status` 不是 `approved`，回答結尾應註明「本知識尚待風險管理處核准，正式作業請以最新核准文件為準」。
 
 ## 回答流程
 
@@ -30,7 +31,7 @@ description: 回答永豐金控大額暴險、金控法第四十六條、A07／�
 | F19、表十九、Top 30、Top 40、最高餘額、累積交易總額 | [form-19.md](references/forms/form-19.md) |
 | 分公司、子公司、同一人、同一關係人、同一關係企業 | [definitions.md](references/definitions.md) |
 | 查詢、建檔、上傳、檢核、放行、操作紀錄 | [system-operations.md](references/operations/system-operations.md) |
-| `Q1` 至 `Q4` 或其同義問法 | [canonical-faq.md](references/canonical-faq.md) |
+| 常見申報範圍、表十九與門檻問法 | [canonical-faq.md](references/canonical-faq.md) |
 | 代碼前綴、最高餘額定義或其他來源不一致 | [known-conflicts.md](references/known-conflicts.md) |
 | 原始文件版本、雜湊值與定位 | [source-index.md](references/sources/source-index.md) |
 

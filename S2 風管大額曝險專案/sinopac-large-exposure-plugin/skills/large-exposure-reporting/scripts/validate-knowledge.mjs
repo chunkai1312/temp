@@ -3,12 +3,14 @@
 import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
+import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const skillRoot = path.resolve(scriptDir, "..");
 const pluginRoot = path.resolve(skillRoot, "..", "..");
 const releaseMode = process.argv.includes("--release");
+const verifySources = process.argv.includes("--verify-sources");
 const errors = [];
 const warnings = [];
 
@@ -113,17 +115,68 @@ for (const file of referenceFiles) {
 
 const sourceIndex = read(path.join(referenceRoot, "sources", "source-index.md"));
 const allReferenceText = referenceFiles.map(read).join("\n");
+const registeredSources = new Map();
+for (const line of sourceIndex.split("\n")) {
+  const sourceRow = line.match(/^\| `(SRC-\d{3})` \| `([^`]+)` \|.*\| `([a-f0-9]{64})` \|$/);
+  if (!sourceRow) continue;
+  registeredSources.set(sourceRow[1], {
+    sourcePath: sourceRow[2],
+    expectedHash: sourceRow[3]
+  });
+  if (!sourceRow[2].startsWith("知識庫文件/") || sourceRow[2].includes("..")) {
+    errors.push(`來源 ${sourceRow[1]} 不在知識庫文件/ 目錄內：${sourceRow[2]}`);
+  }
+}
+
 for (const sourceId of new Set(allReferenceText.match(/SRC-\d{3}/g) ?? [])) {
-  if (!sourceIndex.includes(`\`${sourceId}\``)) {
+  if (!registeredSources.has(sourceId)) {
     errors.push(`來源 ${sourceId} 未登錄於 source-index.md。`);
+  }
+}
+
+if (verifySources) {
+  const workspaceRoot = path.resolve(pluginRoot, "..");
+  const sourceRoot = path.join(workspaceRoot, "知識庫文件");
+  if (!fs.existsSync(sourceRoot)) {
+    errors.push("找不到原始知識庫文件/ 目錄，無法驗證來源檔案。");
+  } else {
+    const actualSourcePaths = new Set(
+      fs.readdirSync(sourceRoot, { withFileTypes: true })
+        .filter((entry) => entry.isFile() && !entry.name.startsWith(".") && !entry.name.startsWith("~$"))
+        .map((entry) => `知識庫文件/${entry.name}`)
+    );
+    const indexedSourcePaths = new Set(
+      [...registeredSources.values()].map((source) => source.sourcePath)
+    );
+
+    for (const sourcePath of actualSourcePaths) {
+      if (!indexedSourcePaths.has(sourcePath)) errors.push(`來源索引遺漏：${sourcePath}`);
+    }
+    for (const sourcePath of indexedSourcePaths) {
+      if (!actualSourcePaths.has(sourcePath)) errors.push(`來源檔案不存在：${sourcePath}`);
+    }
+
+    for (const [sourceId, source] of registeredSources) {
+      const absoluteSourcePath = path.join(workspaceRoot, source.sourcePath);
+      if (!fs.existsSync(absoluteSourcePath)) continue;
+      const actualHash = crypto.createHash("sha256")
+        .update(fs.readFileSync(absoluteSourcePath))
+        .digest("hex");
+      if (actualHash !== source.expectedHash) {
+        errors.push(`${sourceId} 的 SHA-256 與來源索引不一致。`);
+      }
+    }
   }
 }
 
 const testsPath = path.join(pluginRoot, "tests", "regression-cases.json");
 try {
   const suite = JSON.parse(read(testsPath));
+  if (suite.source_scope !== "知識庫文件/") {
+    errors.push("迴歸案例的 source_scope 必須是知識庫文件/。");
+  }
   const cases = suite.cases ?? [];
-  if (cases.length < 20) errors.push("迴歸案例至少需要 20 題，涵蓋 Q1 至 Q4 的同義問法。");
+  if (cases.length < 20) errors.push("迴歸案例至少需要 20 題，涵蓋四類常見情境的同義問法。");
   const ids = new Set();
   const groups = new Map();
   for (const testCase of cases) {
@@ -139,7 +192,12 @@ try {
       }
     }
   }
-  for (const group of ["Q1", "Q2", "Q3", "Q4"]) {
+  for (const group of [
+    "scope-and-threshold",
+    "f19-highest-balance",
+    "f19-fields",
+    "internal-external-threshold"
+  ]) {
     if ((groups.get(group) ?? 0) < 5) errors.push(`${group} 至少需要 5 個同義問法。`);
   }
 } catch (error) {
@@ -149,6 +207,7 @@ try {
 console.log(`Plugin：${path.basename(pluginRoot)}`);
 console.log(`知識文件：${referenceFiles.length}`);
 console.log(`驗證模式：${releaseMode ? "release" : "development"}`);
+console.log(`來源檔案驗證：${verifySources ? "enabled" : "disabled"}`);
 
 for (const warning of warnings) console.warn(`WARN  ${warning}`);
 for (const error of errors) console.error(`ERROR ${error}`);
