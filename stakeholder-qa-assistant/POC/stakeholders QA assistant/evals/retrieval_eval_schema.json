@@ -1,0 +1,133 @@
+{
+  "$schema_version": "phase6-draft",
+  "title": "Retrieval Eval Schema v2",
+  "description": "檢索層評測資料與結果格式骨架。",
+  "record_type": "retrieval_eval_case",
+  "required": [
+    "eval_id",
+    "question",
+    "question_type",
+    "law_domain",
+    "risk_level",
+    "must_have_sources",
+    "good_to_have_sources",
+    "must_not_cite_sources"
+  ],
+  "fields": {
+    "eval_id": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    },
+    "question_type": {
+      "type": "string",
+      "enum": [
+        "system_operation",
+        "reg_case",
+        "regulation_only",
+        "kinship_scope",
+        "mixed"
+      ]
+    },
+    "law_domain": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "query_date": {
+      "type": "string"
+    },
+    "must_have_sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/source_item"
+      },
+      "description": "若未召回，應計入關鍵法條漏失。"
+    },
+    "good_to_have_sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/source_item"
+      }
+    },
+    "must_not_cite_sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/source_item"
+      }
+    },
+    "expected_joint_application": {
+      "type": "boolean"
+    },
+    "expected_exception_required": {
+      "type": "boolean"
+    },
+    "retrieval_result": {
+      "$ref": "#/definitions/retrieval_result"
+    }
+  },
+  "definitions": {
+    "source_item": {
+      "type": "object",
+      "required": [
+        "source_name",
+        "locator"
+      ],
+      "properties": {
+        "source_name": {
+          "type": "string"
+        },
+        "locator": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "string",
+          "enum": [
+            "critical",
+            "important",
+            "optional"
+          ]
+        }
+      }
+    },
+    "retrieval_result": {
+      "type": "object",
+      "properties": {
+        "retrieved_sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/source_item"
+          }
+        },
+        "recall_at_20": {
+          "type": "number"
+        },
+        "recall_at_50": {
+          "type": "number"
+        },
+        "recall_at_100": {
+          "type": "number"
+        },
+        "precision_at_10": {
+          "type": "number"
+        },
+        "ndcg": {
+          "type": "number"
+        },
+        "critical_source_missed": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

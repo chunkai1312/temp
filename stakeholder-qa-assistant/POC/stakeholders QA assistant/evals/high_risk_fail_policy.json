@@ -1,0 +1,32 @@
+{
+  "version": "phase6-draft",
+  "status": "spec-skeleton-only",
+  "description": "高風險錯誤 hard fail 政策骨架。",
+  "hard_fail_conditions": [
+    {
+      "code": "missing_key_exception",
+      "description": "漏掉關鍵例外或但書"
+    },
+    {
+      "code": "wrong_subject_binding",
+      "description": "弄錯義務主體"
+    },
+    {
+      "code": "wrong_effective_version",
+      "description": "引用失效或版本不明法條回答現況高風險題"
+    },
+    {
+      "code": "unsupported_core_claim",
+      "description": "核心結論未被法源支持"
+    },
+    {
+      "code": "wrong_high_risk_direction",
+      "description": "禁止規定、申報義務、董事會核決等高風險結論回答方向錯誤"
+    }
+  ],
+  "policy": {
+    "any_hard_fail_blocks_release": true,
+    "average_score_cannot_override_hard_fail": true,
+    "high_risk_cases_must_be_reported_separately": true
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "manifest_version": "formal-batch-1",
+  "updated_at": "2026-09-08",
+  "sources": [
+    {
+      "source_id": "src_reg_004",
+      "law_name": "內規-交易查詢及判斷",
+      "regulator": "永豐金控內規",
+      "official_url": "",
+      "source_type": "internal_rule",
+      "last_checked_at": "",
+      "notes": "依工作區既有內規條文整理，尚未補內部公告版本基準日。"
+    },
+    {
+      "source_id": "src_reg_026_033",
+      "law_name": "內規-建檔及申報",
+      "regulator": "永豐金控內規",
+      "official_url": "",
+      "source_type": "internal_rule",
+      "last_checked_at": "",
+      "notes": "依工作區既有內規條文整理，尚未補內部公告版本基準日。"
+    },
+    {
+      "source_id": "src_reg_037",
+      "law_name": "金管銀法字第11202738872號令/外規-銀",
+      "regulator": "金融監督管理委員會",
+      "official_url": "",
+      "source_type": "regulator_order",
+      "last_checked_at": "",
+      "notes": "工作區資料可確認令號與日期，但未另抓官方網址。"
+    },
+    {
+      "source_id": "src_reg_039",
+      "law_name": "金融控股公司法",
+      "regulator": "主管機關法規資料",
+      "official_url": "",
+      "source_type": "statute",
+      "last_checked_at": "",
+      "notes": "依工作區整理資料，版本日期為一○八年一月十六日修正。"
+    },
+    {
+      "source_id": "src_reg_040_042",
+      "law_name": "銀行法",
+      "regulator": "主管機關法規資料",
+      "official_url": "",
+      "source_type": "statute",
+      "last_checked_at": "",
+      "notes": "依工作區整理資料，版本日期為一一二年六月二十八日修正。"
+    },
+    {
+      "source_id": "src_faq_005_009",
+      "law_name": "利害關係人常見問答集-更新",
+      "regulator": "內部FAQ整理",
+      "official_url": "",
+      "source_type": "faq_case",
+      "last_checked_at": "",
+      "notes": "僅可作案例或程序輔助，正式結論仍應搭配法規/內規。"
+    }
+  ]
+}

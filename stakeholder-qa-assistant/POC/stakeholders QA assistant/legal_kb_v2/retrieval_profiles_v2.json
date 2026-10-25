@@ -1,0 +1,379 @@
+{
+  "version": "phase3-draft",
+  "status": "spec-skeleton-only",
+  "notes": [
+    "此檔為 v2 檢索規格骨架，不代表現階段已接上真正的 BM25、向量索引、RRF 或法律專用 reranker。",
+    "現行回答資料仍以 stakeholders QA assistant/rag_optimized_output/*.jsonl 為主。",
+    "若 v1 欄位不足以完成版本或效力驗證，回答時必須揭露限制。"
+  ],
+  "global_policy": {
+    "pre_filter_required": true,
+    "pre_filter_inputs": [
+      "law_domain",
+      "query_date",
+      "requested_time_scope",
+      "source_tiers_allowed",
+      "version_filter_status"
+    ],
+    "dual_retrieval_required": true,
+    "fusion_method": {
+      "name": "rrf",
+      "k": 60,
+      "status": "target-policy"
+    },
+    "rerank_policy": {
+      "enabled": true,
+      "mode": "legal-rerank-or-heuristic-fallback",
+      "target_output_size": 10
+    },
+    "source_validation_required": true,
+    "hard_fail_conditions": [
+      "missing_key_exception_or_proviso",
+      "wrong_subject_binding",
+      "effective_version_unconfirmed_for_high_risk_current_question",
+      "claim_not_supported_by_source"
+    ]
+  },
+  "router": {
+    "description": "先判斷問題屬於系統操作、親等／申報範圍、法規案例或純法規/制度問答，再選擇檢索設定。",
+    "rules": [
+      {
+        "if_contains_any": [
+          "幾血",
+          "幾姻",
+          "親等",
+          "申報範圍",
+          "血親",
+          "姻親",
+          "配偶的兄弟姊妹",
+          "兄弟姊妹的配偶",
+          "岳父母",
+          "公婆",
+          "繼父",
+          "繼母",
+          "前婚姻關係",
+          "祖父母再婚配偶",
+          "圖上",
+          "圖示",
+          "申報範圍圖"
+        ],
+        "route": "kinship_scope"
+      },
+      {
+        "if_contains_any": [
+          "如何",
+          "怎麼",
+          "查詢",
+          "新增",
+          "解除",
+          "批次",
+          "權限",
+          "畫面",
+          "系統"
+        ],
+        "route": "system_operation"
+      },
+      {
+        "if_contains_any": [
+          "是否構成",
+          "利害關係人交易",
+          "案例",
+          "董事會",
+          "概括授權",
+          "授信",
+          "捐贈",
+          "交易申報"
+        ],
+        "route": "reg_case"
+      },
+      {
+        "if_contains_any": [
+          "條文",
+          "法規",
+          "規定是什麼",
+          "哪些情況",
+          "可概括授權",
+          "制度"
+        ],
+        "route": "regulation_only"
+      }
+    ],
+    "default_route": "reg_case"
+  },
+  "profiles": {
+    "system_operation": {
+      "pre_filter": {
+        "allowed_source_tiers": [
+          "manual"
+        ],
+        "version_filter_status": "partially_applied"
+      },
+      "sources": [
+        "stakeholders QA assistant/rag_optimized_output/system_operation_kb_rag.jsonl"
+      ],
+      "retrieval": {
+        "sparse": {
+          "enabled": true,
+          "target_top_k": 20,
+          "priority_fields": [
+            "title",
+            "title_aliases",
+            "keywords",
+            "retrieval_text_sparse",
+            "content"
+          ]
+        },
+        "dense": {
+          "enabled": true,
+          "target_top_k": 20,
+          "priority_fields": [
+            "retrieval_text_dense",
+            "content"
+          ],
+          "status": "target-policy"
+        },
+        "fusion": {
+          "method": "rrf",
+          "candidate_pool_size": 40
+        }
+      },
+      "rerank": {
+        "target_top_n": 5,
+        "must_check": [
+          "issue_match",
+          "action_match",
+          "step_relevance"
+        ]
+      },
+      "source_validation": {
+        "required_checks": [
+          "action_supported",
+          "conditions_supported",
+          "version_status"
+        ],
+        "fallback_when_missing": "抱歉，檔案中未包含相關資訊，建議洽詢法遵處，謝謝您。"
+      }
+    },
+    "reg_case": {
+      "pre_filter": {
+        "allowed_source_tiers": [
+          "external",
+          "internal",
+          "faq",
+          "training",
+          "reference"
+        ],
+        "require_law_domain": true,
+        "require_query_date_assessment": true,
+        "version_filter_status": "partially_applied"
+      },
+      "sources": [
+        "stakeholders QA assistant/rag_optimized_output/faq_case_kb_rag.jsonl",
+        "stakeholders QA assistant/rag_optimized_output/regulation_kb_rag.jsonl",
+        "stakeholders QA assistant/rag_optimized_output/training_note_kb_rag.jsonl",
+        "references/group-structure.md"
+      ],
+      "retrieval": {
+        "sparse": {
+          "enabled": true,
+          "target_top_k": 50,
+          "priority_fields": [
+            "law_name",
+            "article_key",
+            "title",
+            "title_aliases",
+            "law_refs",
+            "keywords",
+            "retrieval_text_sparse",
+            "content"
+          ]
+        },
+        "dense": {
+          "enabled": true,
+          "target_top_k": 50,
+          "priority_fields": [
+            "retrieval_text_dense",
+            "content"
+          ],
+          "status": "target-policy"
+        },
+        "fusion": {
+          "method": "rrf",
+          "candidate_pool_size": 100
+        }
+      },
+      "rerank": {
+        "target_top_n": 15,
+        "must_check": [
+          "issue_match",
+          "subject_match",
+          "counterparty_match",
+          "action_match",
+          "modality_match",
+          "exception_coverage",
+          "liability_coverage",
+          "authority_level",
+          "version_confidence",
+          "needs_joint_application"
+        ],
+        "fallback_mode": "heuristic"
+      },
+      "source_validation": {
+        "required_checks": [
+          "subject_supported",
+          "counterparty_supported",
+          "action_supported",
+          "modality_supported",
+          "conditions_supported",
+          "exceptions_checked",
+          "liability_checked",
+          "version_status"
+        ],
+        "high_risk_if_any": [
+          "董事會核決",
+          "禁止規定",
+          "申報義務",
+          "重大交易",
+          "責任或法律效果"
+        ],
+        "answer_if_validation_uncertain": "目前無法確定"
+      }
+    },
+    "regulation_only": {
+      "pre_filter": {
+        "allowed_source_tiers": [
+          "external",
+          "internal",
+          "training"
+        ],
+        "require_law_domain": true,
+        "require_query_date_assessment": true,
+        "version_filter_status": "partially_applied"
+      },
+      "sources": [
+        "stakeholders QA assistant/rag_optimized_output/regulation_kb_rag.jsonl",
+        "stakeholders QA assistant/rag_optimized_output/training_note_kb_rag.jsonl"
+      ],
+      "retrieval": {
+        "sparse": {
+          "enabled": true,
+          "target_top_k": 40,
+          "priority_fields": [
+            "law_name",
+            "article_key",
+            "title",
+            "title_aliases",
+            "law_refs",
+            "keywords",
+            "retrieval_text_sparse",
+            "content"
+          ]
+        },
+        "dense": {
+          "enabled": true,
+          "target_top_k": 40,
+          "priority_fields": [
+            "retrieval_text_dense",
+            "content"
+          ],
+          "status": "target-policy"
+        },
+        "fusion": {
+          "method": "rrf",
+          "candidate_pool_size": 80
+        }
+      },
+      "rerank": {
+        "target_top_n": 12,
+        "must_check": [
+          "issue_match",
+          "subject_match",
+          "modality_match",
+          "exception_coverage",
+          "authority_level",
+          "version_confidence"
+        ],
+        "fallback_mode": "heuristic"
+      },
+      "source_validation": {
+        "required_checks": [
+          "modality_supported",
+          "conditions_supported",
+          "exceptions_checked",
+          "version_status"
+        ],
+        "answer_if_validation_uncertain": "目前無法確定"
+      }
+    },
+    "kinship_scope": {
+      "pre_filter": {
+        "allowed_source_tiers": [
+          "reference",
+          "faq",
+          "external",
+          "internal",
+          "training",
+          "manual"
+        ],
+        "require_law_domain": true,
+        "version_filter_status": "partially_applied"
+      },
+      "sources": [
+        "references/kinship-scope-chart.md",
+        "stakeholders QA assistant/rag_optimized_output/faq_case_kb_rag.jsonl",
+        "stakeholders QA assistant/rag_optimized_output/regulation_kb_rag.jsonl",
+        "stakeholders QA assistant/rag_optimized_output/training_note_kb_rag.jsonl",
+        "stakeholders QA assistant/rag_optimized_output/system_operation_kb_rag.jsonl"
+      ],
+      "retrieval": {
+        "sparse": {
+          "enabled": true,
+          "target_top_k": 30,
+          "priority_fields": [
+            "title",
+            "title_aliases",
+            "keywords",
+            "law_refs",
+            "retrieval_text_sparse",
+            "content"
+          ]
+        },
+        "dense": {
+          "enabled": true,
+          "target_top_k": 30,
+          "priority_fields": [
+            "retrieval_text_dense",
+            "content"
+          ],
+          "status": "target-policy"
+        },
+        "fusion": {
+          "method": "rrf",
+          "candidate_pool_size": 60
+        }
+      },
+      "rerank": {
+        "target_top_n": 10,
+        "must_check": [
+          "issue_match",
+          "counterparty_match",
+          "action_match",
+          "exception_coverage",
+          "authority_level"
+        ],
+        "fallback_mode": "heuristic"
+      },
+      "source_validation": {
+        "required_checks": [
+          "counterparty_supported",
+          "action_supported",
+          "conditions_supported",
+          "exceptions_checked",
+          "version_status"
+        ],
+        "special_rule": "圖示資料只能輔助關係路徑與幾血幾姻，不可單獨支持最終法規結論。",
+        "answer_if_validation_uncertain": "目前無法確定"
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "$schema_version": "phase6-draft",
+  "title": "Answer Grounding Eval Schema v2",
+  "description": "最終回答 grounding 與引用支持度評測資料格式骨架。",
+  "record_type": "answer_grounding_eval_case",
+  "required": [
+    "eval_id",
+    "question",
+    "expected_claims"
+  ],
+  "fields": {
+    "eval_id": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    },
+    "expected_claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/claim_item"
+      }
+    },
+    "predicted_answer": {
+      "type": "string"
+    },
+    "predicted_claims": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/claim_item"
+      }
+    },
+    "metrics": {
+      "$ref": "#/definitions/answer_metrics"
+    }
+  },
+  "definitions": {
+    "claim_item": {
+      "type": "object",
+      "required": [
+        "claim_text"
+      ],
+      "properties": {
+        "claim_text": {
+          "type": "string"
+        },
+        "must_have_citation": {
+          "type": "boolean"
+        },
+        "citation_support_required": {
+          "type": "boolean"
+        },
+        "must_disclose_uncertainty": {
+          "type": "boolean"
+        }
+      }
+    },
+    "answer_metrics": {
+      "type": "object",
+      "properties": {
+        "citation_completeness": { "type": "number" },
+        "citation_support_rate": { "type": "number" },
+        "wrong_version_rate": { "type": "number" },
+        "unsupported_claim_rate": { "type": "number" },
+        "exception_disclosure_rate": { "type": "number" },
+        "uncertainty_disclosure_rate": { "type": "number" }
+      }
+    }
+  }
+}

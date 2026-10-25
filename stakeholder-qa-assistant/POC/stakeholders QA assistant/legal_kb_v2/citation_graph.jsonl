@@ -1,0 +1,10 @@
+{"edge_id":"cg_formal_001","from_record_id":"regv2_004","to_record_id":"regv2_037","relation_type":"supplemented_by","description":"內規第三條明示概括授權範圍應依主管機關法令及函釋辦理，需由11202738872號令補足外規範圍。","confidence":"high"}
+{"edge_id":"cg_formal_002","from_record_id":"regv2_033","to_record_id":"faq_012","relation_type":"supplemented_by","description":"交易申報作業的內規流程與FAQ中對申報系統注意事項互相補充，但正式作業規則仍以內規條文為主。","confidence":"medium"}
+{"edge_id":"cg_formal_003","from_record_id":"faq_005","to_record_id":"regv2_037","relation_type":"requires_joint_application","description":"股票禮品卡 > 5000萬案例須結合外規概括授權上限與FAQ案例流程，不能只單看FAQ。","confidence":"high"}
+{"edge_id":"cg_formal_004","from_record_id":"faq_005","to_record_id":"regv2_039","relation_type":"requires_joint_application","description":"案例涉及金融控股公司法第四十五條授信以外交易的基礎規範與董事會決議門檻。","confidence":"high"}
+{"edge_id":"cg_formal_005","from_record_id":"faq_009","to_record_id":"regv2_039","relation_type":"requires_joint_application","description":"捐贈給利害關係人的程序需先回到金融控股公司法第四十五條授信以外交易架構。","confidence":"high"}
+{"edge_id":"cg_formal_006","from_record_id":"faq_009","to_record_id":"regv2_004","relation_type":"supplemented_by","description":"FAQ提到檢核表與內部流程時，可由內規概括授權與程序條文補充。","confidence":"medium"}
+{"edge_id":"cg_formal_007","from_record_id":"regv2_040","to_record_id":"regv2_042","relation_type":"requires_definition","description":"銀行法第三十二條所稱有利害關係者需回查第七十五條定義。","confidence":"high"}
+{"edge_id":"cg_formal_008","from_record_id":"regv2_041","to_record_id":"regv2_042","relation_type":"requires_definition","description":"銀行法第三十三條適用對象需回查第七十五條定義。","confidence":"high"}
+{"edge_id":"cg_formal_009","from_record_id":"regv2_026","to_record_id":"regv2_042","relation_type":"aligned_with","description":"內規-建檔及申報第六條中銀行子公司親屬/相關事業範圍，與銀行法利害關係人定義存在對照關係。","confidence":"medium"}
+{"edge_id":"cg_formal_010","from_record_id":"regv2_026","to_record_id":"regv2_033","relation_type":"workflow_dependency","description":"先建檔與維護利害關係人範圍，再進行交易申報作業。","confidence":"high"}

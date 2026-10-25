@@ -1,0 +1,3 @@
+{"edge_id":"cg_001","from_record_id":"regv2_002","to_record_id":"regv2_001","relation_type":"supplemented_by","description":"內規概括授權範圍應依主管機關法令及函釋辦理，實際外規內容需再回查正式法源。","confidence":"medium"}
+{"edge_id":"cg_002","from_record_id":"regv2_001","to_record_id":"banking_law_75_20240628","relation_type":"requires_definition","description":"第三十三條所稱有利害關係者，需再回查相關定義條文。","confidence":"medium"}
+{"edge_id":"cg_003","from_record_id":"regv2_001","to_record_id":"regv2_001","relation_type":"may_require_joint_application","description":"若問題涉及董事會核決門檻，可能需同時搭配主管機關規定金額與相關函令。","confidence":"low"}

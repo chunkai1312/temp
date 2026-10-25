@@ -1,0 +1,69 @@
+{
+  "$schema_version": "phase4-draft",
+  "status": "spec-skeleton-only",
+  "description": "工作區 v2 法規知識庫預定使用的結構化抽取 schema 映射檔。此檔與 skill references/norm-extraction-schema.json 對齊，用於後續資料重建或抽取流程。",
+  "primary_artifacts": [
+    "norm_extraction",
+    "claim_validation"
+  ],
+  "norm_extraction": {
+    "source_schema": "stakeholder-qa-rag-test/references/norm-extraction-schema.json",
+    "minimum_required_fields": [
+      "extraction_id",
+      "source_record_id",
+      "claim_scope",
+      "subject",
+      "counterparty",
+      "modality",
+      "action",
+      "object",
+      "conditions",
+      "exceptions",
+      "deadline",
+      "legal_effect",
+      "liability",
+      "citations",
+      "extraction_status"
+    ],
+    "notes": [
+      "若目前只有 v1 record，source_record_id 可先對應既有 record_id。",
+      "source_version_id 在未建立版本化法規庫前可留空，不得虛構。",
+      "claim_scope 若需共同適用，必須搭配 joint_application_refs。",
+      "FAQ 或教育訓練來源可抽取，但 extraction_status 不應直接視為 fully supported。"
+    ]
+  },
+  "claim_validation": {
+    "source_schema": "stakeholder-qa-rag-test/references/claim-validation-schema.json",
+    "minimum_required_fields": [
+      "claim_id",
+      "claim_text",
+      "claim_type",
+      "supporting_norms",
+      "subject_supported",
+      "counterparty_supported",
+      "action_supported",
+      "modality_supported",
+      "conditions_supported",
+      "exceptions_checked",
+      "legal_effect_supported",
+      "liability_supported",
+      "version_status",
+      "support_level"
+    ],
+    "notes": [
+      "每一項最終要輸出的重要結論，都應有一筆 claim_validation。",
+      "若 support_level 不是 supported，回答時應改採保守表述或揭露限制。",
+      "若 risk_flags 包含 version_unconfirmed 且屬高風險現況題，不應直接給確定答案。"
+    ]
+  },
+  "consistency_policy": {
+    "reference": "stakeholder-qa-rag-test/references/consistency-check-rules.md",
+    "must_check_before_final_answer": [
+      "subject_binding",
+      "exception_coverage",
+      "joint_application_completion",
+      "version_confirmation",
+      "claim_to_citation_alignment"
+    ]
+  }
+}

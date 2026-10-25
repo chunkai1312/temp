@@ -1,0 +1,70 @@
+{
+  "version": "phase5-draft",
+  "status": "spec-skeleton-only",
+  "description": "人工覆核與最終回答 gate 的工作區政策骨架。",
+  "human_review": {
+    "required_for_any": [
+      "禁止規定",
+      "重大交易",
+      "董事會核決",
+      "申報義務",
+      "利害關係人交易成立與否",
+      "責任或法律效果"
+    ],
+    "also_required_when": [
+      "support_level_not_all_supported",
+      "version_status_contains_unconfirmed",
+      "exceptions_checked_false",
+      "joint_application_not_completed",
+      "formal_conclusion_supported_mainly_by_faq_or_training_or_reference"
+    ],
+    "checklist_reference": "stakeholder-qa-rag-test/references/human-review-checklist.md"
+  },
+  "review_decision_levels": [
+    "approve",
+    "approve_with_caveat",
+    "revise_and_recheck",
+    "cannot_determine"
+  ],
+  "decision_policy_reference": "stakeholder-qa-rag-test/references/review-decision-policy.md",
+  "final_answer_gates": {
+    "required_review_decision": [
+      "approve",
+      "approve_with_caveat"
+    ],
+    "required_claim_support": {
+      "disallow_for_key_claims": [
+        "unsupported",
+        "uncertain"
+      ]
+    },
+    "required_checks": [
+      "exception_gate",
+      "version_gate",
+      "authority_gate",
+      "citation_alignment_gate"
+    ],
+    "gating_reference": "stakeholder-qa-rag-test/references/final-answer-gating-rules.md"
+  },
+  "final_answer_modes": {
+    "evidence_answer": {
+      "when": "all gates passed and review_decision=approve"
+    },
+    "evidence_answer_with_caveat": {
+      "when": "review_decision=approve_with_caveat",
+      "must_include": [
+        "適用前提",
+        "限制揭露",
+        "保守語氣"
+      ]
+    },
+    "cannot_determine": {
+      "when": "any key gate failed or review_decision=cannot_determine",
+      "recommended_phrases": [
+        "目前無法確定。",
+        "依現有資料尚難作成確定判斷。",
+        "因版本效力／例外條款／主體事實仍未能確認，暫不宜下確定結論。"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1790 @@
+{
+  "schema": "openai.presentation.layout/v5",
+  "unit": "px",
+  "slide": {
+    "id": "sl/oandva",
+    "index": 1,
+    "layout": {
+      "id": "ly/ux4ruhcv",
+      "name": "標題及物件"
+    },
+    "masterLayoutId": "ly/atofqts7",
+    "backgroundColor": "rgba(255,255,255,1)",
+    "position": {
+      "left": 0,
+      "top": 0,
+      "width": 1209.5,
+      "height": 680.33
+    }
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "ly/ux4ruhcv",
+      "name": "標題及物件",
+      "parentLayoutId": "ly/atofqts7",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "id": "sh/bexgre18",
+          "editable": false,
+          "name": "Google Shape;18;p34",
+          "position": {
+            "left": 18.83,
+            "top": 7.56,
+            "width": 1171.83,
+            "height": 56.69
+          },
+          "geometry": "rect",
+          "lineWidth": 0,
+          "style": {
+            "anchor": 2,
+            "verticalAlignment": "middle",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 4.62,
+              "right": 9.25,
+              "bottom": 4.62,
+              "left": 9.25
+            },
+            "useParagraphSpacing": true
+          }
+        },
+        {
+          "order": 2,
+          "kind": "textbox",
+          "scope": "layout",
+          "id": "sh/adozi903",
+          "editable": false,
+          "name": "Google Shape;19;p34",
+          "position": {
+            "left": 18.83,
+            "top": 75.5,
+            "width": 1171.83,
+            "height": 567.04
+          },
+          "geometry": "rect",
+          "lineWidth": 0,
+          "text": "第一層\n第二層\n第三層\n第四層\n第五層",
+          "style": {
+            "anchor": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 4.62,
+              "right": 9.25,
+              "bottom": 4.62,
+              "left": 9.25
+            },
+            "useParagraphSpacing": true
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "第一層",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第一層",
+                  "anchor": 1,
+                  "verticalAlignment": "top",
+                  "wrap": "square",
+                  "autoFit": "none",
+                  "insets": {
+                    "top": 4.62,
+                    "right": 9.25,
+                    "bottom": 4.62,
+                    "left": 9.25
+                  },
+                  "useParagraphSpacing": true
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第二層",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第二層",
+                  "anchor": 1,
+                  "verticalAlignment": "top",
+                  "wrap": "square",
+                  "autoFit": "none",
+                  "insets": {
+                    "top": 4.62,
+                    "right": 9.25,
+                    "bottom": 4.62,
+                    "left": 9.25
+                  },
+                  "useParagraphSpacing": true
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第三層",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第三層",
+                  "anchor": 1,
+                  "verticalAlignment": "top",
+                  "wrap": "square",
+                  "autoFit": "none",
+                  "insets": {
+                    "top": 4.62,
+                    "right": 9.25,
+                    "bottom": 4.62,
+                    "left": 9.25
+                  },
+                  "useParagraphSpacing": true
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第四層",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第四層",
+                  "anchor": 1,
+                  "verticalAlignment": "top",
+                  "wrap": "square",
+                  "autoFit": "none",
+                  "insets": {
+                    "top": 4.62,
+                    "right": 9.25,
+                    "bottom": 4.62,
+                    "left": 9.25
+                  },
+                  "useParagraphSpacing": true
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第五層",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第五層",
+                  "anchor": 1,
+                  "verticalAlignment": "top",
+                  "wrap": "square",
+                  "autoFit": "none",
+                  "insets": {
+                    "top": 4.62,
+                    "right": 9.25,
+                    "bottom": 4.62,
+                    "left": 9.25
+                  },
+                  "useParagraphSpacing": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "id": "sh/m98jqdkb",
+          "editable": false,
+          "name": "Google Shape;20;p34",
+          "position": {
+            "left": 18.83,
+            "top": 64.25,
+            "width": 1171.83,
+            "height": 0
+          },
+          "geometry": "straightConnector1",
+          "lineColor": "#FF0000",
+          "lineWidth": 1.67
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "ly/atofqts7",
+      "type": "master",
+      "backgroundColor": "lt1",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "image",
+          "scope": "master",
+          "id": "im/ut8nyx4j",
+          "editable": false,
+          "name": "圖片 2",
+          "position": {
+            "left": 0,
+            "top": 629.29,
+            "width": 462.6,
+            "height": 74.08
+          },
+          "contentType": "image/png",
+          "asset": {
+            "contentType": "image/png",
+            "byteLength": 59655
+          },
+          "fillImage": {
+            "contentType": "image/png",
+            "byteLength": 59655
+          }
+        },
+        {
+          "order": 2,
+          "kind": "textbox",
+          "scope": "master",
+          "id": "sh/czu98z2x",
+          "editable": false,
+          "name": "Google Shape;6;p31",
+          "position": {
+            "left": 0,
+            "top": 654.9,
+            "width": 40.06,
+            "height": 25.43
+          },
+          "geometry": "rect",
+          "lineWidth": 0,
+          "text": "2",
+          "style": {
+            "anchor": 3,
+            "fontSize": 16,
+            "typeface": "Microsoft JhengHei",
+            "color": "#000000",
+            "bold": false,
+            "italic": false,
+            "alignment": "center",
+            "verticalAlignment": "bottom",
+            "textTransform": "none",
+            "wrap": "none",
+            "autoFit": "resizeShapeToFitText",
+            "insets": {
+              "top": 4.62,
+              "right": 9.25,
+              "bottom": 4.62,
+              "left": 9.25
+            },
+            "useParagraphSpacing": true
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "2",
+              "lineSpacingPercent": 83333,
+              "style": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "2",
+                  "anchor": 3,
+                  "fontSize": 16,
+                  "typeface": "Microsoft JhengHei",
+                  "color": "#000000",
+                  "bold": false,
+                  "italic": false,
+                  "alignment": "center",
+                  "verticalAlignment": "bottom",
+                  "textTransform": "none",
+                  "wrap": "none",
+                  "autoFit": "resizeShapeToFitText",
+                  "insets": {
+                    "top": 4.62,
+                    "right": 9.25,
+                    "bottom": 4.62,
+                    "left": 9.25
+                  },
+                  "useParagraphSpacing": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "image",
+          "scope": "master",
+          "id": "im/50j6dc36",
+          "editable": false,
+          "name": "圖片 3",
+          "position": {
+            "left": 944.88,
+            "top": 646.3,
+            "width": 258.55,
+            "height": 30.58
+          },
+          "contentType": "image/png",
+          "asset": {
+            "contentType": "image/png",
+            "byteLength": 4113
+          },
+          "fillImage": {
+            "contentType": "image/png",
+            "byteLength": 4113
+          }
+        },
+        {
+          "order": 4,
+          "kind": "textbox",
+          "scope": "master",
+          "id": "sh/ry1szulc",
+          "editable": false,
+          "name": "矩形 4",
+          "position": {
+            "left": 772.91,
+            "top": 653.86,
+            "width": 171.8,
+            "height": 21.73
+          },
+          "geometry": "rect",
+          "lineWidth": 0,
+          "text": "機密資料僅限永豐金控內部使用 ",
+          "style": {
+            "anchor": 2,
+            "fontSize": 10.67,
+            "typeface": "微軟正黑體",
+            "color": "#B2B2B2",
+            "bold": false,
+            "alignment": "center",
+            "verticalAlignment": "middle",
+            "wrap": "none",
+            "autoFit": "resizeShapeToFitText",
+            "insets": {
+              "top": 4.54,
+              "right": 9.07,
+              "bottom": 4.54,
+              "left": 9.07
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "機密資料僅限永豐金控內部使用 ",
+              "style": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "機密資料僅限永豐金控內部使用 ",
+                  "anchor": 2,
+                  "fontSize": 10.67,
+                  "typeface": "微軟正黑體",
+                  "color": "#B2B2B2",
+                  "bold": false,
+                  "alignment": "center",
+                  "verticalAlignment": "middle",
+                  "wrap": "none",
+                  "autoFit": "resizeShapeToFitText",
+                  "insets": {
+                    "top": 4.54,
+                    "right": 9.07,
+                    "bottom": 4.54,
+                    "left": 9.07
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "id": "sh/5szalw7u",
+      "editable": true,
+      "name": "usage-boundary",
+      "position": {
+        "left": 57,
+        "top": 448,
+        "width": 1095,
+        "height": 104
+      },
+      "geometry": "rect",
+      "fillColor": "#F4F4F4",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/vupofix0",
+      "editable": true,
+      "name": "Google Shape;18;p34",
+      "position": {
+        "left": 18.83,
+        "top": 7.56,
+        "width": 1171.83,
+        "height": 56.69
+      },
+      "geometry": "rect",
+      "lineWidth": 0,
+      "text": "解決方案概述",
+      "style": {
+        "anchor": 2,
+        "fontSize": 39.68,
+        "typeface": "Microsoft JhengHei",
+        "color": "#111111",
+        "bold": true,
+        "italic": false,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "wrap": "square",
+        "autoFit": "none",
+        "autoFitScale": 0.93,
+        "insets": {
+          "top": 4.62,
+          "right": 9.25,
+          "bottom": 4.62,
+          "left": 9.25
+        },
+        "useParagraphSpacing": true
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "解決方案概述",
+          "style": {
+            "fontSize": 42.67,
+            "typeface": "Microsoft JhengHei",
+            "color": "#111111",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "解決方案概述",
+              "anchor": 2,
+              "fontSize": 42.67,
+              "typeface": "Microsoft JhengHei",
+              "color": "#111111",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "middle",
+              "wrap": "square",
+              "autoFit": "shrinkText",
+              "autoFitScale": 0.93,
+              "insets": {
+                "top": 4.62,
+                "right": 9.25,
+                "bottom": 4.62,
+                "left": 9.25
+              },
+              "useParagraphSpacing": true
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "id": "sh/98361cvy",
+      "editable": true,
+      "name": "Google Shape;19;p34",
+      "position": {
+        "left": 18.83,
+        "top": 75.5,
+        "width": 1171.83,
+        "height": 567.04
+      },
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "anchor": 1,
+        "fontSize": 21.33,
+        "typeface": "微軟正黑體",
+        "color": "#000000",
+        "bold": false,
+        "italic": false,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "textTransform": "none",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.62,
+          "right": 9.25,
+          "bottom": 4.62,
+          "left": 9.25
+        },
+        "useParagraphSpacing": true
+      }
+    },
+    {
+      "order": 4,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/4zipcneh",
+      "editable": true,
+      "name": "solution-summary",
+      "position": {
+        "left": 57,
+        "top": 92,
+        "width": 1095,
+        "height": 82
+      },
+      "geometry": "rect",
+      "lineWidth": 0,
+      "text": "將既有大額暴險文件封裝為標準化 Agent Plugin，\n讓使用者可在 Spade 直接查詢，並追溯回答來源。",
+      "style": {
+        "anchor": 2,
+        "fontSize": 26.67,
+        "typeface": "Microsoft JhengHei",
+        "color": "#3D3D3D",
+        "bold": true,
+        "italic": false,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "將既有大額暴險文件封裝為標準化 Agent Plugin，",
+          "style": {
+            "fontSize": 26.67,
+            "typeface": "Microsoft JhengHei",
+            "color": "#3D3D3D",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "將既有大額暴險文件封裝為標準化 Agent Plugin，",
+              "anchor": 2,
+              "fontSize": 26.67,
+              "typeface": "Microsoft JhengHei",
+              "color": "#3D3D3D",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "middle",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        },
+        {
+          "index": 2,
+          "text": "讓使用者可在 Spade 直接查詢，並追溯回答來源。",
+          "style": {
+            "fontSize": 26.67,
+            "typeface": "Microsoft JhengHei",
+            "color": "#3D3D3D",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "讓使用者可在 Spade 直接查詢，並追溯回答來源。",
+              "anchor": 2,
+              "fontSize": 26.67,
+              "typeface": "Microsoft JhengHei",
+              "color": "#3D3D3D",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "middle",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "id": "sh/50r6lsf2",
+      "editable": true,
+      "name": "process-baseline",
+      "position": {
+        "left": 95,
+        "top": 244,
+        "width": 1018,
+        "height": 0
+      },
+      "geometry": "line",
+      "lineColor": "#D8D8D8",
+      "lineWidth": 2
+    },
+    {
+      "order": 6,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/ix07adwb",
+      "editable": true,
+      "name": "stage-1-number",
+      "position": {
+        "left": 151,
+        "top": 219,
+        "width": 48,
+        "height": 48
+      },
+      "geometry": "ellipse",
+      "fillColor": "#E60012",
+      "lineColor": "#E60012",
+      "lineWidth": 1,
+      "text": "01",
+      "style": {
+        "anchor": 2,
+        "fontSize": 16,
+        "typeface": "Microsoft JhengHei",
+        "color": "#FFFFFF",
+        "bold": true,
+        "italic": false,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "01",
+          "style": {
+            "fontSize": 16,
+            "typeface": "Microsoft JhengHei",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "01",
+              "anchor": 2,
+              "fontSize": 16,
+              "typeface": "Microsoft JhengHei",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "middle",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/jy9ojixw",
+      "editable": true,
+      "name": "stage-1-title",
+      "position": {
+        "left": 60,
+        "top": 286,
+        "width": 230,
+        "height": 34
+      },
+      "geometry": "rect",
+      "lineWidth": 0,
+      "text": "知識庫文件",
+      "style": {
+        "anchor": 2,
+        "fontSize": 21.33,
+        "typeface": "Microsoft JhengHei",
+        "color": "#111111",
+        "bold": true,
+        "italic": false,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "知識庫文件",
+          "style": {
+            "fontSize": 21.33,
+            "typeface": "Microsoft JhengHei",
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "知識庫文件",
+              "anchor": 2,
+              "fontSize": 21.33,
+              "typeface": "Microsoft JhengHei",
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "middle",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/snipg7et",
+      "editable": true,
+      "name": "stage-1-description",
+      "position": {
+        "left": 60,
+        "top": 329,
+        "width": 230,
+        "height": 62
+      },
+      "geometry": "rect",
+      "lineWidth": 0,
+      "text": "彙整既有規範、作業說明\n與系統操作文件",
+      "style": {
+        "anchor": 1,
+        "fontSize": 17.33,
+        "typeface": "Microsoft JhengHei",
+        "color": "#6B6B6B",
+        "bold": false,
+        "italic": false,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "textTransform": "none",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "彙整既有規範、作業說明",
+          "style": {
+            "fontSize": 17.33,
+            "typeface": "Microsoft JhengHei",
+            "color": "#6B6B6B",
+            "bold": false,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "彙整既有規範、作業說明",
+              "anchor": 1,
+              "fontSize": 17.33,
+              "typeface": "Microsoft JhengHei",
+              "color": "#6B6B6B",
+              "bold": false,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        },
+        {
+          "index": 2,
+          "text": "與系統操作文件",
+          "style": {
+            "fontSize": 17.33,
+            "typeface": "Microsoft JhengHei",
+            "color": "#6B6B6B",
+            "bold": false,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "與系統操作文件",
+              "anchor": 1,
+              "fontSize": 17.33,
+              "typeface": "Microsoft JhengHei",
+              "color": "#6B6B6B",
+              "bold": false,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/dor6pcvy",
+      "editable": true,
+      "name": "stage-2-number",
+      "position": {
+        "left": 431,
+        "top": 219,
+        "width": 48,
+        "height": 48
+      },
+      "geometry": "ellipse",
+      "fillColor": "#E60012",
+      "lineColor": "#E60012",
+      "lineWidth": 1,
+      "text": "02",
+      "style": {
+        "anchor": 2,
+        "fontSize": 16,
+        "typeface": "Microsoft JhengHei",
+        "color": "#FFFFFF",
+        "bold": true,
+        "italic": false,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "02",
+          "style": {
+            "fontSize": 16,
+            "typeface": "Microsoft JhengHei",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "02",
+              "anchor": 2,
+              "fontSize": 16,
+              "typeface": "Microsoft JhengHei",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "middle",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/10jatg72",
+      "editable": true,
+      "name": "stage-2-title",
+      "position": {
+        "left": 340,
+        "top": 286,
+        "width": 230,
+        "height": 34
+      },
+      "geometry": "rect",
+      "lineWidth": 0,
+      "text": "Markdown 知識",
+      "style": {
+        "anchor": 2,
+        "fontSize": 21.33,
+        "typeface": "Microsoft JhengHei",
+        "color": "#111111",
+        "bold": true,
+        "italic": false,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Markdown 知識",
+          "style": {
+            "fontSize": 21.33,
+            "typeface": "Microsoft JhengHei",
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Markdown 知識",
+              "anchor": 2,
+              "fontSize": 21.33,
+              "typeface": "Microsoft JhengHei",
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "middle",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/0zqtkv6h",
+      "editable": true,
+      "name": "stage-2-description",
+      "position": {
+        "left": 340,
+        "top": 329,
+        "width": 230,
+        "height": 62
+      },
+      "geometry": "rect",
+      "lineWidth": 0,
+      "text": "每份文件分別轉換，\n保留來源對應",
+      "style": {
+        "anchor": 1,
+        "fontSize": 17.33,
+        "typeface": "Microsoft JhengHei",
+        "color": "#6B6B6B",
+        "bold": false,
+        "italic": false,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "textTransform": "none",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "每份文件分別轉換，",
+          "style": {
+            "fontSize": 17.33,
+            "typeface": "Microsoft JhengHei",
+            "color": "#6B6B6B",
+            "bold": false,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "每份文件分別轉換，",
+              "anchor": 1,
+              "fontSize": 17.33,
+              "typeface": "Microsoft JhengHei",
+              "color": "#6B6B6B",
+              "bold": false,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        },
+        {
+          "index": 2,
+          "text": "保留來源對應",
+          "style": {
+            "fontSize": 17.33,
+            "typeface": "Microsoft JhengHei",
+            "color": "#6B6B6B",
+            "bold": false,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "保留來源對應",
+              "anchor": 1,
+              "fontSize": 17.33,
+              "typeface": "Microsoft JhengHei",
+              "color": "#6B6B6B",
+              "bold": false,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/fyhsrqpw",
+      "editable": true,
+      "name": "stage-3-number",
+      "position": {
+        "left": 711,
+        "top": 219,
+        "width": 48,
+        "height": 48
+      },
+      "geometry": "ellipse",
+      "fillColor": "#E60012",
+      "lineColor": "#E60012",
+      "lineWidth": 1,
+      "text": "03",
+      "style": {
+        "anchor": 2,
+        "fontSize": 16,
+        "typeface": "Microsoft JhengHei",
+        "color": "#FFFFFF",
+        "bold": true,
+        "italic": false,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03",
+          "style": {
+            "fontSize": 16,
+            "typeface": "Microsoft JhengHei",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03",
+              "anchor": 2,
+              "fontSize": 16,
+              "typeface": "Microsoft JhengHei",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "middle",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/ex8bilob",
+      "editable": true,
+      "name": "stage-3-title",
+      "position": {
+        "left": 620,
+        "top": 286,
+        "width": 230,
+        "height": 34
+      },
+      "geometry": "rect",
+      "lineWidth": 0,
+      "text": "Agent Plugin",
+      "style": {
+        "anchor": 2,
+        "fontSize": 21.33,
+        "typeface": "Microsoft JhengHei",
+        "color": "#111111",
+        "bold": true,
+        "italic": false,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Agent Plugin",
+          "style": {
+            "fontSize": 21.33,
+            "typeface": "Microsoft JhengHei",
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Agent Plugin",
+              "anchor": 2,
+              "fontSize": 21.33,
+              "typeface": "Microsoft JhengHei",
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "middle",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/dwzapg76",
+      "editable": true,
+      "name": "stage-3-description",
+      "position": {
+        "left": 620,
+        "top": 329,
+        "width": 230,
+        "height": 62
+      },
+      "geometry": "rect",
+      "lineWidth": 0,
+      "text": "以 Agent Plugins 1.0\n封裝為可載入的 Skill",
+      "style": {
+        "anchor": 1,
+        "fontSize": 17.33,
+        "typeface": "Microsoft JhengHei",
+        "color": "#6B6B6B",
+        "bold": false,
+        "italic": false,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "textTransform": "none",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "以 Agent Plugins 1.0",
+          "style": {
+            "fontSize": 17.33,
+            "typeface": "Microsoft JhengHei",
+            "color": "#6B6B6B",
+            "bold": false,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "以 Agent Plugins 1.0",
+              "anchor": 1,
+              "fontSize": 17.33,
+              "typeface": "Microsoft JhengHei",
+              "color": "#6B6B6B",
+              "bold": false,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        },
+        {
+          "index": 2,
+          "text": "封裝為可載入的 Skill",
+          "style": {
+            "fontSize": 17.33,
+            "typeface": "Microsoft JhengHei",
+            "color": "#6B6B6B",
+            "bold": false,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "封裝為可載入的 Skill",
+              "anchor": 1,
+              "fontSize": 17.33,
+              "typeface": "Microsoft JhengHei",
+              "color": "#6B6B6B",
+              "bold": false,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 15,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/svqtgb6l",
+      "editable": true,
+      "name": "stage-4-number",
+      "position": {
+        "left": 991,
+        "top": 219,
+        "width": 48,
+        "height": 48
+      },
+      "geometry": "ellipse",
+      "fillColor": "#E60012",
+      "lineColor": "#E60012",
+      "lineWidth": 1,
+      "text": "04",
+      "style": {
+        "anchor": 2,
+        "fontSize": 16,
+        "typeface": "Microsoft JhengHei",
+        "color": "#FFFFFF",
+        "bold": true,
+        "italic": false,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "04",
+          "style": {
+            "fontSize": 16,
+            "typeface": "Microsoft JhengHei",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "04",
+              "anchor": 2,
+              "fontSize": 16,
+              "typeface": "Microsoft JhengHei",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "middle",
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 16,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/ruhsn6p0",
+      "editable": true,
+      "name": "stage-4-title",
+      "position": {
+        "left": 900,
+        "top": 286,
+        "width": 230,
+        "height": 34
+      },
+      "geometry": "rect",
+      "lineWidth": 0,
+      "text": "Spade 問答",
+      "style": {
+        "anchor": 2,
+        "fontSize": 21.33,
+        "typeface": "Microsoft JhengHei",
+        "color": "#111111",
+        "bold": true,
+        "italic": false,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Spade 問答",
+          "style": {
+            "fontSize": 21.33,
+            "typeface": "Microsoft JhengHei",
+            "color": "#111111",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Spade 問答",
+              "anchor": 2,
+              "fontSize": 21.33,
+              "typeface": "Microsoft JhengHei",
+              "color": "#111111",
+              "bold": true,
+              "alignment": "center",
+              "verticalAlignment": "middle",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 17,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/qt8re1of",
+      "editable": true,
+      "name": "stage-4-description",
+      "position": {
+        "left": 900,
+        "top": 329,
+        "width": 230,
+        "height": 62
+      },
+      "geometry": "rect",
+      "lineWidth": 0,
+      "text": "以自然語言提問，\n回覆標示來源依據",
+      "style": {
+        "anchor": 1,
+        "fontSize": 17.33,
+        "typeface": "Microsoft JhengHei",
+        "color": "#6B6B6B",
+        "bold": false,
+        "italic": false,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "textTransform": "none",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "以自然語言提問，",
+          "style": {
+            "fontSize": 17.33,
+            "typeface": "Microsoft JhengHei",
+            "color": "#6B6B6B",
+            "bold": false,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "以自然語言提問，",
+              "anchor": 1,
+              "fontSize": 17.33,
+              "typeface": "Microsoft JhengHei",
+              "color": "#6B6B6B",
+              "bold": false,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        },
+        {
+          "index": 2,
+          "text": "回覆標示來源依據",
+          "style": {
+            "fontSize": 17.33,
+            "typeface": "Microsoft JhengHei",
+            "color": "#6B6B6B",
+            "bold": false,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "回覆標示來源依據",
+              "anchor": 1,
+              "fontSize": 17.33,
+              "typeface": "Microsoft JhengHei",
+              "color": "#6B6B6B",
+              "bold": false,
+              "alignment": "center",
+              "verticalAlignment": "top",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "id": "sh/4r69cb69",
+      "editable": true,
+      "name": "usage-boundary-accent",
+      "position": {
+        "left": 57,
+        "top": 448,
+        "width": 6,
+        "height": 104
+      },
+      "geometry": "rect",
+      "fillColor": "#E60012",
+      "lineColor": "#E60012",
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/u1kz6d0v",
+      "editable": true,
+      "name": "usage-boundary-title",
+      "position": {
+        "left": 85,
+        "top": 467,
+        "width": 135,
+        "height": 30
+      },
+      "geometry": "rect",
+      "lineWidth": 0,
+      "text": "使用邊界",
+      "style": {
+        "anchor": 2,
+        "fontSize": 20,
+        "typeface": "Microsoft JhengHei",
+        "color": "#111111",
+        "bold": true,
+        "italic": false,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "使用邊界",
+          "style": {
+            "fontSize": 20,
+            "typeface": "Microsoft JhengHei",
+            "color": "#111111",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "使用邊界",
+              "anchor": 2,
+              "fontSize": 20,
+              "typeface": "Microsoft JhengHei",
+              "color": "#111111",
+              "bold": true,
+              "alignment": "left",
+              "verticalAlignment": "middle",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 20,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/vmtgzi1g",
+      "editable": true,
+      "name": "usage-boundary-copy",
+      "position": {
+        "left": 220,
+        "top": 467,
+        "width": 895,
+        "height": 48
+      },
+      "geometry": "rect",
+      "lineWidth": 0,
+      "text": "僅依知識庫文件回答；不執行正式申報、不修改正式系統，也不查詢客戶即時資料。",
+      "style": {
+        "anchor": 2,
+        "fontSize": 18.67,
+        "typeface": "Microsoft JhengHei",
+        "color": "#3D3D3D",
+        "bold": false,
+        "italic": false,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "僅依知識庫文件回答；不執行正式申報、不修改正式系統，也不查詢客戶即時資料。",
+          "style": {
+            "fontSize": 18.67,
+            "typeface": "Microsoft JhengHei",
+            "color": "#3D3D3D",
+            "bold": false,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "僅依知識庫文件回答；不執行正式申報、不修改正式系統，也不查詢客戶即時資料。",
+              "anchor": 2,
+              "fontSize": 18.67,
+              "typeface": "Microsoft JhengHei",
+              "color": "#3D3D3D",
+              "bold": false,
+              "alignment": "left",
+              "verticalAlignment": "middle",
+              "autoFit": "shrinkText",
+              "autoFitScale": 1,
+              "insets": {
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            }
+          ],
+          "lineSpacingPercent": 100000
+        }
+      ]
+    }
+  ]
+}

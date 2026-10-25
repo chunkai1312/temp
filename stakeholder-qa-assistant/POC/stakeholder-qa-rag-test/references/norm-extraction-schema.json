@@ -1,0 +1,319 @@
+{
+  "$schema_version": "phase4-draft",
+  "title": "Norm Extraction Schema v2",
+  "description": "法律規範單元之結構化抽取骨架。此為 skill 規格檔，不代表現階段已完成自動抽取。",
+  "record_type": "norm_extraction",
+  "required": [
+    "extraction_id",
+    "source_record_id",
+    "claim_scope",
+    "subject",
+    "counterparty",
+    "modality",
+    "action",
+    "object",
+    "conditions",
+    "exceptions",
+    "deadline",
+    "legal_effect",
+    "liability",
+    "citations",
+    "extraction_status"
+  ],
+  "fields": {
+    "extraction_id": {
+      "type": "string",
+      "description": "本次抽取結果的唯一識別碼。"
+    },
+    "source_record_id": {
+      "type": "string",
+      "description": "對應法源或 RAG record 的識別碼。"
+    },
+    "source_version_id": {
+      "type": "string",
+      "description": "對應版本化法規資料的 version_id；若無法確認可留空。"
+    },
+    "claim_scope": {
+      "type": "string",
+      "enum": [
+        "single_article",
+        "joint_application",
+        "derived_from_case_and_rule",
+        "unclear"
+      ],
+      "description": "本抽取是單一條文即可支撐、需共同適用、或僅屬輔助整理。"
+    },
+    "subject": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "義務或權利主體。"
+    },
+    "counterparty": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "相對人、交易對象、申報對象或利害關係對象。"
+    },
+    "modality": {
+      "type": "string",
+      "enum": [
+        "must",
+        "must_not",
+        "may",
+        "right",
+        "definition",
+        "procedure",
+        "unclear"
+      ],
+      "description": "規範型態：應為、不得為、得為、權利、定義、程序或不明。"
+    },
+    "action": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "受規範行為，例如授信、投資、捐贈、建檔、查詢、申報。"
+    },
+    "object": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "行為客體，例如有價證券、不動產、親屬資料、交易資料。"
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/condition_item"
+      },
+      "description": "成立要件、門檻、前提。"
+    },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/exception_item"
+      },
+      "description": "例外、但書、排除情形。"
+    },
+    "deadline": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/deadline_item"
+      },
+      "description": "期限或時點要求。"
+    },
+    "legal_effect": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/legal_effect_item"
+      },
+      "description": "法律效果、程序效果、核決效果。"
+    },
+    "liability": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/liability_item"
+      },
+      "description": "責任、違反效果、罰則、申報後果。"
+    },
+    "definitions_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "支撐本抽取所依賴的定義條款或術語。"
+    },
+    "joint_application_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "若需共同適用，列出其他條文或 record_id。"
+    },
+    "citations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/citation_item"
+      },
+      "description": "本抽取所依據的法源定位資訊。"
+    },
+    "extraction_status": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "uncertain_due_to_version",
+        "uncertain_due_to_missing_facts"
+      ],
+      "description": "本抽取結果目前的支撐程度。"
+    },
+    "notes": {
+      "type": "string",
+      "description": "補充說明，例如版本不明、FAQ 僅作輔助。"
+    }
+  },
+  "definitions": {
+    "condition_item": {
+      "type": "object",
+      "required": [
+        "text",
+        "condition_type"
+      ],
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "condition_type": {
+          "type": "string",
+          "enum": [
+            "identity",
+            "entity_scope",
+            "transaction_type",
+            "amount_threshold",
+            "holding_ratio",
+            "kinship_scope",
+            "time_requirement",
+            "document_requirement",
+            "other"
+          ]
+        },
+        "is_explicit": {
+          "type": "boolean"
+        },
+        "source_ref": {
+          "type": "string"
+        }
+      }
+    },
+    "exception_item": {
+      "type": "object",
+      "required": [
+        "text",
+        "exception_type"
+      ],
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "exception_type": {
+          "type": "string",
+          "enum": [
+            "proviso",
+            "statutory_exception",
+            "scope_limitation",
+            "not_applicable",
+            "other"
+          ]
+        },
+        "reverses_outcome": {
+          "type": "boolean"
+        },
+        "source_ref": {
+          "type": "string"
+        }
+      }
+    },
+    "deadline_item": {
+      "type": "object",
+      "required": [
+        "text"
+      ],
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "trigger_event": {
+          "type": "string"
+        },
+        "source_ref": {
+          "type": "string"
+        }
+      }
+    },
+    "legal_effect_item": {
+      "type": "object",
+      "required": [
+        "text"
+      ],
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "effect_type": {
+          "type": "string",
+          "enum": [
+            "board_approval",
+            "manager_authorization",
+            "reporting_required",
+            "filing_required",
+            "prohibited",
+            "permitted",
+            "other"
+          ]
+        },
+        "source_ref": {
+          "type": "string"
+        }
+      }
+    },
+    "liability_item": {
+      "type": "object",
+      "required": [
+        "text"
+      ],
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "liability_type": {
+          "type": "string",
+          "enum": [
+            "administrative",
+            "civil",
+            "criminal",
+            "internal_control",
+            "process_consequence",
+            "unknown",
+            "other"
+          ]
+        },
+        "source_ref": {
+          "type": "string"
+        }
+      }
+    },
+    "citation_item": {
+      "type": "object",
+      "required": [
+        "source_name",
+        "locator"
+      ],
+      "properties": {
+        "source_name": {
+          "type": "string"
+        },
+        "locator": {
+          "type": "string"
+        },
+        "quote": {
+          "type": "string"
+        },
+        "version_date": {
+          "type": "string"
+        },
+        "support_scope": {
+          "type": "string",
+          "enum": [
+            "full",
+            "partial",
+            "context_only"
+          ]
+        }
+      }
+    }
+  }
+}

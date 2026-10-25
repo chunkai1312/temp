@@ -1,0 +1,69 @@
+{
+  "output_dir": "stakeholders QA assistant/jsonl_output",
+  "files": {
+    "system_operation_kb.jsonl": 29,
+    "faq_case_kb.jsonl": 12,
+    "regulation_kb.jsonl": 42,
+    "training_note_kb.jsonl": 13
+  },
+  "schemas": {
+    "system_operation_kb.jsonl": [
+      "id",
+      "assistant_type",
+      "source_type",
+      "module",
+      "title",
+      "source_file",
+      "source_section",
+      "keywords",
+      "steps",
+      "notes",
+      "content",
+      "retrieval_text"
+    ],
+    "faq_case_kb.jsonl": [
+      "id",
+      "assistant_type",
+      "source_type",
+      "question_type",
+      "question_no",
+      "title",
+      "fact_pattern",
+      "summary",
+      "steps",
+      "notes",
+      "legal_basis",
+      "source_file",
+      "full_answer",
+      "keywords",
+      "retrieval_text"
+    ],
+    "regulation_kb.jsonl": [
+      "id",
+      "assistant_type",
+      "source_type",
+      "doc_level",
+      "law_name",
+      "article_no",
+      "chapter",
+      "title",
+      "applicable_entity",
+      "topic",
+      "source_file",
+      "content",
+      "keywords",
+      "retrieval_text"
+    ],
+    "training_note_kb.jsonl": [
+      "id",
+      "assistant_type",
+      "source_type",
+      "title",
+      "topic",
+      "source_file",
+      "content",
+      "keywords",
+      "retrieval_text"
+    ]
+  }
+}

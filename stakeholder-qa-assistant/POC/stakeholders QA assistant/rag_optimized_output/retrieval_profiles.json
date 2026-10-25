@@ -1,0 +1,151 @@
+{
+  "router": {
+    "description": "先判斷問題屬於系統操作、親等／圖示對照或法規案例，再選擇檢索路徑。",
+    "rules": [
+      {
+        "if_contains_any": [
+          "幾血",
+          "幾姻",
+          "親等",
+          "申報範圍",
+          "血親",
+          "姻親",
+          "配偶的兄弟姊妹",
+          "兄弟姊妹的配偶",
+          "岳父母",
+          "公婆",
+          "繼父",
+          "繼母",
+          "前婚姻關係",
+          "祖父母再婚配偶",
+          "圖上",
+          "圖示",
+          "申報範圍圖"
+        ],
+        "route": "reg_case_kinship"
+      },
+      {
+        "if_contains_any": [
+          "如何",
+          "怎麼",
+          "查詢",
+          "新增",
+          "解除",
+          "批次",
+          "權限",
+          "畫面",
+          "系統"
+        ],
+        "route": "system_operation"
+      },
+      {
+        "if_contains_any": [
+          "是否構成",
+          "利害關係人交易",
+          "法規",
+          "條文",
+          "董事會",
+          "概括授權",
+          "授信",
+          "捐贈",
+          "交易申報",
+          "親等"
+        ],
+        "route": "reg_case"
+      }
+    ]
+  },
+  "profiles": {
+    "system_operation": {
+      "sources": [
+        "system_operation_kb_rag.jsonl"
+      ],
+      "top_k_dense": 5,
+      "top_k_sparse": 8,
+      "rerank_to": 3,
+      "min_source_priority": 100,
+      "filters": [
+        "assistant_type=system_operation"
+      ],
+      "answer_policy": "僅依操作手冊回答；優先輸出步驟與注意事項。"
+    },
+    "reg_case_case_first": {
+      "sources": [
+        "faq_case_kb_rag.jsonl",
+        "regulation_kb_rag.jsonl",
+        "training_note_kb_rag.jsonl"
+      ],
+      "retrieval_order": [
+        {
+          "source": "faq_case_kb_rag.jsonl",
+          "top_k_dense": 6,
+          "top_k_sparse": 8
+        },
+        {
+          "source": "regulation_kb_rag.jsonl",
+          "top_k_dense": 6,
+          "top_k_sparse": 8
+        },
+        {
+          "source": "training_note_kb_rag.jsonl",
+          "top_k_dense": 2,
+          "top_k_sparse": 3
+        }
+      ],
+      "rerank_to": 4,
+      "faq_similarity_gate": {
+        "require_at_least_match_fields": 2,
+        "fields": [
+          "entity_type",
+          "transaction_type",
+          "law_refs"
+        ]
+      },
+      "answer_policy": "先看FAQ是否有同質案例；若無，再以外規→內規→教育訓練補充。"
+    },
+    "reg_case_regulation_only": {
+      "sources": [
+        "regulation_kb_rag.jsonl",
+        "training_note_kb_rag.jsonl"
+      ],
+      "top_k_dense": 8,
+      "top_k_sparse": 10,
+      "rerank_to": 5,
+      "filters": [
+        "assistant_type=reg_case",
+        "source_type in [regulation, training_note]"
+      ],
+      "answer_policy": "若問的是條文內容/制度規範，直接以外規優先、內規補充。"
+    },
+    "reg_case_kinship": {
+      "sources": [
+        "training_note_kb_rag.jsonl",
+        "faq_case_kb_rag.jsonl",
+        "regulation_kb_rag.jsonl"
+      ],
+      "retrieval_order": [
+        {
+          "source": "training_note_kb_rag.jsonl",
+          "top_k_dense": 6,
+          "top_k_sparse": 8
+        },
+        {
+          "source": "faq_case_kb_rag.jsonl",
+          "top_k_dense": 4,
+          "top_k_sparse": 6
+        },
+        {
+          "source": "regulation_kb_rag.jsonl",
+          "top_k_dense": 4,
+          "top_k_sparse": 6
+        }
+      ],
+      "preferred_filters": [
+        "topic in [親等計算, 利害關係人範圍]",
+        "title/title_aliases contains 幾血|幾姻|申報範圍|圖示|血親|姻親"
+      ],
+      "rerank_to": 4,
+      "answer_policy": "親等／圖示對照題優先用圖示知識條目判斷關係路徑與幾血幾姻，再回正式FAQ、regulation或system_operation確認各業別正式適用差異；不得只憑圖示直接下最終法規結論。"
+    }
+  }
+}

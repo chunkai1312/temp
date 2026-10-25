@@ -1,0 +1,20 @@
+{
+  "output_dir": "stakeholders QA assistant/rag_optimized_output",
+  "counts": {
+    "system_operation_kb_rag.jsonl": 29,
+    "faq_case_kb_rag.jsonl": 12,
+    "regulation_kb_rag.jsonl": 42,
+    "training_note_kb_rag.jsonl": 14,
+    "all_kb_rag.jsonl": 97
+  },
+  "key_added_fields": [
+    "source_priority",
+    "route_target",
+    "title_aliases",
+    "applicable_entity",
+    "transaction_type",
+    "law_refs",
+    "retrieval_text_dense",
+    "retrieval_text_sparse"
+  ]
+}

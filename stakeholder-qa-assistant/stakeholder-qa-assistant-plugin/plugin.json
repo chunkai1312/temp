@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "stakeholder-qa-assistant",
+  "version": "0.1.0",
+  "description": "永豐金控利害關係人認定、交易判斷、建檔申報與系統操作的靜態知識 QA 助理。",
+  "author": {
+    "name": "永豐金控法令遵循處"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "stakeholder",
+    "related-party",
+    "related-party-transaction",
+    "financial-holding",
+    "compliance"
+  ]
+}

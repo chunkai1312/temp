@@ -1,0 +1,110 @@
+{
+  "$schema_version": "phase6-draft",
+  "title": "Extraction Eval Schema v2",
+  "description": "結構化抽取層評測資料與結果格式骨架。",
+  "record_type": "extraction_eval_case",
+  "required": [
+    "eval_id",
+    "question",
+    "gold_extraction"
+  ],
+  "fields": {
+    "eval_id": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    },
+    "gold_extraction": {
+      "$ref": "#/definitions/extraction_gold"
+    },
+    "prediction": {
+      "$ref": "#/definitions/extraction_gold"
+    },
+    "metrics": {
+      "$ref": "#/definitions/extraction_metrics"
+    }
+  },
+  "definitions": {
+    "extraction_gold": {
+      "type": "object",
+      "properties": {
+        "subject": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "counterparty": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "modality": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "action": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "object": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "conditions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "exceptions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "deadline": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "legal_effect": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "liability": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "extraction_metrics": {
+      "type": "object",
+      "properties": {
+        "subject_precision": { "type": "number" },
+        "subject_recall": { "type": "number" },
+        "subject_f1": { "type": "number" },
+        "counterparty_precision": { "type": "number" },
+        "counterparty_recall": { "type": "number" },
+        "counterparty_f1": { "type": "number" },
+        "modality_precision": { "type": "number" },
+        "modality_recall": { "type": "number" },
+        "modality_f1": { "type": "number" },
+        "action_precision": { "type": "number" },
+        "action_recall": { "type": "number" },
+        "action_f1": { "type": "number" },
+        "object_precision": { "type": "number" },
+        "object_recall": { "type": "number" },
+        "object_f1": { "type": "number" },
+        "conditions_precision": { "type": "number" },
+        "conditions_recall": { "type": "number" },
+        "conditions_f1": { "type": "number" },
+        "exceptions_precision": { "type": "number" },
+        "exceptions_recall": { "type": "number" },
+        "exceptions_f1": { "type": "number" },
+        "deadline_precision": { "type": "number" },
+        "deadline_recall": { "type": "number" },
+        "deadline_f1": { "type": "number" },
+        "legal_effect_precision": { "type": "number" },
+        "legal_effect_recall": { "type": "number" },
+        "legal_effect_f1": { "type": "number" },
+        "liability_precision": { "type": "number" },
+        "liability_recall": { "type": "number" },
+        "liability_f1": { "type": "number" }
+      }
+    }
+  }
+}

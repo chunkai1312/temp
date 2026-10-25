@@ -1,0 +1,23 @@
+{
+  "manifest_version": "sample-v1",
+  "sources": [
+    {
+      "source_id": "src_001",
+      "law_name": "銀行法",
+      "regulator": "金融監督管理委員會",
+      "official_url": "",
+      "source_type": "official_or_regulator_reference",
+      "last_checked_at": "",
+      "notes": "正式使用時應填入官方法規查詢系統或主管機關來源。"
+    },
+    {
+      "source_id": "src_002",
+      "law_name": "內規-交易查詢及判斷",
+      "regulator": "永豐金控內規",
+      "official_url": "",
+      "source_type": "internal_rule",
+      "last_checked_at": "",
+      "notes": "正式使用時應填入內規版本基準日與內部核定/公告資訊。"
+    }
+  ]
+}
