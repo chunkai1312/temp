@@ -4,7 +4,7 @@ description: 回答永豐金控利害關係人認定、金控法第 44 條與第
 license: UNLICENSED
 metadata:
   author: 永豐金控法令遵循處
-  version: "0.1.0"
+  version: "0.1.2"
 ---
 
 # 利害關係人 QA 助理
@@ -12,7 +12,7 @@ metadata:
 ## 使用範圍
 
 - 只依 `references/` 中由原始文件轉寫的內容回答。
-- 知識事實只允許來自 [source-index.md](references/source-index.md) 登錄的來源。
+- 知識事實只允許來自 [source-index.md](references/source-index.md)「有效來源」登錄的來源。
 - 本 Skill 是靜態知識，不執行申報、建檔、資料修改或正式系統操作，也不查詢客戶或員工即時資料。
 - 不把文件內容宣稱為已完成最新法規版本或效力查證；使用者詢問特定日期適用性時，必須揭露來源日期限制。
 - 文件未提供答案時，直接說明查無明文，不使用一般常識補足內部規範。

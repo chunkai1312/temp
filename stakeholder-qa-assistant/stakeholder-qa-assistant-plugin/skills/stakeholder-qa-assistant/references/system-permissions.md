@@ -1,7 +1,7 @@
 ---
 title: 金控利害關係人管理系統操作手冊 伍 權限及其他功能篇
 source_id: SRC-010
-source_file: 利害關係人QA小幫手外規,內規,操作手冊及問答集/金控利害關係人管理系統操作手冊 -伍、權限及其他功能篇-final.docx
+source_file: sources/金控利害關係人管理系統操作手冊 -伍、權限及其他功能篇-final.docx
 source_sha256: f0a9d138c3bd9e02adac70af639a91b17051c67fe7c26a6369cc63159b194841
 converted_on: 2026-10-25
 ---

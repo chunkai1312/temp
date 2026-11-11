@@ -1,7 +1,7 @@
 ---
 title: (金控)利害關係人教育訓練
 source_id: SRC-005
-source_file: 利害關係人QA小幫手外規,內規,操作手冊及問答集/(金控)利害關係人教育訓練.pdf
+source_file: sources/(金控)利害關係人教育訓練.pdf
 source_sha256: 4f4f38174044262a7e148297fdfa1d9968e7172546d41d7b7a64043056f2bca8
 converted_on: 2026-10-25
 ---

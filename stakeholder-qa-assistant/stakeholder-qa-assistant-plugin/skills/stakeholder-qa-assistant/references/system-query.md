@@ -1,7 +1,7 @@
 ---
 title: 金控利害關係人管理系統操作手冊 貳 查詢篇
 source_id: SRC-007
-source_file: 利害關係人QA小幫手外規,內規,操作手冊及問答集/金控利害關係人管理系統操作手冊 -貳、查詢篇.docx
+source_file: sources/金控利害關係人管理系統操作手冊 -貳、查詢篇.docx
 source_sha256: 4e6627bd73f861607bd35d61d73b975d98ac58a5f14fa5d9fc0d0e4c81df1177
 converted_on: 2026-10-25
 ---

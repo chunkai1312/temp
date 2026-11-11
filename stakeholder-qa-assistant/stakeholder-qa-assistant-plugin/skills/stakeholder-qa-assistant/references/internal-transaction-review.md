@@ -1,7 +1,7 @@
 ---
 title: 內規-交易查詢及判斷
 source_id: SRC-002
-source_file: 利害關係人QA小幫手外規,內規,操作手冊及問答集/內規-交易查詢及判斷.pdf
+source_file: sources/內規-交易查詢及判斷.pdf
 source_sha256: e8e46b019856d3b97f0daa74868e6dd1b26576cebeafb793f8fd899656da5564
 converted_on: 2026-10-25
 ---

@@ -1,7 +1,7 @@
 ---
 title: 外規-銀
 source_id: SRC-001
-source_file: 利害關係人QA小幫手外規,內規,操作手冊及問答集/外規-銀.pdf
+source_file: sources/外規-銀.pdf
 source_sha256: 10cc2482e11e682402babf245e4888bc9fde8e8b74c605b347b8bed7af6f3967
 converted_on: 2026-10-25
 ---

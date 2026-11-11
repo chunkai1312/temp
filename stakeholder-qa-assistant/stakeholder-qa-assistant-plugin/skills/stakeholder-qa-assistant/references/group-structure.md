@@ -1,7 +1,7 @@
 ---
 title: 永豐金控及轉投資企業總覽
 source_id: SRC-011
-source_file: 利害關係人QA小幫手外規,內規,操作手冊及問答集/SPH轉投資(含金控共23家)，(刪京城銀國際租賃及京城國際建築經理2家)20260130.xls
+source_file: sources/SPH轉投資(含金控共23家)，(刪京城銀國際租賃及京城國際建築經理2家)20260130.xls
 source_sha256: 6efb2c4a4a08fc8272d42e0f9a84f1996f428ee334eebd24f44ea980d596b080
 converted_on: 2026-10-25
 ---

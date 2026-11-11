@@ -1,7 +1,7 @@
 ---
 title: 金控利害關係人管理系統操作手冊 參 本人資料管理篇
 source_id: SRC-008
-source_file: 利害關係人QA小幫手外規,內規,操作手冊及問答集/金控利害關係人管理系統操作手冊 -參、本人資料管理篇-final.docx
+source_file: sources/金控利害關係人管理系統操作手冊 -參、本人資料管理篇-final.docx
 source_sha256: d5ad838e63464712c00847868dc550e1873b0dbc9aa24f10c7349b56959b9544
 converted_on: 2026-10-25
 ---

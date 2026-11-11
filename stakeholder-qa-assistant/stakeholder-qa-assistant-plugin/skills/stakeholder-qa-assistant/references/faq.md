@@ -1,7 +1,7 @@
 ---
 title: 金控利害關係人常見問答集
 source_id: SRC-006
-source_file: 利害關係人QA小幫手外規,內規,操作手冊及問答集/利害關係人常見問答集-更新3.docx
+source_file: sources/利害關係人常見問答集-更新3.docx
 source_sha256: 21b4edb436d47b01b7033703b7da7569dedf630866cf7c76da5259d7e2bca722
 converted_on: 2026-10-25
 ---

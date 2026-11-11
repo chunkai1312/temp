@@ -1,7 +1,7 @@
 ---
 title: 相關事業之申報範圍
 source_id: SRC-004
-source_file: 利害關係人QA小幫手外規,內規,操作手冊及問答集/相關事業之申報範圍.pdf
+source_file: sources/相關事業之申報範圍.pdf
 source_sha256: a854309a444c7cad8b956829a702ada5bb3c819d49d6fb4d2b84c497452e5268
 converted_on: 2026-10-25
 ---

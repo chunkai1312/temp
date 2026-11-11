@@ -1,7 +1,7 @@
 ---
 title: 金控利害關係人管理系統操作手冊 肆 非本人資料管理篇
 source_id: SRC-009
-source_file: 利害關係人QA小幫手外規,內規,操作手冊及問答集/金控利害關係人管理系統操作手冊 -肆、非本人資料管理篇-final.docx
+source_file: sources/金控利害關係人管理系統操作手冊 -肆、非本人資料管理篇-final.docx
 source_sha256: 35079f301a206aa4cc77486c22cbe81f8626ad596567e0e75b6b1c3331984f99
 converted_on: 2026-10-25
 ---

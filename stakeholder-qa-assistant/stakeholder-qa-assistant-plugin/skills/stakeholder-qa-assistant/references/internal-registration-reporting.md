@@ -1,7 +1,7 @@
 ---
 title: 內規-建檔及申報
 source_id: SRC-003
-source_file: 利害關係人QA小幫手外規,內規,操作手冊及問答集/內規-建檔及申報.pdf
+source_file: sources/內規-建檔及申報.pdf
 source_sha256: dc12978d787ef02b5832048a3252f8d0f5ddbb5ad9ad0ff03b5b6e2c5140a0b0
 converted_on: 2026-10-25
 ---

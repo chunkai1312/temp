@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "stakeholder-qa-maintainer",
+  "version": "0.1.0",
+  "description": "依新版原始文件建立利害關係人 QA 助理候選版本的更新維護工具。",
+  "author": {
+    "name": "永豐金控法令遵循處"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "stakeholder",
+    "skill-maintenance",
+    "source-governance",
+    "compliance"
+  ]
+}
