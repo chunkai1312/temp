@@ -1,0 +1,158 @@
+{
+  "$schema_version": "phase4-draft",
+  "title": "Claim Validation Schema v2",
+  "description": "逐項重要結論之驗證結果骨架。此為 skill 規格檔，不代表現階段已完成自動 claim validation。",
+  "record_type": "claim_validation",
+  "required": [
+    "claim_id",
+    "claim_text",
+    "claim_type",
+    "supporting_norms",
+    "subject_supported",
+    "counterparty_supported",
+    "action_supported",
+    "modality_supported",
+    "conditions_supported",
+    "exceptions_checked",
+    "legal_effect_supported",
+    "liability_supported",
+    "version_status",
+    "support_level"
+  ],
+  "fields": {
+    "claim_id": {
+      "type": "string",
+      "description": "本項重要結論的唯一識別碼。"
+    },
+    "claim_text": {
+      "type": "string",
+      "description": "要在回答中輸出的具體結論或陳述。"
+    },
+    "claim_type": {
+      "type": "string",
+      "enum": [
+        "issue_conclusion",
+        "subject_scope",
+        "counterparty_scope",
+        "procedure_requirement",
+        "reporting_requirement",
+        "board_approval_requirement",
+        "authorization_scope",
+        "deadline",
+        "liability",
+        "other"
+      ],
+      "description": "此項結論的類型。"
+    },
+    "supporting_norms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "支撐此 claim 的 norm_extraction 識別碼。"
+    },
+    "supporting_citations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/citation_item"
+      },
+      "description": "支撐此 claim 的具體法源定位。"
+    },
+    "subject_supported": {
+      "type": "boolean"
+    },
+    "counterparty_supported": {
+      "type": "boolean"
+    },
+    "action_supported": {
+      "type": "boolean"
+    },
+    "modality_supported": {
+      "type": "boolean"
+    },
+    "conditions_supported": {
+      "type": "boolean"
+    },
+    "exceptions_checked": {
+      "type": "boolean"
+    },
+    "legal_effect_supported": {
+      "type": "boolean"
+    },
+    "liability_supported": {
+      "type": "boolean"
+    },
+    "version_status": {
+      "type": "string",
+      "enum": [
+        "confirmed",
+        "partially_confirmed",
+        "unconfirmed"
+      ],
+      "description": "此 claim 所依賴法源版本之確認程度。"
+    },
+    "support_level": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "uncertain"
+      ],
+      "description": "本項 claim 的整體支撐程度。"
+    },
+    "risk_flags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "missing_exception",
+          "wrong_subject_binding",
+          "wrong_counterparty_binding",
+          "wrong_action_type",
+          "insufficient_conditions",
+          "joint_application_not_completed",
+          "version_unconfirmed",
+          "citation_context_only",
+          "faq_only_support",
+          "training_only_support"
+        ]
+      },
+      "description": "此 claim 的主要風險旗標。"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "citation_item": {
+      "type": "object",
+      "required": [
+        "source_name",
+        "locator"
+      ],
+      "properties": {
+        "source_name": {
+          "type": "string"
+        },
+        "locator": {
+          "type": "string"
+        },
+        "quote": {
+          "type": "string"
+        },
+        "support_scope": {
+          "type": "string",
+          "enum": [
+            "full",
+            "partial",
+            "context_only"
+          ]
+        },
+        "version_date": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
