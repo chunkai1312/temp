@@ -1,4 +1,4 @@
-# 永豐金控利害關係人 QA 助理 Agent Plugin
+# 永豐金控利害關係人 QA 小幫手 Agent Plugin
 
 本專案依 [Agent Plugins 1.0.0](https://agent-plugins.org/specification) 與 [Agent Skills](https://agentskills.io/specification) 建立，採 `Skills-only` 架構。知識內容只來自工作區 `sources/` 內的 `11` 份原始文件，不連接正式資料庫、客戶資料、員工資料或利害關係人管理系統。
 
