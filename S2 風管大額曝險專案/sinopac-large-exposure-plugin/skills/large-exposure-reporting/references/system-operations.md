@@ -1,9 +1,9 @@
 ---
 title: 大額暴險系統功能與操作畫面
 source_id: SRC-004
-source_file: 知識庫文件/大額暴險系統操作流程畫面 (1).pdf
+source_file: sources/大額暴險系統操作流程畫面.pdf
 source_sha256: 49158865dd9a79c5d5fabb58ec9ede6c737a96865d232caf9109f784e829729d
-converted_on: 2026-10-08
+converted_on: 2026-11-24
 ---
 
 # 大額暴險系統功能與操作畫面

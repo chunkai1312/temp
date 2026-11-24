@@ -1,6 +1,6 @@
 # 永豐金控大額暴險 Agent Plugin
 
-本專案依 `Agent Plugins 1.0` 建立，採 `Skills-only` 架構。知識內容只來自工作區 `知識庫文件/` 內的 `5` 份原始文件，不連接正式資料庫、客戶資料或申報系統。
+本專案依 `Agent Plugins 1.0` 建立，採 `Skills-only` 架構。知識內容只來自工作區 `sources/` 內的 `5` 份原始文件，不連接正式資料庫、客戶資料或申報系統。
 
 ## 結構
 
@@ -21,7 +21,7 @@ sinopac-large-exposure-plugin/
             └── validate-plugin.mjs
 ```
 
-每份原始文件對應一份 Markdown；沒有另外建立標準答案或衍生知識文件。
+每份原始文件對應一份 Markdown。0.2.0 的問答方式依 11/23「通報導航Chat!」Prompt 更新，收錄於 `skills/large-exposure-reporting/SKILL.md`。
 
 ## 驗證
 
@@ -31,7 +31,7 @@ sinopac-large-exposure-plugin/
 node skills/large-exposure-reporting/scripts/validate-plugin.mjs
 ```
 
-在原始工作區執行時，可加上 `--verify-sources`，核對 `知識庫文件/` 的檔案清單與 `SHA-256`：
+在原始工作區執行時，可加上 `--verify-sources`，核對 `sources/` 的檔案清單與 `SHA-256`：
 
 ```bash
 node skills/large-exposure-reporting/scripts/validate-plugin.mjs --verify-sources

@@ -1,9 +1,9 @@
 ---
 title: 金融控股公司依金融控股公司法第四十六條申報與揭露辦法
 source_id: SRC-001
-source_file: 知識庫文件/(外部規範)金融控股公司依金融控股公司法第四十六條申報與揭露辦法 (1).docx
+source_file: sources/(外部規範)金融控股公司依金融控股公司法第四十六條申報與揭露辦法.docx
 source_sha256: 12c31281382b5ef429fd9ada2b2c796c3a7ced8c4736194fce64f96b11e6732d
-converted_on: 2026-10-08
+converted_on: 2026-11-24
 ---
 
 # 金融控股公司依金融控股公司法第四十六條申報與揭露辦法

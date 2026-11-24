@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sinopac-large-exposure",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "永豐金控大額暴險申報與系統操作的靜態知識 Plugin。",
   "author": {
     "name": "永豐金控風險管理處"

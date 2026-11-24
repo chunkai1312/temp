@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "sinopac-large-exposure-maintainer",
+  "version": "0.1.0",
+  "description": "依新版原始文件建立大額暴險知識庫候選版本的更新維護工具。",
+  "author": {
+    "name": "永豐金控風險管理處"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "large-exposure",
+    "skill-maintenance",
+    "source-governance",
+    "risk-management"
+  ]
+}

@@ -1,9 +1,9 @@
 ---
 title: 大額暴險申報常見問答
 source_id: SRC-003
-source_file: 知識庫文件/大額暴險呈報及系統相關QA (1).docx
+source_file: sources/大額暴險呈報及系統相關QA.docx
 source_sha256: a25072f35bebd505557f843ac93ab0e1ced73376890b0c74385746e26f9c13da
-converted_on: 2026-10-08
+converted_on: 2026-11-24
 ---
 
 # 大額暴險申報常見 Q&A

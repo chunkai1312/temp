@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "sinopac-large-exposure-update-plan.v1",
+  "confirmed": true,
+  "currentVersion": "0.1.0",
+  "nextVersion": "0.2.0",
+  "routeChanged": true,
+  "routeChangesConfirmed": true,
+  "versionReason": "依 11/23 Prompt 改為優先查 QA、以子公司視角答覆並調整引用、轉介及操作指引，更新五份來源的追溯資訊與作業說明。",
+  "breakingChange": false,
+  "promoteToStable": false,
+  "changes": [
+    {
+      "sourceId": "SRC-001",
+      "currentFile": "(外部規範)金融控股公司依金融控股公司法第四十六條申報與揭露辦法 (1).docx",
+      "incomingFile": "(外部規範)金融控股公司依金融控股公司法第四十六條申報與揭露辦法.docx",
+      "markdown": "external-regulation.md",
+      "action": "rename"
+    },
+    {
+      "sourceId": "SRC-002",
+      "currentFile": "(行內規範)永豐金融控股公司「金控法第四十六條申報與揭露」相關作業細則 (1).docx",
+      "incomingFile": "(行內規範)永豐金融控股公司「金控法第四十六條申報與揭露」相關作業細則.docx",
+      "markdown": "internal-procedure.md",
+      "action": "rename"
+    },
+    {
+      "sourceId": "SRC-003",
+      "currentFile": "大額暴險呈報及系統相關QA (1).docx",
+      "incomingFile": "大額暴險呈報及系統相關QA.docx",
+      "markdown": "qa.md",
+      "action": "rename"
+    },
+    {
+      "sourceId": "SRC-004",
+      "currentFile": "大額暴險系統操作流程畫面 (1).pdf",
+      "incomingFile": "大額暴險系統操作流程畫面.pdf",
+      "markdown": "system-operations.md",
+      "action": "rename"
+    },
+    {
+      "sourceId": "SRC-005",
+      "currentFile": "永豐金控依金控法第四十六條申報與揭露相關作業說明 (2).pdf",
+      "incomingFile": "永豐金控依金控法第四十六條申報與揭露相關作業說明.pdf",
+      "markdown": "reporting-guide.md",
+      "action": "replace"
+    }
+  ]
+}

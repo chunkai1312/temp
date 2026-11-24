@@ -1,0 +1,74 @@
+{
+  "slideCount": 11,
+  "masters": [
+    {
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": ""
+    }
+  ],
+  "layouts": [
+    {
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "name": "",
+      "placeholders": []
+    },
+    {
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "標題及物件",
+      "placeholders": [
+        {
+          "name": "title",
+          "type": "title",
+          "text": ""
+        },
+        {
+          "name": "body",
+          "type": "body",
+          "text": "第一層\n第二層\n第三層\n第四層\n第五層"
+        }
+      ]
+    },
+    {
+      "id": "/ppt/slideLayouts/slideLayout2.xml",
+      "name": "空白",
+      "placeholders": []
+    },
+    {
+      "id": "/ppt/slideLayouts/slideLayout3.xml",
+      "name": "章節標題",
+      "placeholders": [
+        {
+          "name": "title",
+          "type": "title",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "id": "/ppt/slideLayouts/slideLayout4.xml",
+      "name": "標題投影片",
+      "placeholders": [
+        {
+          "name": "title",
+          "type": "title",
+          "text": ""
+        },
+        {
+          "name": "Google Shape;11;p32",
+          "type": "body",
+          "text": ""
+        },
+        {
+          "name": "Google Shape;12;p32",
+          "type": "body",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "id": "/ppt/slideLayouts/slideLayout5.xml",
+      "name": "版本",
+      "placeholders": []
+    }
+  ]
+}

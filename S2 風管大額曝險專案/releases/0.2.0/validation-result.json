@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "sinopac-large-exposure-release-validation.v1",
+  "candidateRoot": "/Users/ckwang/Projects/work/temp/S2 風管大額曝險專案/releases/0.2.0/sinopac-large-exposure-plugin",
+  "sourceSnapshotRoot": "/Users/ckwang/Projects/work/temp/S2 風管大額曝險專案/sources",
+  "version": "0.2.0",
+  "activeSources": 5,
+  "retiredSources": 0,
+  "referenceFiles": 6,
+  "status": "pass",
+  "errors": [],
+  "warnings": [],
+  "candidateValidator": {
+    "status": 0,
+    "stdout": "Plugin：sinopac-large-exposure-plugin\n有效來源：5\n已停用來源：0\nMarkdown 參考文件：6\n來源檔案驗證：disabled\n驗證通過：0 個錯誤。\n",
+    "stderr": ""
+  },
+  "zipPath": "/Users/ckwang/Projects/work/temp/S2 風管大額曝險專案/releases/0.2.0/sinopac-large-exposure-plugin-0.2.0.zip",
+  "zipSha256": "0b1400ebce91e043468df472227351ba4fef5561bff6e8526522e77aa36f3f22",
+  "zipBytes": 67696
+}

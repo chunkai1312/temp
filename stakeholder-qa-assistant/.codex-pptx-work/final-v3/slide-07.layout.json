@@ -1,0 +1,609 @@
+{
+  "schema": "openai.presentation.layout/v5",
+  "unit": "px",
+  "slide": {
+    "id": "sl/gnmp4jqx",
+    "index": 6,
+    "layout": {
+      "id": "ly/ux4ruhcv",
+      "name": "標題及物件"
+    },
+    "masterLayoutId": "ly/atofqts7",
+    "backgroundColor": "rgba(255,255,255,1)",
+    "position": {
+      "left": 0,
+      "top": 0,
+      "width": 1209.5,
+      "height": 680.33
+    }
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "ly/ux4ruhcv",
+      "name": "標題及物件",
+      "parentLayoutId": "ly/atofqts7",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "id": "sh/bexgre18",
+          "editable": false,
+          "name": "Google Shape;18;p34",
+          "position": {
+            "left": 18.83,
+            "top": 7.56,
+            "width": 1171.83,
+            "height": 56.69
+          },
+          "geometry": "rect",
+          "lineWidth": 0,
+          "style": {
+            "anchor": 2,
+            "verticalAlignment": "middle",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 4.62,
+              "right": 9.25,
+              "bottom": 4.62,
+              "left": 9.25
+            },
+            "useParagraphSpacing": true
+          }
+        },
+        {
+          "order": 2,
+          "kind": "textbox",
+          "scope": "layout",
+          "id": "sh/adozi903",
+          "editable": false,
+          "name": "Google Shape;19;p34",
+          "position": {
+            "left": 18.83,
+            "top": 75.5,
+            "width": 1171.83,
+            "height": 567.04
+          },
+          "geometry": "rect",
+          "lineWidth": 0,
+          "text": "第一層\n第二層\n第三層\n第四層\n第五層",
+          "style": {
+            "anchor": 1,
+            "verticalAlignment": "top",
+            "wrap": "square",
+            "autoFit": "none",
+            "insets": {
+              "top": 4.62,
+              "right": 9.25,
+              "bottom": 4.62,
+              "left": 9.25
+            },
+            "useParagraphSpacing": true
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "第一層",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第一層",
+                  "anchor": 1,
+                  "verticalAlignment": "top",
+                  "wrap": "square",
+                  "autoFit": "none",
+                  "insets": {
+                    "top": 4.62,
+                    "right": 9.25,
+                    "bottom": 4.62,
+                    "left": 9.25
+                  },
+                  "useParagraphSpacing": true
+                }
+              ]
+            },
+            {
+              "index": 2,
+              "text": "第二層",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第二層",
+                  "anchor": 1,
+                  "verticalAlignment": "top",
+                  "wrap": "square",
+                  "autoFit": "none",
+                  "insets": {
+                    "top": 4.62,
+                    "right": 9.25,
+                    "bottom": 4.62,
+                    "left": 9.25
+                  },
+                  "useParagraphSpacing": true
+                }
+              ]
+            },
+            {
+              "index": 3,
+              "text": "第三層",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第三層",
+                  "anchor": 1,
+                  "verticalAlignment": "top",
+                  "wrap": "square",
+                  "autoFit": "none",
+                  "insets": {
+                    "top": 4.62,
+                    "right": 9.25,
+                    "bottom": 4.62,
+                    "left": 9.25
+                  },
+                  "useParagraphSpacing": true
+                }
+              ]
+            },
+            {
+              "index": 4,
+              "text": "第四層",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第四層",
+                  "anchor": 1,
+                  "verticalAlignment": "top",
+                  "wrap": "square",
+                  "autoFit": "none",
+                  "insets": {
+                    "top": 4.62,
+                    "right": 9.25,
+                    "bottom": 4.62,
+                    "left": 9.25
+                  },
+                  "useParagraphSpacing": true
+                }
+              ]
+            },
+            {
+              "index": 5,
+              "text": "第五層",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "第五層",
+                  "anchor": 1,
+                  "verticalAlignment": "top",
+                  "wrap": "square",
+                  "autoFit": "none",
+                  "insets": {
+                    "top": 4.62,
+                    "right": 9.25,
+                    "bottom": 4.62,
+                    "left": 9.25
+                  },
+                  "useParagraphSpacing": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "id": "sh/m98jqdkb",
+          "editable": false,
+          "name": "Google Shape;20;p34",
+          "position": {
+            "left": 18.83,
+            "top": 64.25,
+            "width": 1171.83,
+            "height": 0
+          },
+          "geometry": "straightConnector1",
+          "lineColor": "#FF0000",
+          "lineWidth": 1.67
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "ly/atofqts7",
+      "type": "master",
+      "backgroundColor": "lt1",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "image",
+          "scope": "master",
+          "id": "im/ut8nyx4j",
+          "editable": false,
+          "name": "圖片 2",
+          "position": {
+            "left": 0,
+            "top": 629.29,
+            "width": 462.6,
+            "height": 74.08
+          },
+          "contentType": "image/png",
+          "asset": {
+            "contentType": "image/png",
+            "byteLength": 59655
+          },
+          "fillImage": {
+            "contentType": "image/png",
+            "byteLength": 59655
+          }
+        },
+        {
+          "order": 2,
+          "kind": "textbox",
+          "scope": "master",
+          "id": "sh/czu98z2x",
+          "editable": false,
+          "name": "Google Shape;6;p31",
+          "position": {
+            "left": 0,
+            "top": 654.9,
+            "width": 40.06,
+            "height": 25.43
+          },
+          "geometry": "rect",
+          "lineWidth": 0,
+          "text": "7",
+          "style": {
+            "anchor": 3,
+            "fontSize": 16,
+            "typeface": "Microsoft JhengHei",
+            "color": "#000000",
+            "bold": false,
+            "italic": false,
+            "alignment": "center",
+            "verticalAlignment": "bottom",
+            "textTransform": "none",
+            "wrap": "none",
+            "autoFit": "resizeShapeToFitText",
+            "insets": {
+              "top": 4.62,
+              "right": 9.25,
+              "bottom": 4.62,
+              "left": 9.25
+            },
+            "useParagraphSpacing": true
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "7",
+              "lineSpacingPercent": 83333,
+              "style": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "7",
+                  "anchor": 3,
+                  "fontSize": 16,
+                  "typeface": "Microsoft JhengHei",
+                  "color": "#000000",
+                  "bold": false,
+                  "italic": false,
+                  "alignment": "center",
+                  "verticalAlignment": "bottom",
+                  "textTransform": "none",
+                  "wrap": "none",
+                  "autoFit": "resizeShapeToFitText",
+                  "insets": {
+                    "top": 4.62,
+                    "right": 9.25,
+                    "bottom": 4.62,
+                    "left": 9.25
+                  },
+                  "useParagraphSpacing": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "image",
+          "scope": "master",
+          "id": "im/50j6dc36",
+          "editable": false,
+          "name": "圖片 3",
+          "position": {
+            "left": 944.88,
+            "top": 646.3,
+            "width": 258.55,
+            "height": 30.58
+          },
+          "contentType": "image/png",
+          "asset": {
+            "contentType": "image/png",
+            "byteLength": 4113
+          },
+          "fillImage": {
+            "contentType": "image/png",
+            "byteLength": 4113
+          }
+        },
+        {
+          "order": 4,
+          "kind": "textbox",
+          "scope": "master",
+          "id": "sh/ry1szulc",
+          "editable": false,
+          "name": "矩形 4",
+          "position": {
+            "left": 772.91,
+            "top": 653.86,
+            "width": 171.8,
+            "height": 21.73
+          },
+          "geometry": "rect",
+          "lineWidth": 0,
+          "text": "機密資料僅限永豐金控內部使用 ",
+          "style": {
+            "anchor": 2,
+            "fontSize": 10.67,
+            "typeface": "微軟正黑體",
+            "color": "#B2B2B2",
+            "bold": false,
+            "alignment": "center",
+            "verticalAlignment": "middle",
+            "wrap": "none",
+            "autoFit": "resizeShapeToFitText",
+            "insets": {
+              "top": 4.54,
+              "right": 9.07,
+              "bottom": 4.54,
+              "left": 9.07
+            }
+          },
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "機密資料僅限永豐金控內部使用 ",
+              "style": {
+                "alignment": "center"
+              },
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "機密資料僅限永豐金控內部使用 ",
+                  "anchor": 2,
+                  "fontSize": 10.67,
+                  "typeface": "微軟正黑體",
+                  "color": "#B2B2B2",
+                  "bold": false,
+                  "alignment": "center",
+                  "verticalAlignment": "middle",
+                  "wrap": "none",
+                  "autoFit": "resizeShapeToFitText",
+                  "insets": {
+                    "top": 4.54,
+                    "right": 9.07,
+                    "bottom": 4.54,
+                    "left": 9.07
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/zedcfa9g",
+      "editable": true,
+      "name": "標題 4",
+      "position": {
+        "left": 18.83,
+        "top": 7.56,
+        "width": 1171.83,
+        "height": 56.69
+      },
+      "text": "Step 4：確認 Skill 已安裝",
+      "style": {
+        "anchor": 2,
+        "fontSize": 42.67,
+        "typeface": "Microsoft JhengHei",
+        "color": "#000000",
+        "bold": true,
+        "italic": false,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.62,
+          "right": 9.25,
+          "bottom": 4.62,
+          "left": 9.25
+        },
+        "useParagraphSpacing": true
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Step 4：確認 Skill 已安裝",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Step 4",
+              "bold": true
+            },
+            {
+              "index": 2,
+              "text": "：確認 ",
+              "bold": true
+            },
+            {
+              "index": 3,
+              "text": "Skill ",
+              "bold": true
+            },
+            {
+              "index": 4,
+              "text": "已安裝",
+              "bold": true
+            }
+          ],
+          "bulletCharacter": "",
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "textbox",
+      "scope": "slide",
+      "id": "sh/fi9c369c",
+      "editable": true,
+      "name": "文字版面配置區 8",
+      "position": {
+        "left": 18.83,
+        "top": 75.5,
+        "width": 1171.83,
+        "height": 567.04
+      },
+      "text": "重新進入 Skills 頁面。若安裝成功，「本機 Skills」清單中會出現「stakeholder-qa-assistant」。",
+      "style": {
+        "anchor": 1,
+        "fontSize": 21.33,
+        "typeface": "微軟正黑體",
+        "color": "#000000",
+        "bold": false,
+        "italic": false,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "textTransform": "none",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 4.62,
+          "right": 9.25,
+          "bottom": 4.62,
+          "left": 9.25
+        },
+        "useParagraphSpacing": true
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "重新進入 Skills 頁面。若安裝成功，「本機 Skills」清單中會出現「stakeholder-qa-assistant」。",
+          "runs": [
+            {
+              "index": 1,
+              "text": "重新進入 "
+            },
+            {
+              "index": 2,
+              "text": "Skills "
+            },
+            {
+              "index": 3,
+              "text": "頁面。若安裝成功，「本機 "
+            },
+            {
+              "index": 4,
+              "text": "Skills"
+            },
+            {
+              "index": 5,
+              "text": "」清單中會出現「"
+            },
+            {
+              "index": 6,
+              "text": "stakeholder-"
+            },
+            {
+              "index": 7,
+              "text": "qa"
+            },
+            {
+              "index": 8,
+              "text": "-assistant"
+            },
+            {
+              "index": 9,
+              "text": "」。"
+            }
+          ],
+          "bulletCharacter": "○",
+          "marginLeft": 252000,
+          "indent": -216000,
+          "lineSpacingPercent": 100000
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "kind": "image",
+      "scope": "slide",
+      "id": "im/wz6dk3it",
+      "editable": true,
+      "name": "圖片 9",
+      "position": {
+        "left": 56.69,
+        "top": 132.39,
+        "width": 896.33,
+        "height": 472.44
+      },
+      "contentType": "image/png",
+      "asset": {
+        "contentType": "image/png",
+        "byteLength": 440055
+      },
+      "fillImage": {
+        "contentType": "image/png",
+        "byteLength": 440055
+      }
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "id": "sh/a9ojq5kz",
+      "editable": true,
+      "name": "矩形 10",
+      "position": {
+        "left": 208.67,
+        "top": 212.07,
+        "width": 170.53,
+        "height": 17.27
+      },
+      "geometry": "rect",
+      "lineColor": "#F33F5E",
+      "lineWidth": 1.33,
+      "style": {
+        "anchor": 2,
+        "fontSize": 18.67,
+        "typeface": "Arial",
+        "color": "#FFFFFF",
+        "bold": false,
+        "italic": false,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "textTransform": "none",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      }
+    }
+  ]
+}
