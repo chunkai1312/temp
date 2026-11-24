@@ -5,7 +5,7 @@
   "nextVersion": "0.2.0",
   "routeChanged": true,
   "routeChangesConfirmed": true,
-  "versionReason": "依 11/23 Prompt 改為優先查 QA、以子公司視角答覆並調整引用、轉介及操作指引，更新五份來源的追溯資訊與作業說明。",
+  "versionReason": "依 11/23 Prompt 改為優先查 QA、以子公司視角答覆並調整引用、轉介及操作指引，更新五份來源的追溯資訊，並修正申報作業說明與系統操作流程的集團代碼範例。",
   "breakingChange": false,
   "promoteToStable": false,
   "changes": [
@@ -35,7 +35,7 @@
       "currentFile": "大額暴險系統操作流程畫面 (1).pdf",
       "incomingFile": "大額暴險系統操作流程畫面.pdf",
       "markdown": "system-operations.md",
-      "action": "rename"
+      "action": "replace"
     },
     {
       "sourceId": "SRC-005",
